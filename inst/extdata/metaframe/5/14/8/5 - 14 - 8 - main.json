@@ -1,0 +1,62 @@
+[
+  {
+    "fxInfo_label": "Political competition",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Polity IV (Marshall and Jaggers 2016).",
+    "fxInfo_clarification": "This variable combines information presented in two component variables: the degree of institutionalization, or regulation, of political competition (e_parreg) and the extent of government restriction on political competition (e_parcomp).",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "Is there any (institutionalized) political competition?",
+    "fxInfo_responses": [
+      {
+        "key": "1",
+        "value": "Repressed Competition: While no significant political activity is permitted outside the ranks of the hegemonic regime, nevertheless, some organized political participation occurs within the regime through highly circumscribed institutional channels."
+      },
+      {
+        "key": "2",
+        "value": "Restricted Competition: Some organized political activity occurs outside the ranks of the hegemonic regime, but the regime systematically limits its form, extent, or both in ways that exclude substantial groups from participating in the political arena and/or suppresses the contestation of rival political interests."
+      },
+      {
+        "key": "3",
+        "value": "Authoritarian-guided liberalization of repressed or restricted competition or the deepening of hegemonic control: Used to indicate either the concerted effort on the part of hegemonic regimes to open up their political systems to limited (and typically factional) political competition or the transformation of factional-based \"quasi-democracies\" or \"weak authoritarian regimes\" into more repressive hegemonic systems in which political competition is increasingly institutionalized and restricted."
+      },
+      {
+        "key": "4",
+        "value": "Uninstitutionalized Competition: Political participation is decentralized and fluid in character — revolving around personalities, regional interests, and religious/ethnic/clan groups. There are no enduring national political organizations and systematic regime control of political activity is limited, that is, a situation characterized by a coincidence of weak state and weak society. In the contemporary context, uninstitutionalized competition is most likely to occur in resource poor countries and/or following the collapse of central authority under a (former) repressive, authoritarian state."
+      },
+      {
+        "key": "5",
+        "value": "Gradual transition from uninstitutionalized (unregulated) competition to more regulated forms of political competition (the increasing regulation of competition may be centrally-guided or decentralized through the gradual development of political parties and interest groups)."
+      },
+      {
+        "key": "6",
+        "value": "Factional/Restricted Competition: Polities that oscillate more or less regularly between intense factionalism and faction-based restrictions: that is, when one faction secures power it uses that power to promote its exclusive interests and favor group members while restricting the political access and activities of other, excluded groups, until it is displaced in turn."
+      },
+      {
+        "key": "7",
+        "value": "Factional Competition: There are relatively stable and enduring political groups which compete for political influence at the national level — parties, regional groups, or ethnic groups— but particularistic/parochial agendas tend to be exclusive and uncompromising with limited social integration or accommodation across identity boundaries. Factional competition is distinguished by a relative balance of group capabilities that prevents any one of the groups from capturing state power and imposing restrictions on other groups."
+      },
+      {
+        "key": "8",
+        "value": "Political liberalization or democratic retrenchment: persistent over coercion: relatively coercive/restrictive transitions either from factional/restricted competition to institutionalized competitive participation or from institutionalized competitive participation to factional/restricted competition. In either case, this code reflects the unconsolidated nature of liberal political participation in otherwise procedurally democratic polities."
+      },
+      {
+        "key": "9",
+        "value": "Political liberalization or democratic retrenchment: limited and/or decreasing overt coercion: This code is used to indicate relatively peaceful transitions either to or from institutionalized competitive participation. In either case, this code reflects the unconsolidated nature of liberal political participation in otherwise procedurally open electoral polities."
+      },
+      {
+        "key": "10",
+        "value": "Institutionalized open electoral participation: Relatively stable and enduring political groups regularly compete for political influence with little use of coercion. No significant or substantial groups, issues, or types of conventional political action are regularly excluded from the political process."
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Polity IV (Marshall and Jaggers 2016).",
+    "name": "e_polcomp"
+  }
+]

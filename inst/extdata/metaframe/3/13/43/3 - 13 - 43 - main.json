@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Flag",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["John Gerring"],
+    "fxInfo_question": "Is there a national flag?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No."
+      },
+      {
+        "key": "1",
+        "value": "Yes."
+      }
+    ],
+    "fxInfo_scale": "Dichotomou",
+    "fxInfo_sources": "CCP (v68); Whitney Smith (1975), Flags Through the Ages and Across the World; Wikipedia; World Fact Book, CIA.",
+    "name": "v3stflag"
+  }
+]

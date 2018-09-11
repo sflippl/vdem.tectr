@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Candidates in elections",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Przeworski et al. (2013).",
+    "fxInfo_clarification": "Number of candidates presented to voters in presidential elections.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "Applies whether the president is directly or indirectly elected. If there are two rounds, the first one is coded. If there is more than one election during a year, the last one is coded.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "if one."
+      },
+      {
+        "key": "1",
+        "value": "if more."
+      }
+    ],
+    "fxInfo_scale": "Dichotomous",
+    "fxInfo_sources": "Przeworski et al. (2013).",
+    "name": "e_elecparty_pres"
+  }
+]

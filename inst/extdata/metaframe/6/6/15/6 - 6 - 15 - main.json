@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Radios",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Comin and Hobijn (2009).",
+    "fxInfo_clarification": "Original source doesn’t specify if the indicators considers total number of radio sets or only radio sets in use.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "What is the number of radio sets?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Comin and Hobijn (2009).",
+    "name": "e_radio_n"
+  }
+]

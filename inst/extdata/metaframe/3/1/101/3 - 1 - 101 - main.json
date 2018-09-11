@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Monitors refuse to be present",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Staffan I. Lindberg"],
+    "fxInfo_question": "Did any monitors refuse to go to an election because they believed that it would not be free and fair?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No/Unclear"
+      },
+      {
+        "key": "1",
+        "value": "Yes"
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "NELDA 49 (Hyde and Marinov 2012); websites of election monitors.",
+    "name": "v2elmonref"
+  }
+]

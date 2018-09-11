@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Uncertainty 1",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Bilinski (2015).",
+    "fxInfo_clarification": "If uncertainty1 = 1, it indicates that more detailed information on the scope of suffrage, or the presence of elected institutions, likely exist, but more extensive research, with the use of online-inaccessible content, would be necessary to determine the scope of suffrage more accurately.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "How certain are the previous answers?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "Not certain"
+      },
+      {
+        "key": "1",
+        "value": "More information exists"
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Bilinski (2015).",
+    "name": "e_uncertainty1"
+  }
+]

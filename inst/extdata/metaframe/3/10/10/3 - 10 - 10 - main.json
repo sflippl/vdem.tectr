@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Religious organization introduction",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "",
+    "fxInfo_clarification": "In this section, we ask two questions regarding religious organizations. These may be religiously inspired civil society organizations (CSOs) or organizations whose purpose is primarily spiritual.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "",
+    "name": "v2csintro2"
+  }
+]

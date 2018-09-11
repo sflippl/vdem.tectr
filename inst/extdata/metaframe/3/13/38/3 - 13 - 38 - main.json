@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Regime interregnum",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "This question is used to identify so-called interregnum periods, where no political  regime is in control over the entity. Different types of political situations can lead to periods of time under which there is no identifiable political regime, one example being a civil war in which none of the parties have clear control over political bodies and processes in the country. However, the interregnum coding is employed conservatively, meaning that partial control over political bodies and processes in fairly large parts of the country (which is often the case also during civil wars) is sufficient for a 0 score.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Carl Henrik Knutsen", "Tore Wig"],
+    "fxInfo_question": "Does there exist an identifiable political regime?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No."
+      },
+      {
+        "key": "1",
+        "value": "Yes."
+      }
+    ],
+    "fxInfo_scale": "Dichotomou",
+    "fxInfo_sources": "Encyclopedia Britannica; Wikipedia; various region- and country-specific sources.",
+    "name": "v3regint"
+  }
+]

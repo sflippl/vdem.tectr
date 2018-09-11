@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Corresponding flowchart",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "This variable indicates if a flowchart summarizing the appointment process was generated and is available.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jeffrey Staton"],
+    "fxInfo_question": "Is a flowchart of the process available?",
+    "fxInfo_responses": ["0. No 1. Yes"],
+    "fxInfo_scale": "Dichotomou",
+    "fxInfo_sources": "V-Dem coding of constitutional texts in CCP (Elkins et al. 2012).",
+    "name": "v2juflow"
+  }
+]

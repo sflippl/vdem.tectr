@@ -1,0 +1,34 @@
+[
+  {
+    "fxInfo_label": "Reapportionment upper chamber",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Pemstein et al. (2018, V-Dem Working Paper Series 2018:21); V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Reapportionment is the process of reallocating the number of seats or the boundaries of a district in order to reflect its relative share of the population. Answering yes does not imply perfect apportionment (see later question). Leave blank if no upper chamber. (This question is not about suffrage or informal restrictions to suffrage.)",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "Bayesian Item Response Theory Measurement Model",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Daniel Ziblatt"],
+    "fxInfo_question": "Is there a legal or constitutional statute, upheld in practice, stating that seats or electoral boundaries for elections to the upper chamber of the legislature should be regularly reapportioned?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No."
+      },
+      {
+        "key": "1",
+        "value": "Yes, reapportionment is stipulated by constitution or law but not upheld in practice."
+      },
+      {
+        "key": "2",
+        "value": "Yes, reapportionment is stipulated by constitution or law and upheld in practice."
+      }
+    ],
+    "fxInfo_scale": "Ordinal, converted to interval by the measurement model",
+    "fxInfo_sources": "",
+    "name": "v3elreappuc"
+  }
+]

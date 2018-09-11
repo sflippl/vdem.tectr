@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Minimum candidate age lower chamber",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Numeric",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Leave blank if there is no lower (or unicameral) chamber.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Svend-Erik Skaaning"],
+    "fxInfo_question": "What is the minimum age at which citizens are allowed to serve in the lower (or unicameral) chamber of the national legislature?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "Interva",
+    "fxInfo_sources": "Nohlen and colleagues (1999, 2002, 2005, 2010); Mackie and Rose (1991); Posada-Carbó(1996); CCP (Elkins et al. 2012); and various country specific sources.",
+    "name": "v3canagelc"
+  }
+]

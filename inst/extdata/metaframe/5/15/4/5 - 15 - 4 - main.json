@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Lower chamber effective number of legislative parties",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Bormann and Golder (2016).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "3-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "After this election, what was the effective number of parties as measured by share of seats in the lower (or unicameral) chamber of the legislature? Leave this question blank if election was nonpartisan, i.e., no parties (not even pro-government parties) were allowed.",
+    "fxInfo_responses": ["Numeric."],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Bormann and Golder (2016).",
+    "name": "e_ellonmpl"
+  }
+]

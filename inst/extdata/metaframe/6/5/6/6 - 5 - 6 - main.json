@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Natural gas production per capita",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Haber and Menaldo (2011).",
+    "fxInfo_clarification": "Real value of natural gas produced per capita.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "What is the real value of a country’s natural gas production?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Haber and Menaldo (2011).",
+    "name": "e_natural_gas_income_PC"
+  }
+]

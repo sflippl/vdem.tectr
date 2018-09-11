@@ -1,0 +1,38 @@
+[
+  {
+    "fxInfo_label": "Bureaucratic remuneration",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "A state administrator is anyone who works for the state administration. By \"salaried employee\", we mean someone who is employed on a contract and paid a regular allowance directly out of the state coffers. It does not include unpaid work; work paid for through a private collection of fees, material perquisites or bribes; private employment by a higherranking \"patron\" within the administration; contractors being paid on an irregular basis; or\"parastatals\" (those working for state-owned companies), since the latter are not paid directly out of the state coffers. Note that the question refers to the practices obtaining in the state administration, excluding the armed forces.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jan Teorell"],
+    "fxInfo_question": "To what extent are state administrators salaried employees?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "None or almost none are salaried state employees."
+      },
+      {
+        "key": "1",
+        "value": "A small share is salaried state employees. 2. About half are salaried state employees."
+      },
+      {
+        "key": "3",
+        "value": "A substantial number are salaried state employees."
+      },
+      {
+        "key": "4",
+        "value": "All or almost all are salaried state employees."
+      }
+    ],
+    "fxInfo_scale": "Ordinal",
+    "fxInfo_sources": "",
+    "name": "v2strenadm"
+  }
+]

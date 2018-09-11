@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Direct popular vote index ordinal",
+    "fxInfo_aggregation": "Same transformation rule as for \"v2x_libdem_3C/_4C/_5C\".",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Lindberg (2016).",
+    "fxInfo_clarification": "These are ordinalized versions of the V-Dem direct popular vote index. The original index ranges from 0 to 1. These transformations offer three different ordinal versions with three (_3C), four (_4C), and five (_5C) levels respectively.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-6, 7 (new aggregation formula),8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "To what extent is the direct popular vote utilized?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "Ordinal",
+    "fxInfo_sources": "v2ddlexci v2ddsigpci v2ddsiglci v2ddsigdci v2ddlevci v2ddpartci v2ddapprci v2ddspmci v2ddadmci v2ddyrci v2ddlexrf v2ddsigprf v2ddsigdrf v2ddpartrf v2ddapprrf v2ddspmrf v2ddadmrf v2ddyrrf v2ddpartpl v2ddapprpl v2ddspmpl v2ddadmpl v2ddlexpl v2ddyrpl v2ddlexor v2ddpartor v2ddappor v2ddspmor v2ddadmor v2ddyror, v2ddthreor, v2ddthrerf, v2ddthrepl",
+    "name": "e_v2xdd_dd_3C /_4C /_5C"
+  }
+]

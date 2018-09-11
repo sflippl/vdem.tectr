@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "HOG appointed by HOS",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jan Teorell"],
+    "fxInfo_question": "Is the head of government HOG appointed by the head of state HOS?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No."
+      },
+      {
+        "key": "1",
+        "value": "Yes."
+      }
+    ],
+    "fxInfo_scale": "Dichotomous",
+    "fxInfo_sources": "v2expathhg",
+    "name": "v2ex_hosconhog"
+  }
+]

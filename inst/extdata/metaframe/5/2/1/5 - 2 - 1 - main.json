@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "State government authority over taxing, spending, or legislating",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Cruz et al. (2018).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "Do the state/provinces have authority over taxing, spending, or legislating?",
+    "fxInfo_responses": ["If 1 for any of these, category gets a 1. Authority over \"cultural affairs\", or \"planning\" in Communist systems, does not qualify."],
+    "fxInfo_scale": "Dichotomous",
+    "fxInfo_sources": "Cruz et al. (2018).",
+    "name": "e_dpi_author"
+  }
+]

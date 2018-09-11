@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Exchange rate to US dollar",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Clio Infra (2014).",
+    "fxInfo_clarification": "Missing data within a time-series is interpolated using linear interpolation.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "What is the exchange rate of the local currency to the US Dollar?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Clio Infra (clio-infra.eu), drawing on Officer (2011), Heston, Summers and Aten (2012), Reinhart and Rogoff (N.d.).",
+    "name": "e_miexraus"
+  }
+]

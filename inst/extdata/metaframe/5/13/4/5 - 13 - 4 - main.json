@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Coups",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Przeworski et al. (2013).",
+    "fxInfo_clarification": "Number of successful coups d’état during a given year.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "A coup is any event resulting in an irregular removal or resignation of the chief executive that involves a violent action or an explicit threat of resorting to it, by an armed organization. Assassinations of the chief executive are not considered coups unless the group responsible for the action takes over the office. Whenever the rules about the replacement of the chief executive are either not codified or unclear, the force criterion prevails. The definition excludes resignations under pressure of popular mobilization if no armed group (legal or not) is involved(resignation of Carlos Mesa in Bolivia). Similarly, irregular transfers of power among civilians that do not entail force (such as changes of communist leaders) are not considered coups. We place no restriction on whether the armed group causing the replacement is domestic or foreign, nor on the identity of the incoming ruler. In particular, any military intervention of foreign powers producing a replacement of the chief executive is coded as a coup, even if they restore a previously elected ruler (French troops overthrowing Bokassa in Central African Republic). As a general rule, any replacement of a military chief executive by another military man is considered a coup, unless the succession occurred according to pre-established rules (Figueirido replacing Geisel in Brazil). Specifically, resignations of the military chief executive caused by votes of non-confidence of irregular military bodies are considered coups (Galtieri replacing Viola in Argentina). The variable is compatible to other conventional sources such as Powell and Thyne (2010), Marshall and Marshall (2009), and Svolik and Akcinaroglu (2010) for the period 1950. 2008, with some difference in the interpretation of specific events. Information for the pre-1950 era is more scarce and therefore the coding may be less reliable.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Przeworski et al. (2013).",
+    "name": "e_coups"
+  }
+]

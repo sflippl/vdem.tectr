@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Presidential elections cumulative",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "This counts the cumulative number of presidential elections, regardless of any constitutional or unconstitutional changes and interruptions that may have taken place. Do not code if there is no office of the presidency. However, if there is a presidency, and no elections have ever occurred, this should be recorded as 0.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Staffan I. Lindberg"],
+    "fxInfo_question": "How many presidential elections including the current election have been held since 1900?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "Interval, from low to high (0-1)",
+    "fxInfo_sources": "v2eltype",
+    "name": "v2elprescumul"
+  }
+]

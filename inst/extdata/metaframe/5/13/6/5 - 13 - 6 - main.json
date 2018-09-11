@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "HOS dissolution power",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Przeworski et al. (2013).",
+    "fxInfo_clarification": "Dummy for the power of the head of state to dissolve the legislature (at least the lower house) unilaterally. Dissolution power is unilateral if the head of state can dissolve the parliament without the consent of the government or leaders of political parties in the legislature. It is still unilateral if dissolution requires the consultation or consent of non-elected bodies or if there are restrictions concerning the frequency or the period during which it can occur.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "if never unilaterally."
+      },
+      {
+        "key": "1",
+        "value": "if a unilateral (that is, not at the request of someone else) decision of the dissolver."
+      }
+    ],
+    "fxInfo_scale": "Dichotomous",
+    "fxInfo_sources": "Przeworski et al. (2013).",
+    "name": "e_dissolution_power"
+  }
+]

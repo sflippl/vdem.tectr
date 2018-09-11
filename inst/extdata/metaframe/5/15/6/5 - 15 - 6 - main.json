@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Political constraints index V",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Henisz (2002).",
+    "fxInfo_clarification": "This index follows the same logic as Political Constraints Index III (h_polcon3) but also includes two additional veto points: the judiciary and sub-federal entities.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "The coding reflects information as of January 1 in any given year. Henisz (2000) uses this index to measure the impact on cross-national growth rates of a government’s ability to provide credible commitment.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "The index scores are derived from a simple spatial model and theoretically ranges from 0 to 1, with higher scores indicating more political constraint and thus less feasibility of policy change",
+    "fxInfo_sources": "The Political Constraint Index POLCON Dataset (2017).",
+    "name": "e_h_polcon5"
+  }
+]

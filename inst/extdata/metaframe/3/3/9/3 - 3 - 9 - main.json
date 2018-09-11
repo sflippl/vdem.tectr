@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Occurrence of any type of popular vote this year credible",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "By credible, we mean whether the official results of the vote(s) reflect the actual vote(leaving aside issues of voter exclusion, intimidation, or vote-buying).",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "1-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "Converted from (B) to (A) coding by David Altman.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["David Altman"],
+    "fxInfo_question": "If any direct democracy election occurred this year, was the official result of the vote, or votes (their success or failure) credible?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "Not credible."
+      },
+      {
+        "key": "1",
+        "value": "Credible."
+      }
+    ],
+    "fxInfo_scale": "Dichotomous",
+    "fxInfo_sources": "",
+    "name": "v2ddcredal"
+  }
+]

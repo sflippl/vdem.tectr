@@ -1,0 +1,74 @@
+[
+  {
+    "fxInfo_label": "Month of legislative election",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Kelley and Kolev (2010).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5, 7.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "What was the month of the legislative election?",
+    "fxInfo_responses": [
+      {
+        "key": "1",
+        "value": "January"
+      },
+      {
+        "key": "2",
+        "value": "February"
+      },
+      {
+        "key": "3",
+        "value": "March"
+      },
+      {
+        "key": "4",
+        "value": "April"
+      },
+      {
+        "key": "5",
+        "value": "May"
+      },
+      {
+        "key": "6",
+        "value": "June"
+      },
+      {
+        "key": "7",
+        "value": "July"
+      },
+      {
+        "key": "8",
+        "value": "August"
+      },
+      {
+        "key": "9",
+        "value": "September"
+      },
+      {
+        "key": "10",
+        "value": "October"
+      },
+      {
+        "key": "11",
+        "value": "November"
+      },
+      {
+        "key": "12",
+        "value": "December"
+      },
+      {
+        "key": "0",
+        "value": "Missing data"
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Kelley and Kolev (2010).",
+    "name": "e_Dateleg"
+  }
+]

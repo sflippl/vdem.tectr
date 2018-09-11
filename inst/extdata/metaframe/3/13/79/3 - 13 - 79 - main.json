@@ -1,0 +1,42 @@
+[
+  {
+    "fxInfo_label": "State steering capacity",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Pemstein et al. (2018, V-Dem Working Paper Series 2018:21); V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "This refers to the state’s ability to keep track of economic activities in its territory and potentially influence them by shaping the incentives and constraints that private firms  face to do business; e.g., through licensing, granting exploitation rights, taxing, imposing market barriers, building infrastructure, offering subsidies, adjudicating conflicts, or enforcing regulations.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "Bayesian Item Response Theory Measurement Model",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jan Teorell"],
+    "fxInfo_question": "Can the state oversee and regulate the economy?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "Most economic activities happen outside the reach of the state"
+      },
+      {
+        "key": "1",
+        "value": "The state steers some economic activities"
+      },
+      {
+        "key": "2",
+        "value": "The state steers a substantial share – but less than half – of the national economy"
+      },
+      {
+        "key": "3",
+        "value": "The state steers about half or more than half, of the national economy"
+      },
+      {
+        "key": "4",
+        "value": "The state steers all or almost all economic activities"
+      }
+    ],
+    "fxInfo_scale": "Ordinal",
+    "fxInfo_sources": "",
+    "name": "v3ststeecap"
+  }
+]

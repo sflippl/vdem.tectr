@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Democratic breakdowns",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Boix et al. (2013).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "How many previous democratic breakdowns occurred?",
+    "fxInfo_responses": ["Numeric."],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Boixet al. (2013).",
+    "name": "e_democracy_breakdowns"
+  }
+]

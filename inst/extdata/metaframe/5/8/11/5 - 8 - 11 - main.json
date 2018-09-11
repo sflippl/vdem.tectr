@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Transitional election",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Kelley and Kolev (2010).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-7.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "Was there a transitional election that year?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No"
+      },
+      {
+        "key": "1",
+        "value": "Yes"
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Kelley and Kolev (2010).",
+    "name": "e_Seltrans"
+  }
+]

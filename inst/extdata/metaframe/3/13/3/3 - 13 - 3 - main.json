@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Slavery",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Refers to the de jure status of slavery, not its actual practice.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["John Gerring"],
+    "fxInfo_question": "Is slavery legal?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No."
+      },
+      {
+        "key": "1",
+        "value": "Yes."
+      }
+    ],
+    "fxInfo_scale": "Dichotomou",
+    "fxInfo_sources": "Various country specific sources",
+    "name": "v3clslavery"
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Direct democracy introduction",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "",
+    "fxInfo_clarification": "This set of questions focuses on direct popular votes. Four mechanisms are distinguished: a. Measures placed on the ballot by the executive and/or the legislature for which the constitution or basic laws require a vote. These are referred to as constitutional referendums (i.e. obligatory referendums). b. Measures placed on the ballot by the executive and/or the legislature that for which the constitution or basic laws does not require a vote. These are referred to as plebiscites. c. Measures placed on the ballot through a citizen petition process that concern the possible adoption of a new law or constitutional amendment. These are referred to as popular initiatives. c. Measures placed on the ballot through a citizen petition process that concern the possible rejection of a recently approved law or a bill discussed in parliament. These are referred to as referendums.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "Note that we do not consider recall elections or citizen petitions to the legislature even they may also involve a gathering of signatures or a popular vote. Note also that in coding these questions it is sometimes important to distinguish between formal rules (as stipulated by statute, legislative rules, the constitution, or common law precedent) and actual practice. In order to clarify the de jure/de facto distinction, we employ the terms\"by law. . . \" and \"in practice...\"",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["David Altman"],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "",
+    "name": "v2ddintro"
+  }
+]

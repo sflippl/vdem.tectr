@@ -1,0 +1,58 @@
+[
+  {
+    "fxInfo_label": "Exclusions",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Przeworski et al. (2013).",
+    "fxInfo_clarification": "Captures exclusions not accounted for under FRANCHISE.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "When more than one exclusion applies, all are listed as consecutive digits. For example, if 5, 6, and 7 applies, we code exclusions as 567.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "None other (all restrictions are accounted for under FRANCHISE)."
+      },
+      {
+        "key": "1",
+        "value": "By ethnicity (some ethnic groups are excluded)."
+      },
+      {
+        "key": "2",
+        "value": "By territory (people living in some regions cannot vote)."
+      },
+      {
+        "key": "3",
+        "value": "By religion (only adherents of a particular religion(s) can vote)."
+      },
+      {
+        "key": "4",
+        "value": "By politics (Individuals sympathizing with some political parties or ideologies are excluded. This code refers only to persons, hence it does not cover cases when political parties are banned.). Includes the language in which suffrage is determined by \"moral character.\""
+      },
+      {
+        "key": "5",
+        "value": "Slaves are excluded."
+      },
+      {
+        "key": "6",
+        "value": "Military personnel or police is excluded."
+      },
+      {
+        "key": "7",
+        "value": "Priests or nuns are excluded."
+      },
+      {
+        "key": "8",
+        "value": "Propertied are excluded (as in Mongolia, USSR 1918)."
+      }
+    ],
+    "fxInfo_scale": "Nominal",
+    "fxInfo_sources": "Przeworski et al. (2013).",
+    "name": "e_oth_exclusions"
+  }
+]

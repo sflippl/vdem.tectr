@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Non-election specific coding introduction",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "",
+    "fxInfo_clarification": "The following questions are not election-specific and should be coded for every year from 1900 (or when applicable) to the present.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "",
+    "name": "v2elintro1"
+  }
+]

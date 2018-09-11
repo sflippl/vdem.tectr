@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Armed conflict, international",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document); Clio Infra (clioinfra.eu).",
+    "fxInfo_clarification": "Coded 1 if the country participated in an international armed conflict in a given year, 0 otherwise. The original source codebook (Brecke 2001) states that no war is coded as 0 and war is coded as 1. However, the data contains only 1’s along with missing data (no 0’s). Following the authors’ instructions (personal communication), we re-code missing observations as non-conflict (0) for countries where at least one year in the original times series (which runs from 1500 until present) was coded as 1.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "Did the country participate in an international armed conflict?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Clio Infra (clio-infra.eu), drawing on Brecke (2001).",
+    "name": "e_miinteco"
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Legislature elected",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Przeworski et al. (2013).",
+    "fxInfo_clarification": "Dummy for the lower house of the legislature having been at least partly elected.(Coded as 1 if OPENL=1 and LEG_COMPOSITION_ 5).",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Przeworski et al. (2013).",
+    "name": "e_legselec_pipe"
+  }
+]

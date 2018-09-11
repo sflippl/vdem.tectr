@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Multiplicative polyarchy index",
+    "fxInfo_aggregation": "The electoral component index is operationalized as a chain defined by its weakest link. Specifically, the index is formed by multiplying indices measuring freedom of association thick(v2x_frassoc_thick), clean elections (v2xel_frefair), freedom of expression (v2x_freexp_altinf), elected executive (v2x_elecoff), and suffrage (v2x_suffr), or v2x_mpi = v2x_frassoc_thick * v2xel_frefair * v2x_freexp_altinf * v2x_elecoff * v2x_suffr",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Teorell et al. (2016, V-Dem Working Paper Series 2016:25); V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "The electoral principle of democracy seeks to achieve responsiveness and accountability between leaders and citizens through the mechanism of competitive elections. This is presumed to be achieved when suffrage is extensive; political and civil society organizations can operate freely; elections are clean and not marred by fraud or systematic irregularities; and the chief executive of a country is selected directly or indirectly through elections.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "6-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jan Teorell"],
+    "fxInfo_question": "To what extent is the electoral principle of democracy achieved?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "Interval, from low to high (0-1)",
+    "fxInfo_sources": "v2x_frassoc_thick v2x_suffr v2xel_frefair v2x_elecoff v2x_v2x_freexp_altinf",
+    "name": "v2x_mpi"
+  }
+]

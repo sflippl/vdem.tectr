@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "First woman appointed",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Please consider the same high court that you assessed in High court name. If the identity of the high court has changed over time, please consider the year in which the first woman was appointed to any court that has served as the country’s highest court. For example, the Dominican Republic established a Constitutional Court in 2010, and it began functioning in 2012. In 2012, there were female justices on the new Constitutional Court. Before 2012, the high court was the Supreme Court of the Dominican Republic. A woman was first appointed  to the Supreme Court in 1993. Since a woman was first appointed to what was considered the high court at the time in 1993, the answer to this question would be 1993.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "7-8. Only in disaggregated dataset.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jeffrey Staton"],
+    "fxInfo_question": "In what year was the first female judge appointed to the high court?",
+    "fxInfo_responses": ["Year."],
+    "fxInfo_scale": "Numeric",
+    "fxInfo_sources": "",
+    "name": "v2jufrstfm"
+  }
+]

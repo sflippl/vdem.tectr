@@ -1,0 +1,38 @@
+[
+  {
+    "fxInfo_label": "Minimum wage",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["John Gerring", "Carl Henrik Knutsen"],
+    "fxInfo_question": "Is there a minimum wage?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No."
+      },
+      {
+        "key": "1",
+        "value": "Yes, the state imposes a minimum wage (legislation, regulations)."
+      },
+      {
+        "key": "2",
+        "value": "Yes, there are corporate bargaining arrangements that effectively ensure a minimum wage."
+      },
+      {
+        "key": "3",
+        "value": "Yes, there is a tripartite committee that sets the wage (representatives from union, employer, government)."
+      }
+    ],
+    "fxInfo_scale": "Nomina",
+    "fxInfo_sources": "ILO; East Asia Pacific at Work: Employment, Enterprise, and Well-being, By World Bank, 2014.",
+    "name": "v3peminwage"
+  }
+]

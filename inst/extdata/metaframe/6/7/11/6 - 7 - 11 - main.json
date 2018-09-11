@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Population size",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Haber and Menaldo (2011).",
+    "fxInfo_clarification": "The data until 2006 is from Haber and Menaldo and the data from 2007 until 2016 is taken from the World Bank.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "What is the size of the population?",
+    "fxInfo_responses": ["Numeric."],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Haber and Menaldo (2011); World Bank (2018)",
+    "name": "e_population"
+  }
+]

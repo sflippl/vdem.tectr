@@ -1,0 +1,38 @@
+[
+  {
+    "fxInfo_label": "Print/broadcast media critical",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Pemstein et al. (2018, V-Dem Working Paper Series 2018:21); V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "Bayesian Item Response Theory Measurement Model",
+    "fxInfo_data_release": "1-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Michael Coppedge"],
+    "fxInfo_question": "Of the major print and broadcast outlets, how many routinely criticize the government?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "None."
+      },
+      {
+        "key": "1",
+        "value": "Only a few marginal outlets."
+      },
+      {
+        "key": "2",
+        "value": "Some important outlets routinely criticize the government but there are other important outlets that never do."
+      },
+      {
+        "key": "3",
+        "value": "All major media outlets criticize the government at least occasionally."
+      }
+    ],
+    "fxInfo_scale": "Ordinal, converted to interval by the measurement model",
+    "fxInfo_sources": "",
+    "name": "v2mecrit, *_osp, *_ord"
+  }
+]

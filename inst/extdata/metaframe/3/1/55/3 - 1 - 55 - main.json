@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Introduction subnational elections and offices",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "",
+    "fxInfo_clarification": "This section of the survey asks a small number of questions about subnational elections and offices. You will be instructed to identify two subnational levels, referred to as \"regional government\" and \"local government\". Questions in this section should be answered for every year, rather than for specific elections.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Kelly McMann"],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "",
+    "name": "v2elintro4"
+  }
+]

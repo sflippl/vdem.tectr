@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Female judges",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Please consider the same high court that you assessed in High court name. If judges were appointed to and/or left the high court in this calendar year, please report the number of female judges serving on the high court for the majority of the calendar year.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "7-8. Only in disaggregated dataset.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jeffrey Staton"],
+    "fxInfo_question": "Of the judges who served on the high court during this calendar year, how many were female?",
+    "fxInfo_responses": ["Number."],
+    "fxInfo_scale": "Numeric",
+    "fxInfo_sources": "",
+    "name": "v2jufemjdg"
+  }
+]

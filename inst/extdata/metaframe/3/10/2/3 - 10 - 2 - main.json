@@ -1,0 +1,42 @@
+[
+  {
+    "fxInfo_label": "CSO entry and exit",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Bernhard et al. (2015, V-Dem Working Paper Series 2015:13); Pemstein et al. (2018, V-Dem Working Paper Series 2018:21); V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "Bayesian Item Response Theory Measurement Model",
+    "fxInfo_data_release": "1-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Michael Bernhard"],
+    "fxInfo_question": "To what extent does the government achieve control over entry and exit by civil society organizations (CSOs) into public life?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "Monopolistic control. The government exercises an explicit monopoly over CSOs. The only organizations allowed to engage in political activity such as endorsing parties or politicians, sponsoring public issues forums, organizing rallies or demonstrations, engaging in strikes, or publicly commenting on public officials and policies are government-sponsored organizations. The government actively represses those who attempt to defy its monopoly on political activity."
+      },
+      {
+        "key": "1",
+        "value": "Substantial control. The government licenses all CSOs and uses political criteria to bar organizations that are likely to oppose the government. There are at least some citizen-based organizations that play a limited role in politics independent of the government. The government actively represses those who attempt to flout its political criteria and bars them from any political activity."
+      },
+      {
+        "key": "2",
+        "value": "Moderate control. Whether the government ban on independent CSOs is partial or full, some prohibited organizations manage to play an active political role. Despite its ban on organizations of this sort, the government does not or cannot repress them, due to either its weakness or political expedience."
+      },
+      {
+        "key": "3",
+        "value": "Minimal control. Whether or not the government licenses CSOs, there exist constitutional provisions that allow the government to ban organizations or movements that have a history of anti-democratic action in the past (e.g. the banning of neo-fascist or communist organizations in the Federal Republic of Germany). Such banning takes place under strict rule of law and conditions of judicial independence."
+      },
+      {
+        "key": "4",
+        "value": "Unconstrained. Whether or not the government licenses CSOs, the government does not impede their formation and operation unless they are engaged in activities to violently overthrow the government."
+      }
+    ],
+    "fxInfo_scale": "Ordinal, converted to interval by the measurement model",
+    "fxInfo_sources": "",
+    "name": "v2cseeorgs, *_osp, *_ord"
+  }
+]

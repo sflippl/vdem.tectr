@@ -1,0 +1,38 @@
+[
+  {
+    "fxInfo_label": "Lower chamber gender quota",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Hughes, Paxton, Clayton, and Zetterberg (2018); V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "National-level quotas either reserve some seats for women in the legislature (as a whole or per district) or mandate through statutory law that all political parties must nominate a certain percentage of female candidates or candidates considered for nomination. A sanction for noncompliance imposes a penalty on a party that fails to meet the quota provisions. Examples of sanctions for noncompliance include rejection of the party list, loss of public campaign funds, or other financial penalties. Weak sanctions are those that parties may be able to ignore, such as a very weak financial penalty. Strong sanctions provide strong deterrents for noncompliance. An example of a strong sanction would be the rejection of a party’s list. Countries with both candidate quotas and reserved seats are recorded at the stronger level. This variable records quotas from the date of implementation. The quota adoption date may be earlier, sometimes by several years. Data on quota adoption is available from the QAROT dataset (Hughes, Paxton, Clayton, and Zetterberg 2017) while the theoretical implications of adoption vs. implementation are discussed in Hughes, Paxton, Clayton, and Zetterberg (2018).",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "Converted from (B) to (A) coding.",
+    "fxInfo_ordering": "If you answer 1-4, proceed to the next question [v2lgqugens]. If you answer 0, skip to question [v2lglegllo].",
+    "fxInfo_project_manager": ["Pamela Paxton"],
+    "fxInfo_question": "Is there a national-level gender quota for the lower (or unicameral) chamber of the legislature?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No national level gender quota."
+      },
+      {
+        "key": "1",
+        "value": "Yes, a statutory gender quota for all parties without sanctions for noncompliance."
+      },
+      {
+        "key": "2",
+        "value": "Yes, statutory gender quota for all parties with weak sanctions for noncompliance. 3. Yes, statutory gender quota for all parties with strong sanctions for noncompliance."
+      },
+      {
+        "key": "4",
+        "value": "Yes, there are reserved seats in the legislature for women."
+      }
+    ],
+    "fxInfo_scale": "Ordinal",
+    "fxInfo_sources": "QAROT dataset (Hughes, Paxton, Clayton, and Zetterberg 2017), Quota project (2017); Coding by project manager.",
+    "name": "v2lgqugen"
+  }
+]

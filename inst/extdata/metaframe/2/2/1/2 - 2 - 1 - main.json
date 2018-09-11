@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Additive polyarchy index",
+    "fxInfo_aggregation": "The index is operationalized by taking the weighted average of the indices measuring freedom of association thick (v2x_frassoc_thick), clean elections (v2xel_frefair), freedom of expression (v2x_freexp_altinf), elected executive (v2x_elecoff), and suffrage (v2x_suffr). The weights are constructed so as to sum to 1 and weigh elected executive and suffrage half as much as the other three, respectively. The index is aggregated using this formula: v2x_api = (1/4)∗v2x_f rassoc_thick +(1/4)∗v2xel_f ref air +(1/4)∗v2x_f reexp_altinf +(1/8) ∗ v2x_elecof f + (1/8) ∗ v2x_suf f r",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Teorell et al. (2016, V-Dem Working Paper Series 2016:25); V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "The electoral principle of democracy seeks to achieve responsiveness and accountability between leaders and citizens through the mechanism of competitive elections. This is presumed to be achieved when suffrage is extensive; political and civil society organizations can operate freely; elections are clean and not marred by fraud or systematic irregularities; and the chief executive of a country is selected directly or indirectly through elections.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "6-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jan Teorell"],
+    "fxInfo_question": "To what extent is the electoral principle of democracy achieved?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "Interval, from low to high (0-1)",
+    "fxInfo_sources": "v2x_frassoc_thick v2x_suffr v2xel_frefair v2x_elecoff v2x_freexp_altinf",
+    "name": "v2x_api"
+  }
+]

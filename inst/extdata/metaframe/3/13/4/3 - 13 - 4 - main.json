@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Minimum voting age presidency",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Numeric",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Leave blank if there are no presidential elections.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Svend-Erik Skaaning"],
+    "fxInfo_question": "What is the minimum age at which citizens are allowed to vote for presidential elections?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "Interva",
+    "fxInfo_sources": "Caramani (2000); Flora et al. (1983); Nohlen and colleagues (1999, 2002, 2005, 2010); Mackie and Rose (1991); Posada-Carbó (1996); Rokkan and Meyriat (1969); Sternberger and Vogel (1969); CCP (Elkins et al. 2012); and various country specific sources, including constitutions.",
+    "name": "v3elagepr"
+  }
+]

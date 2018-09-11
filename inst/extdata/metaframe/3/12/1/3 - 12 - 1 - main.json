@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Political equality introduction",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "",
+    "fxInfo_clarification": "This section pertains to political equality, that is, the extent to which members of a polity possess equal political power. It does not refer to the inevitable differentiation in power that occurs in all large societies between those who hold positions of power within the state(political elites) and lay citizens. It is, rather, about the distribution of political power among identifiable groups within the population. What does it mean for a group of individuals to wield real political power? Although political power cannot be directly observed, one can infer that groups possess power to the extent that they: (a) actively participate in politics (by voting, etc.), (b) are involved in civil society organizations, (c) secure representation in government, (d) are able to set the political agenda, (e) influence political decisions, and (f) influence the implementation of those decisions. Please consider all these factors when answering the following questions. (Of course, the picture across these different dimensions may be mixed; your response should indicate the overall picture, taking all aspects of political power into account.)",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["John Gerring"],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "",
+    "name": "v2peintro"
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "State authority over territory",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "With this question we seek to judge the extent of recognition of the preeminent authority of the state over its territory. We are not interested here in perfect control by the state, or whether it is relatively effective in comparison to other states, but an assessment of the areas over which it is hegemonic, e.g. where it is recognized as the preeminent authority and in a contest of wills it can assert its control over political forces that reject its authority. Several illustrative examples may help in this coding. During civil wars the claim of the state to rule is effectively neutralized by insurgent groups (e.g., the Tamil Tigers in Sri Lanka). There are also situations in which criminals or warlords exert control in contravention of state authority (e.g. opium growers in parts of Indochina). There are also cases of failed states where the central government cannot assert control over a share of its territory (e.g., contemporary Somalia). Here, we ask you to estimate the size of the territory that the state has effective control over, as a percentage (%) of the total territory that is officially part of the country. By \"officially part of the country\" we refer to international law. In cases where international law is not entirely clear, we refer you to general understandings. For example, China claims sovereignty over Taiwan, but it remains under the control of its own government. For purposes of this question, Taiwan should not be considered a failure to control its territory by the  government of the PRC.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "Bootstrapped",
+    "fxInfo_data_release": "1-6, 8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Michael Bernhard"],
+    "fxInfo_question": "Over what percentage (%) of the territory does the state have effective control?",
+    "fxInfo_responses": ["Percent."],
+    "fxInfo_scale": "Interval",
+    "fxInfo_sources": "",
+    "name": "v2svstterr"
+  }
+]

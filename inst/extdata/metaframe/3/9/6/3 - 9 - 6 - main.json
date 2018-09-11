@@ -1,0 +1,42 @@
+[
+  {
+    "fxInfo_label": "State fiscal capacity",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jan Teorell"],
+    "fxInfo_question": "On which of the following sources of revenue does the central government primarily rely to finance its activities?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "The state is not capable of raising revenue to finance itself."
+      },
+      {
+        "key": "1",
+        "value": "The state primarily relies on external sources of funding (loans and foreign aid) to finance its activities."
+      },
+      {
+        "key": "2",
+        "value": "The state primarily relies on directly controlling economic assets (natural resource rents, public monopolies, and the expropriation of assets within and outside the country) to finance its activities."
+      },
+      {
+        "key": "3",
+        "value": "The state primarily relies on taxes on property (land taxes) and trade (customs duties)."
+      },
+      {
+        "key": "4",
+        "value": "The state primarily relies on taxes on economic transactions (such as sales taxes) and/or taxes on income, corporate profits and capital."
+      }
+    ],
+    "fxInfo_scale": "Ordinal",
+    "fxInfo_sources": "",
+    "name": "v2stfisccap"
+  }
+]

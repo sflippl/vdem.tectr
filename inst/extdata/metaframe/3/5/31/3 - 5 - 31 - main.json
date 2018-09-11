@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Percentage of indirectly elected legislators lower chamber",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Indirect elections include elections by local/regional parliaments, country/city councilors or similar. Exceptions to the norm of indirect election include members who are appointed, e.g., by an executive, the military, or a theocratic body. We are not concerned with non-voting members or with members of the legislature who do not possess the powers of most legislators.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jan Teorell"],
+    "fxInfo_question": "What percentage of the lower (or unicameral) chamber of the legislature is indirectly elected?",
+    "fxInfo_responses": ["Percent."],
+    "fxInfo_scale": "Interval",
+    "fxInfo_sources": "Nohlen et al. (1999, 2002, 2005, 2010); Chronicle of Parliamentary Elections (IPU); Websites of national parliaments.",
+    "name": "v2lginello"
+  }
+]

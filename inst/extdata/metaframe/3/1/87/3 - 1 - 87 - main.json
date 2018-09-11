@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Lower chamber election consecutive",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "This counts the consecutive number of lower chamber or unicameral legislative elections since the last unconstitutional change of government or democratic breakdown, or 1900 whichever is more recent. Do not code if there is no legislature.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Staffan I. Lindberg"],
+    "fxInfo_question": "How many consecutive lower chamber or unicameral legislative elections including the current election have been held since 1900?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "v2eltype",
+    "name": "v2ellocons"
+  }
+]

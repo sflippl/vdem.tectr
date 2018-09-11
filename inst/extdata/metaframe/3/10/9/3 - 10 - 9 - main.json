@@ -1,0 +1,74 @@
+[
+  {
+    "fxInfo_label": "CSO anti-system movement character",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Selection",
+    "fxInfo_citation": "Bernhard et al. V-Dem Working Paper Series 2015:13); V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Check all that apply.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "Mean",
+    "fxInfo_data_release": "1-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Michael Bernhard"],
+    "fxInfo_question": "How would you characterize the anti-system movement(s) identified in the previous question?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "Works through legal channels, for the most part. (0=No, 1=Yes) [v2csanmvch_0]"
+      },
+      {
+        "key": "1",
+        "value": "Participates in elections. (0=No, 1=Yes) [v2csanmvch_1]"
+      },
+      {
+        "key": "2",
+        "value": "Works through a mix of legal and extra-legal channels. (0=No, 1=Yes) [v2csanmvch_2]"
+      },
+      {
+        "key": "3",
+        "value": "Insurrectionary. (0=No, 1=Yes) [v2csanmvch_3]"
+      },
+      {
+        "key": "4",
+        "value": "Democratic. Perceived by most disinterested observers as willing to play by the rules of the democratic game, willing to respect constitutional provisions or electoral outcomes, and willing to relinquish power (under democratic auspices). (0=No, 1=Yes) [v2csanmvch_4]"
+      },
+      {
+        "key": "5",
+        "value": "Anti-democratic. Perceived by most disinterested observers as unwilling to play by the rules of the democratic game, not willing to respect constitutional provisions or electoral outcomes, and/or not willing to relinquish power (under democratic auspices). (0=No, 1=Yes)[v2csanmvch_5]"
+      },
+      {
+        "key": "6",
+        "value": "Leftist, socialist, communist. (0=No, 1=Yes) [v2csanmvch_6]"
+      },
+      {
+        "key": "7",
+        "value": "Rightist, conservative, party of order. (0=No, 1=Yes) [v2csanmvch_7]"
+      },
+      {
+        "key": "8",
+        "value": "Ethnolinguistic, tribe, kinship, clan. (0=No, 1=Yes) [v2csanmvch_8]"
+      },
+      {
+        "key": "9",
+        "value": "Separatist or autonomist. (0=No, 1=Yes) [v2csanmvch_9]"
+      },
+      {
+        "key": "10",
+        "value": "Religious. (0=No, 1=Yes) [v2csanmvch_10]"
+      },
+      {
+        "key": "11",
+        "value": "Paramilitary. (0=No, 1=Yes) [v2csanmvch_11]"
+      },
+      {
+        "key": "12",
+        "value": "Heavily engaged in criminal activity, e.g., narcotics, bootlegging, illegal exploitation of natural resources, extortion, kidnapping. (0=No, 1=Yes) [v2csanmvch_12]"
+      }
+    ],
+    "fxInfo_scale": "Series of dichotomous scales",
+    "fxInfo_sources": "",
+    "name": "v2csanmvch"
+  }
+]

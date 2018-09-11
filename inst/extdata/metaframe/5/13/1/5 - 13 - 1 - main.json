@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Autocoups",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Przeworski et al. (2013).",
+    "fxInfo_clarification": "A dummy variable for any instance in which the ruler illegally changes constitutional rules to reduce the chances of the opposition to oppose policies in the legislature or to win elections.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "The definition comprises any event in which the incumbent illegally closes the legislature the OR closes the legislature legally AND changes electoral rules (includingbanning parties) or adopts laws that extend his tenure (Philippines in 1972).",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Przeworski et al. (2013).",
+    "name": "e_autocoups"
+  }
+]

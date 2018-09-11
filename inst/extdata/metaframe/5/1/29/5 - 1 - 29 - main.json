@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Electoral democracy index ordinal",
+    "fxInfo_aggregation": "3 CATEGORIES 0.0: if v2x_polyarchy>=0 and v2x_polyarchy<=0.25 0.0: if v2x_polyarchy>0.25 and v2x_polyarchy<=0.5 and v2elmulpar_osp>=0 and v2elmulpar_osp<=2.5 0.0: if v2x_polyarchy>0.25 and v2x_polyarchy<=0.5 and v2elfrfair _osp>=0 and v2elfrfair _osp<=2 0.5: if v2x_polyarchy>0.25 and v2x_polyarchy<=0.5 and v2elmulpar_osp>2.5 and v2elmulpar_osp<=4 0.5: if v2x_polyarchy>0.25 and v2x_polyarchy<=0.5 and v2elfrfair_osp>2 and v2elfrfair_osp<=4 0.5: if v2x_polyarchy>0.5 and v2x_polyarchy<=1 and v2elfrfair_osp>=0 and v2elfrfair_osp<3 1.0: if v2x_polyarchy>0.5 and v2x_polyarchy<=1 and v2elfrfair_osp>=3 and v2elfrfair_osp<=4 4 CATEGORIES 0.00: if v2x_polyarchy>=0 and v2x_polyarchy<=0.25 0.00: if v2x_polyarchy>0.25 and v2x_polyarchy<=0.5 and v2elmulpar_osp>=0 and v2elmulpar_osp<=2 0.00: if v2x_polyarchy>0.25 and v2x_polyarchy<=0.5 and v2elfrfair _osp>=0 and v2elfrfair _osp<=2 0.33: if v2x_polyarchy>=0.250001 and v2x_polyarchy<=0.5 and v2elmulpar_osp>2 and v2elmulpar_osp<=4 0.33: if v2x_polyarchy>0.25 and v2x_polyarchy<=0.5 and v2elfrfair _osp>2 and v2elfrfair _osp<=4 0.67: if v2x_polyarchy>0.5 and v2x_polyarchy<=1 and v2elfrfair_osp>2 and v2elfrfair _osp<3 and v2elmulpar_osp>2  1.00: if v2x_polyarchy>0.5 and v2x_polyarchy<=1 and v2elfrfair_osp>3 and v2elmulpar_osp>3 5 CATEGORIES 0.00: if I >=0 and I <=0.2 0.25: if I >0.2 and I <=0.4 0.50: if I >0.4 and I <=0.6 0.75: if I >0.6 and I <=0.8 1.00: if I >0.8 and I <=1",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Lindberg (2016).",
+    "fxInfo_clarification": "These are ordinalized versions of the V-Dem electoral democracy index. The original index ranges from 0 to 1. These transformations offer three different ordinal versions with three (_3C), four (_4C), and five (_5C) levels respectively. For the _3C-version, one can interpret 0.0 as \"Autocratic\", 0.5 as \"Electoral Authoritarian\", and 1.0 as \"Minimally Democratic\". For the _4C-version, one can interpret 0.0 as Autocratic\", 0.33 as \"Electoral Authoritarian\", 0.67 as \"Minimally Democratic\" and 1.0 as \"Democratic\". For the _5C-version, one can interpret 0.0 as \"Closed Autocratic\", 0.25 as \"Autocratic\", 0.5 as\"Ambivalent\", 0.75 as \"Minimally Democratic\", and 1.0 as \"Democratic\".",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "To what extent is the ideal of electoral democracy in its fullest sense achieved?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "Ordinal",
+    "fxInfo_sources": "v2x_polyarchy",
+    "name": "e_v2x_polyarchy_3C /_4C /_5C"
+  }
+]

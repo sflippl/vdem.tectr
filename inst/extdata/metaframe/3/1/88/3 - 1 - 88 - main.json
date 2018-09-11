@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Lower chamber election cumulative",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "This counts the cumulative number of elections to the lower chamber or unicameral legislature, regardless of any constitutional or unconstitutional changes and interruptions that may have taken place. Do not code if there is no legislature. However, if there is a legislature and no elections to that body have ever occurred, this should be coded as 0.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Staffan I. Lindberg"],
+    "fxInfo_question": "How many lower chamber or unicameral legislative elections including the current election have been held since 1900?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "v2eltype",
+    "name": "v2ellocumul"
+  }
+]

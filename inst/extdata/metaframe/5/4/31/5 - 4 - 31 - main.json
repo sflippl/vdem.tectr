@@ -1,0 +1,54 @@
+[
+  {
+    "fxInfo_label": "HOS appointment by law",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "CCP (Elkins et al. 2014).",
+    "fxInfo_clarification": "If the Head of State is selected by the legislature, please select ”Elected by Elite Group.”",
+    "fxInfo_cpp_tag": "HOSELECT",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "1-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "Asked only if EXECNUM is answered 3, or if HOSHOG is answered 1, or if HOSHOG is answered 3, or if HOSHOG is answered 4, or if HOSHOG is answered 96, or if HOSHOG is answered 97.",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "How is the Head of State selected?",
+    "fxInfo_responses": [
+      {
+        "key": "1",
+        "value": "Heredity/Royal Selection"
+      },
+      {
+        "key": "2",
+        "value": "Elected by Citizens"
+      },
+      {
+        "key": "3",
+        "value": "Elected by Elite Group"
+      },
+      {
+        "key": "90",
+        "value": "Left explicitly to non-constitutional law"
+      },
+      {
+        "key": "96",
+        "value": "Other, please specify in the comments section"
+      },
+      {
+        "key": "97",
+        "value": "Unable to Determine"
+      },
+      {
+        "key": "98",
+        "value": "Not Specified"
+      },
+      {
+        "key": "99",
+        "value": "Not Applicable"
+      }
+    ],
+    "fxInfo_scale": "A series of dichotomous scales",
+    "fxInfo_sources": "CCP (Elkins et al. 2014), var v89; cf. IAEP, questions 4. 1 and 8a, 1-4.",
+    "name": "e_ccp_hoselect"
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Real GDP per capita",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Haber and Menaldo (2011).",
+    "fxInfo_clarification": "Real gross domestic product per capita on an annual basis for each country in International Dollars in 2000 constant prices.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-7.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "What is the real GDP per capita?",
+    "fxInfo_responses": ["Numeric."],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Haber and Menaldo (2011).",
+    "name": "e_GDP_Per_Cap_Haber_Men_2"
+  }
+]

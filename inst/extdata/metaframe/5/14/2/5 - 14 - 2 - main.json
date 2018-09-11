@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Institutionalized democracy",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Polity IV (Marshall and Jaggers 2016).",
+    "fxInfo_clarification": "Democracy is conceived as three essential, interdependent elements. One is the presence of institutions and procedures through which citizens can express effective preferences about alternative policies and leaders. Second is the existence of institutionalized constraints on the exercise of power by the executive. Third is the guarantee of civil liberties to all citizens in their daily lives and in acts of political participation. The Democracy indicator is an additive eleven-point scale (0-10). The operational indicator of democracy is derived from codings of the competitiveness of political participation(PARCOMP), the openness and competitiveness of executive recruitment (XROPEN and XRCOMP), and constraints on the chief executive (XCONST).",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "Is the polity an institutionalized democracy?",
+    "fxInfo_responses": ["Numeric."],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Polity IV (Marshall and Jaggers 2016).",
+    "name": "e_democ"
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Election turnout",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "6, 7.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "In cases where executive and legislative elections were held on the same day but there is a different turnout for each election, the turnout for this date is coded for the executive elections only. The turnout data for the legislative elections, in these cases, can be found in the IDEA Voter turnout database (see references).",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Pamela Paxton"],
+    "fxInfo_question": "In this national election, what percentage (%) of all registered voters cast a vote according to official results?",
+    "fxInfo_responses": ["Percent."],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "IDEA; Nohlen et al. (1999, 2002, 2005, 2010); NELDA (Hyde and Marinov 2012).",
+    "name": "v2eltrnout"
+  }
+]

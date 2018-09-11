@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Democracy",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Cheibub et al. (2009).",
+    "fxInfo_clarification": "A regime is considered a democracy if the executive and the legislature is directly or indirectly elected by popular vote, multiple parties are allowed, there is de facto existence of multiple parties outside of regime front, there are multiple parties within the legislature, and there has been no consolidation of incumbent advantage (e.g. unconstitutional closing of the lower house or extension of incumbent’s term by postponing of subsequent elections). Transition years are coded as the regime that emerges in that year.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [
+      {
+        "key": "1",
+        "value": "Democracy."
+      },
+      {
+        "key": "0",
+        "value": "Otherwise."
+      }
+    ],
+    "fxInfo_scale": "Dichotomous",
+    "fxInfo_sources": "Cheibub et al. (2009).",
+    "name": "e_chga_demo"
+  }
+]

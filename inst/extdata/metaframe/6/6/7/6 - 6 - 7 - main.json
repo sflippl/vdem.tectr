@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Railroad passenger km",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "CLIO (2014).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-7.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "What is the total distance (millions of kilometers) traveled by railroad by all passengers annually?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "CLIO (2014), drawn from Almanach de Gotha (1895), Comin and Hobijn (2009), Mitchell(1998b), Herbertson and Howarth (1914a, 1914b, 1914c, 1914d).",
+    "name": "e_mirailkm"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Regime transition",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Polity IV (Marshall and Jaggers 2016).",
+    "fxInfo_clarification": "A regime change is defined simply as a three-point change in either the polity’s democracy or autocracy score and may be either a negative or a positive value change. A negative or adverse regime transition is defined as a six-point decrease in the Polity score.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "Did the polity undergo a substantive regime change?",
+    "fxInfo_responses": [
+      {
+        "key": "+3",
+        "value": "Major Democratic Transition — six points or greater increase in Polity score over a period of three years or less. +2: Minor Democratic Transition — three to five point increase in Polity score over a period of three years or less. +1: Positive Regime Change — three or more point increase in Polity score without a shift in regime type."
+      },
+      {
+        "key": "0",
+        "value": "Little or No Change in POLITY score.-1: Negative Regime Change — three to five point decrease in Polity score.-2: Adverse Regime Transition — six or more point decrease in Polity score or an interregnal.-77: State Failure — complete collapse of central political authority"
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Polity IV (Marshall, Jaggers 2016).",
+    "name": "e_regtrans"
+  }
+]

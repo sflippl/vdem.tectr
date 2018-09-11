@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Party age executive",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Numeric",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "If there is a coalition government, you should count the party of the prime minister was counted. In case of multiple elections in the same year, the party age was coded for the parliament that sat for the most days.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["John Gerring"],
+    "fxInfo_question": "How many years have passed since the party controlling the executive was formed?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "Interva",
+    "fxInfo_sources": "http://countrystudies.us",
+    "name": "v3psagepm"
+  }
+]

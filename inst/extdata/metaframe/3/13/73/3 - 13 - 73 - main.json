@@ -1,0 +1,78 @@
+[
+  {
+    "fxInfo_label": "Regime support groups",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Selection",
+    "fxInfo_citation": "Pemstein et al. (2018, V-Dem Working Paper Series 2018:21); V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Consider which group(s) is supportive of the regime, and, if it/they were to retract support would substantially increase the chance that the regime would lose power. Do not code for years denoted as \"interregnum\".",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "Bayesian Item Response Theory Measurement Model",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Carl Henrik Knutsen"],
+    "fxInfo_question": "Which groups does the current political regime rely on in order to maintain power?(Check all that apply.)",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "The aristocracy, including high status hereditary social groups and castes."
+      },
+      {
+        "key": "1",
+        "value": "Agrarian elites, including rich peasants and large landholders."
+      },
+      {
+        "key": "2",
+        "value": "Party elites (of the party or parties that control the executive)."
+      },
+      {
+        "key": "3",
+        "value": "Business elites."
+      },
+      {
+        "key": "4",
+        "value": "The state bureaucracy."
+      },
+      {
+        "key": "5",
+        "value": "The military."
+      },
+      {
+        "key": "6",
+        "value": "An ethnic or racial group(s)."
+      },
+      {
+        "key": "7",
+        "value": "A religious group(s)."
+      },
+      {
+        "key": "8",
+        "value": "Local elites, including customary chiefs."
+      },
+      {
+        "key": "9",
+        "value": "Urban working classes, including labor unions."
+      },
+      {
+        "key": "10",
+        "value": "Urban middle classes"
+      },
+      {
+        "key": "11",
+        "value": "Rural working classes (e.g. peasants)."
+      },
+      {
+        "key": "12",
+        "value": "Rural middle classes (e.g., family farmers)"
+      },
+      {
+        "key": "13",
+        "value": "A foreign government or colonial power."
+      }
+    ],
+    "fxInfo_scale": "nomina",
+    "fxInfo_sources": "",
+    "name": "v3regsupgroups"
+  }
+]

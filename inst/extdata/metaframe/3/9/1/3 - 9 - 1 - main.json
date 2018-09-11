@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Sovereignty introduction",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "",
+    "fxInfo_clarification": "This section addresses a number of issues concerning the sovereignty of the state. A state is political organization that organizes compulsory domination over a fixed territory on a continual basis. With respect to state sovereignty, we are interested in measuring two distinct areas of sovereignty. The first is an attribute of states within the context of the international system. Here, we are interested in the state’s autonomy from other actors in the system. The second component of sovereignty concerns the relationship of the state to the population and territory over which it claims to rule. Here, we want to gauge the extent of recognition of the preeminent authority of the state over its claimed territory and population.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "",
+    "fxInfo_historical_clarification": "This section addresses a number of issues concerning the state. A state is a political organization that organizes compulsory domination over a fixed territory on a continual basis. The questions concern two general themes: state sovereignty and state administration. With respect to state sovereignty, we are interested in measuring two distinct areas of sovereignty. The first is an attribute of states within the context of the international system. Here, we are interested in the state’s autonomy from and recognition by other actors in the system. The second component of sovereignty concerns the relationship of the state to the population and territory over which it claims to rule. Here, we want to gauge the extent of recognition of the preeminent authority of the state over its claimed territory and population. A second attribute of states is the state administration: the set of institutions that administer and implement governmental decisions. Here we are mainly interested in the professionalization, or lack thereof, of the state administrative staff – in this context termed the state administrators.",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Michael Bernhard"],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "",
+    "name": "v2svintro"
+  }
+]

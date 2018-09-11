@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Lower chamber gender quota placement mandate",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Hughes, Paxton, Clayton, and Zetterberg (2018); V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "A placement mandate is a rule concerning rank order on the party list, usually to ensure that women are placed in electable positions on the party list. An example would a rule stating that no more than three of the top five candidates can be of the same gender. Coded only for years where a gender quota was present.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "Only answer this question if you answered 1-4 on previous question [v2lgqugen].",
+    "fxInfo_project_manager": ["Pamela Paxton"],
+    "fxInfo_question": "Does the national-level quota for the lower (or unicameral) chamber of the legislature contain a placement mandate?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No."
+      },
+      {
+        "key": "1",
+        "value": "Yes."
+      }
+    ],
+    "fxInfo_scale": "Dichotomous",
+    "fxInfo_sources": "QAROT dataset (Hughes, Paxton, Clayton, and Zetterberg 2017), Quota project (2017); Coding by project manager.",
+    "name": "v2lgqugens"
+  }
+]

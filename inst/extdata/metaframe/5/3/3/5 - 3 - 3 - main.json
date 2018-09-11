@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Notes",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Bilinski (2015).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-7.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "What sources were used to code this country/year?",
+    "fxInfo_responses": ["Text."],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Bilinski (2015).",
+    "name": "e_notes_srces"
+  }
+]

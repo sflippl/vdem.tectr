@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Number of houses in legislature",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Przeworski et al. (2013).",
+    "fxInfo_clarification": "Number of houses of the legislature: 0 if none, 1, 2, 3.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "A legislature that is elected in one election and then divides itself into chambers that differ in some prerogatives and at least at times vote separately is coded as multicameral. An example is Norway as of 1814.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Przeworski et al. (2013).",
+    "name": "e_bicam"
+  }
+]

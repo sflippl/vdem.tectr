@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Legislature other than uni- or bicameral",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Text",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Please provide the names of all chambers, as well as how they are grouped into a\"upper\" and \"lower\" chamber. For example, in Sweden prior to 1866, the names would be Estates of Nobility, Clergy, Burghers and Peasantry, where the Estates of Nobility and Clergy are grouped into the \"upper\" chamber, those of the Burghers and Peasantry into the \"lower\" chamber.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jan Teorell"],
+    "fxInfo_question": "What is the cameral structure of the legislature?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "Nomina",
+    "fxInfo_sources": "Nohlen and colleagues (1999, 2002, 2005, 2010). Caramani (2000). Wikipedia. Various country-specific sources.",
+    "name": "v3lgcamoth"
+  }
+]

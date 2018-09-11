@@ -1,0 +1,34 @@
+[
+  {
+    "fxInfo_label": "Upper chamber election turnover",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Svend-Erik Skaaning"],
+    "fxInfo_question": "Did control of the upper chamber of the legislature change as a result of this election, according to official results?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No. The same party/group/coalition remained in control of the majority of seats."
+      },
+      {
+        "key": "1",
+        "value": "Partly. The leading position within a coalition changed. Or, a new coalition includes some old groups/parties and some new groups/parties."
+      },
+      {
+        "key": "2",
+        "value": "Yes. Another party/group/coalition gained control of the majority of seats."
+      }
+    ],
+    "fxInfo_scale": "Ordina",
+    "fxInfo_sources": "Nohlen and colleagues (1999, 2002, 2005, 2010). Caramani (2000). Wikipedia. Websites of National Parliaments. Websites of National Bureau of Statistics. Various country-specfic sources.",
+    "name": "v3eltvriguc"
+  }
+]

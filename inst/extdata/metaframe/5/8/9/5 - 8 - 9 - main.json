@@ -1,0 +1,38 @@
+[
+  {
+    "fxInfo_label": "Extent of election problems",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Kelley and Kolev (2010).",
+    "fxInfo_clarification": "This variable assesses the extent of the problems in the election. This is a combined assessment that considers problems in the legal framework, political and administrative problems in the pre-election period, and then the integrity of the election day itself.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-7.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "What is the extent of problems during the elections?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "Good, no problems"
+      },
+      {
+        "key": "1",
+        "value": "Low, minor problems only"
+      },
+      {
+        "key": "2",
+        "value": "Moderate problems"
+      },
+      {
+        "key": "3",
+        "value": "Major problems"
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Kelley and Kolev (2010).",
+    "name": "e_SA2"
+  }
+]

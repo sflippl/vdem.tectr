@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Media access",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "Bootstrapped",
+    "fxInfo_data_release": "1-6.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Michael Coppedge"],
+    "fxInfo_question": "Approximately what percentage (%) of the population has access to any print or broadcast media that are sometimes critical of the national government?",
+    "fxInfo_responses": ["Percent."],
+    "fxInfo_scale": "Interval",
+    "fxInfo_sources": "",
+    "name": "v2meaccess"
+  }
+]

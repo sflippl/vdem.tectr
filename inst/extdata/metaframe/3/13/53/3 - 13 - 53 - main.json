@@ -1,0 +1,46 @@
+[
+  {
+    "fxInfo_label": "Legislature bicameral",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "The answer to this question has been pre-coded for as many years as possible. Any pre-coded years contain an orange triangle. This means that the code and/or specific date have already been entered, so we are asking you only to add your confidence in the pre-coded rating; we do not want you to change the rating.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "If all years are (0), skip to The Judiciary (v2juintro). If (1) is chosen, skip to v2lgintro2.",
+    "fxInfo_project_manager": ["Carl Henrik Knutsen"],
+    "fxInfo_question": "How many chambers does the legislature contain?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No legislature exists (or the legislature is shut down)."
+      },
+      {
+        "key": "1",
+        "value": "Unicameral"
+      },
+      {
+        "key": "2",
+        "value": "Bicameral"
+      },
+      {
+        "key": "3",
+        "value": "Tricameral"
+      },
+      {
+        "key": "4",
+        "value": "Quadricameral"
+      },
+      {
+        "key": "9",
+        "value": "Other type of legislature"
+      }
+    ],
+    "fxInfo_scale": "Ordina",
+    "fxInfo_sources": "Nohlen and colleagues (1999, 2002, 2005, 2010); Caramani (2000); Lindvall-Larson(2000); CCP (http://comparativeconstitutionsproject.org/); websites of National Parliaments; Library of Congress - Country Studies; Wikipedia; various country-specific sources, including books, articles, constitutions and online sources.",
+    "name": "v3lgbicam"
+  }
+]

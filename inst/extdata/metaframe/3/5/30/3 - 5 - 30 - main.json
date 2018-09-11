@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Lower chamber female legislators",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "4-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Staffan I. Lindberg"],
+    "fxInfo_question": "What percentage (%) of the lower (or unicameral) chamber of the legislature is female?",
+    "fxInfo_responses": ["Percent."],
+    "fxInfo_scale": "Interval",
+    "fxInfo_sources": "Edgel (2014); Paxton et al. (2008); Carmichael et al. (2015); Chronicle of Parliamentary Elections (IPU); genderproject.org.",
+    "name": "v2lgfemleg"
+  }
+]

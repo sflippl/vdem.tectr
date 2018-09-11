@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Normalized polity score",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Haber and Menaldo (2011).",
+    "fxInfo_clarification": "The Polity index is normalized to run from 0 to 100 by adding 10 and multiplying by five. This transformation makes regression coefficients easier to interpret.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "What is the country Polity normalized score?",
+    "fxInfo_responses": ["Numeric."],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Haber and Menaldo (2011).",
+    "name": "e_polity_s"
+  }
+]

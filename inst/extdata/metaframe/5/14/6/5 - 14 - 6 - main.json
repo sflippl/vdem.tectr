@@ -1,0 +1,46 @@
+[
+  {
+    "fxInfo_label": "The competitiveness of participation",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Polity IV (Marshall and Jaggers 2016).",
+    "fxInfo_clarification": "The competitiveness of participation refers to the extent to which alternative preferences for policy and leadership can be pursued in the political arena.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "Is political participation competitive?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "Not Applicable."
+      },
+      {
+        "key": "1",
+        "value": "Repressed: No significant oppositional activity is permitted outside the ranks of the regime and ruling party."
+      },
+      {
+        "key": "2",
+        "value": "Suppressed: Some organized, political competition occurs outside government, without serious factionalism; but the regime systematically and sharply limits its form, extent, or both in ways that exclude substantial groups (20% or more of the adult population) from participation."
+      },
+      {
+        "key": "3",
+        "value": "Factional: Polities with parochial or ethnic-based political factions that regularly compete for political influence in order to promote particularistic agendas and favor group members to the detriment of common, secular, or cross-cutting agendas."
+      },
+      {
+        "key": "4",
+        "value": "Transitional: Any transitional arrangement from Restricted, Suppressed, or Factional patterns to fully Competitive patterns, or vice versa. Transitional arrangements are accommodative of competing, parochial interests but have not fully linked parochial with broader, general interests. Sectarian and secular interest groups coexist."
+      },
+      {
+        "key": "5",
+        "value": "Competitive: There are relatively stable and enduring, secular political groups which regularly compete for political influence at the national level; ruling groups and coalitions regularly, voluntarily transfer central power to competing groups. Competition among groups seldom involves coercion or disruption."
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Polity IV (Marshall and Jaggers 2016).",
+    "name": "e_parcomp"
+  }
+]

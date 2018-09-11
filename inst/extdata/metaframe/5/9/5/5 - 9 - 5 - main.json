@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Multi-party legislative elections",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Skaaning et al. (2015).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "Are the elections for the lower house (or unicameral chamber) multi-party?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No"
+      },
+      {
+        "key": "1",
+        "value": "Yes. The lower house (or unicameral chamber) of the legislature is (at least in part) elected by voters facing more than one choice. Specifically, parties are not banned and (a) more than one party is allowed to compete or (b) elections are nonpartisan (i.e., all candidates run without party labels)."
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Skaaning et al. (2015).",
+    "name": "e_multiparty_elections"
+  }
+]

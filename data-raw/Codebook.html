@@ -131,11 +131,21 @@ $(document).ready(function () {
 <p>This document reads in the codebook and determines the indicator info.</p>
 <div id="preparations" class="section level1">
 <h1>Preparations</h1>
-<pre class="r"><code>library(vdem.tectr)</code></pre>
-<pre><code>## No methods found in package 'tectr' for request: 'clean' when loading 'vdem.tectr'</code></pre>
-<pre><code>## No methods found in package 'tectr' for request: 'tidy' when loading 'vdem.tectr'</code></pre>
-<pre class="r"><code>pdffile &lt;- system.file(&quot;extdata&quot;, &quot;V-DEM&quot;, &quot;Country_Year_V-Dem_Extended_CSV_v8&quot;,
-                       &quot;V-DEM Codebook v8.pdf&quot;, 
+<pre class="r"><code>load_all()</code></pre>
+<pre><code>## Loading vdem.tectr</code></pre>
+<pre><code>## 
+## Attaching package: 'testthat'</code></pre>
+<pre><code>## The following objects are masked from 'package:devtools':
+## 
+##     setup, test_file</code></pre>
+<pre><code>## The following object is masked from 'package:dplyr':
+## 
+##     matches</code></pre>
+<pre><code>## The following object is masked from 'package:purrr':
+## 
+##     is_null</code></pre>
+<pre class="r"><code>pdffile &lt;- system.file(&quot;extdata&quot;, &quot;Country_Year_V-Dem_Extended_STATA_v8&quot;,
+                       &quot;V-DEM Codebook V8.pdf&quot;, 
                        package = &quot;vdem.tectr&quot;)
 codebook &lt;- pdf_text(pdffile)</code></pre>
 <pre><code>## PDF error: Invalid Font Weight</code></pre>
@@ -156,7 +166,7 @@ codebook &lt;- pdf_text(pdffile)</code></pre>
 <pre><code>## list()</code></pre>
 <p>Moreover its structure is: &quot; <Alias> (<Type>) (<Name>)&quot;</p>
 <p>In order to make sure that we do not extract the table of contents, we extract the relevant components of the codebook:</p>
-<pre class="r"><code>codebook2 &lt;- codebook[39:338] %&gt;% str_split(&quot;\r\n&quot;) %&gt;% unlist
+<pre class="r"><code>codebook2 &lt;- codebook[41:341] %&gt;% str_split(&quot;\r\n&quot;) %&gt;% unlist
 rm(codebook)</code></pre>
 <p>We will begin by clearing some irrelevant lines, in particular the page numbers:</p>
 <pre class="r"><code>page_numbers &lt;- str_detect(codebook2, pattern = &quot;^\\s+\\d+$&quot;) %&gt;% which
@@ -216,10 +226,10 @@ tbl_parts</code></pre>
 ##   part_num part_title                                 part_position
 ##      &lt;dbl&gt; &lt;chr&gt;                                              &lt;int&gt;
 ## 1        2 V-Dem Democracy Indices                                1
-## 2        3 V-Dem Indicators (A, B, or C)                        503
-## 3        4 Other Indices Created Using V-Dem Data              7979
-## 4        5 Other Democracy Indices and Indicators (E)          8911
-## 5        6 Background Factors (E)                             12458</code></pre>
+## 2        3 V-Dem Indicators (A, B, or C)                        489
+## 3        4 Other Indices Created Using V-Dem Data              8019
+## 4        5 Other Democracy Indices and Indicators (E)          8942
+## 5        6 Background Factors (E)                             12489</code></pre>
 <p>The next step are the chapters.</p>
 <pre class="r"><code>chapters &lt;- str_detect(codebook2, pattern = &quot;^\\d\\.\\d+\\s+&quot;) %&gt;% which
 tbl_chapters &lt;- tibble(
@@ -236,14 +246,14 @@ tbl_chapters</code></pre>
 ##       &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;                                        &lt;int&gt;
 ##  1        2           1 V-Dem High-Level Democracy Indic~                2
 ##  2        2           2 V-Dem Mid-Level Indices: Compone~              103
-##  3        3           1 Elections                                      505
-##  4        3           2 Political Parties                             2101
-##  5        3           3 Direct democracy                              2387
-##  6        3           4 The Executive                                 2852
-##  7        3           5 The Legislature                               3904
-##  8        3           6 Deliberation                                  4560
-##  9        3           7 The Judiciary                                 4732
-## 10        3           8 Civil Liberty                                 5143
+##  3        3           1 Elections                                      491
+##  4        3           2 Political Parties                             2087
+##  5        3           3 Direct democracy                              2373
+##  6        3           4 The Executive                                 2838
+##  7        3           5 The Legislature                               3890
+##  8        3           6 Deliberation                                  4546
+##  9        3           7 The Judiciary                                 4718
+## 10        3           8 Civil Liberty                                 5130
 ## # ... with 28 more rows</code></pre>
 <p>Now we dissect the sections.</p>
 <pre class="r"><code>sections &lt;- str_detect(codebook2, pattern = &quot;^\\d\\.\\d+\\.\\d+\\s+&quot;) %&gt;% which
@@ -255,10 +265,10 @@ tbl_sections1 &lt;- tibble(
   part_num = section_headers[,2] %&gt;% as.integer, 
   chapter_num = section_headers[,3] %&gt;% as.integer, 
   ind_num = section_headers[,4] %&gt;% as.integer, 
-  ind_name = section_headers[,5] %&gt;% str_trim, 
+  ind_name_external = section_headers[,5] %&gt;% str_trim, 
   ind_type = section_headers[,6] %&gt;% 
     str_replace_all(pattern = &quot;\\s&quot;, replacement = &quot;&quot;),
-  inner_ind_name = section_headers[,7],
+  ind_name = section_headers[,7],
   ind_position = sections
 )</code></pre>
 <p>We are now concerned with analyzing the body of the different tibbles. This is easy for parts and chapters as the body is simply a set of lines that belong together. At first we generate a tibble that gives the end of every body given the beginning position:</p>
@@ -291,13 +301,13 @@ tbl_sections1 &lt;- tibble(
   ) %&gt;% str_trim) %&gt;% select(-end_position)
 tbl_parts2</code></pre>
 <pre><code>## # A tibble: 5 x 4
-##   part_num part_title    part_position part_description                   
-##      &lt;dbl&gt; &lt;chr&gt;                 &lt;int&gt; &lt;chr&gt;                              
-## 1        2 V-Dem Democr~             1 &quot;&quot;                                 
-## 2        3 V-Dem Indica~           503 This section lists all V-Dem varia~
-## 3        4 Other Indice~          7979 This section includes indices crea~
-## 4        5 Other Democr~          8911 This section lists indicators on d~
-## 5        6 Background F~         12458 This section lists variables gathe~</code></pre>
+##   part_num part_title         part_position part_description              
+##      &lt;dbl&gt; &lt;chr&gt;                      &lt;int&gt; &lt;chr&gt;                         
+## 1        2 V-Dem Democracy I~             1 &quot;&quot;                            
+## 2        3 V-Dem Indicators ~           489 This section lists all V-Dem ~
+## 3        4 Other Indices Cre~          8019 This section includes indices~
+## 4        5 Other Democracy I~          8942 This section lists indicators~
+## 5        6 Background Factor~         12489 This section lists variables ~</code></pre>
 <pre class="r"><code>tbl_chapters2 &lt;- tbl_chapters %&gt;% 
   left_join(tbl_sort, c(&quot;chapter_position&quot; = &quot;beginning_position&quot;)) %&gt;% 
   mutate(chapter_description = vapply(
@@ -315,18 +325,18 @@ tbl_parts2</code></pre>
   ) %&gt;% str_trim) %&gt;% select(-end_position)
 tbl_chapters2</code></pre>
 <pre><code>## # A tibble: 38 x 5
-##    part_num chapter_num chapter_title  chapter_position chapter_descripti~
-##       &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;                     &lt;int&gt; &lt;chr&gt;             
-##  1        2           1 V-Dem High-Le~                2 This section grou~
-##  2        2           2 V-Dem Mid-Lev~              103 This section incl~
-##  3        3           1 Elections                   505 &quot;&quot;                
-##  4        3           2 Political Par~             2101 &quot;&quot;                
-##  5        3           3 Direct democr~             2387 &quot;&quot;                
-##  6        3           4 The Executive              2852 &quot;&quot;                
-##  7        3           5 The Legislatu~             3904 &quot;&quot;                
-##  8        3           6 Deliberation               4560 &quot;&quot;                
-##  9        3           7 The Judiciary              4732 &quot;&quot;                
-## 10        3           8 Civil Liberty              5143 &quot;&quot;                
+##    part_num chapter_num chapter_title   chapter_position chapter_descript~
+##       &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;                      &lt;int&gt; &lt;chr&gt;            
+##  1        2           1 V-Dem High-Lev~                2 This section gro~
+##  2        2           2 V-Dem Mid-Leve~              103 This section inc~
+##  3        3           1 Elections                    491 &quot;&quot;               
+##  4        3           2 Political Part~             2087 &quot;&quot;               
+##  5        3           3 Direct democra~             2373 &quot;&quot;               
+##  6        3           4 The Executive               2838 &quot;&quot;               
+##  7        3           5 The Legislature             3890 &quot;&quot;               
+##  8        3           6 Deliberation                4546 &quot;&quot;               
+##  9        3           7 The Judiciary               4718 &quot;&quot;               
+## 10        3           8 Civil Liberty               5130 &quot;&quot;               
 ## # ... with 28 more rows</code></pre>
 <p>It remains to deal with the indicator descriptions which is the most important part. While we may split this tibble later, for now it makes sense to leave all descriptions in one tibble. We note that every indicator description consists of different topic that are marked by two spaces, a description and a “:”, e. g.:</p>
 <pre class="r"><code>codebook2[7]</code></pre>
@@ -404,7 +414,7 @@ head(tbl_categories$Aggregation[agg_not_null], 1)</code></pre>
 <p>Clearly, this is simply a description of the aggregation mechanism. It can thus be safely concatenated:</p>
 <pre class="r"><code>tbl_categories &lt;- mutate(
   tbl_categories, 
-  aggregation = vapply(
+  fxDesc_aggregation = vapply(
     Aggregation, 
     FUN = function(x) {
       if(is.null(x)) return(&quot;&quot;)
@@ -435,7 +445,7 @@ head(tbl_categories$`Answer-type`[ans_not_null], 5)</code></pre>
 <p>Clearly also simply a description.</p>
 <pre class="r"><code>tbl_categories &lt;- mutate(
   tbl_categories, 
-  answer_type = vapply(
+  fxDesc_answer_type = vapply(
     `Answer-type`, 
     FUN = function(x) {
       if(is.null(x)) return(&quot;&quot;)
@@ -446,13 +456,11 @@ head(tbl_categories$`Answer-type`[ans_not_null], 5)</code></pre>
 ) %&gt;% select(-`Answer-type`)</code></pre>
 <p>According to the codebook, by default, the answer type is multiple choice. We will therefore adapt the tibble accordingly. Furthermore, there are different descriptions of multiple selection:</p>
 <pre class="r"><code>unique(tbl_categories$answer_type)</code></pre>
-<pre><code>##  [1] &quot;&quot;                    &quot;Multiple selection.&quot; &quot;Multiple-selection&quot; 
-##  [4] &quot;Multiple selection &quot; &quot;Multiple-selection.&quot; &quot;Multiple selection&quot; 
-##  [7] &quot;Numeric&quot;             &quot;Text&quot;                &quot;Percent&quot;            
-## [10] &quot;Date - year only&quot;</code></pre>
+<pre><code>## Warning: Unknown or uninitialised column: 'answer_type'.</code></pre>
+<pre><code>## NULL</code></pre>
 <pre class="r"><code>tbl_categories &lt;- mutate(
   tbl_categories, 
-  answer_type = factor(answer_type) %&gt;% 
+  fxDesc_answer_type = factor(fxDesc_answer_type) %&gt;% 
     fct_recode(
       `Multiple Choice` = &quot;&quot;, 
       `Multiple Selection` = &quot;Multiple selection.&quot;, 
@@ -490,7 +498,7 @@ head(tbl_categories$Citation[cit_not_null], 5)</code></pre>
 <p>For now, it is sufficient to simply parse the suggested citation.</p>
 <pre class="r"><code>tbl_categories &lt;- mutate(
   tbl_categories, 
-  citation = vapply(
+  fxDesc_citation = vapply(
     Citation, 
     FUN = function(x) {
       if(is.null(x)) return(&quot;&quot;)
@@ -550,7 +558,7 @@ head(tbl_categories$Clarification[cla_not_null], 5)</code></pre>
 <p>This is clearly a description.</p>
 <pre class="r"><code>tbl_categories &lt;- mutate(
   tbl_categories, 
-  clarification = vapply(
+  fxDesc_clarification = vapply(
     Clarification, 
     FUN = function(x) {
       if(is.null(x)) return(&quot;&quot;)
@@ -581,7 +589,7 @@ head(tbl_categories$`CPP tag`[cpp_not_null], 5)</code></pre>
 <p>This seems to be specific to the comparative constitutional project. I will leave it in, however.</p>
 <pre class="r"><code>tbl_categories &lt;- mutate(
   tbl_categories, 
-  cpp_tag = vapply(
+  fxDesc_cpp_tag = vapply(
     `CPP tag`, 
     FUN = function(x) {
       if(is.null(x)) return(&quot;&quot;)
@@ -612,7 +620,7 @@ head(tbl_categories$`Cross-coder aggregation`[cross_not_null], 5)</code></pre>
 <p>Seems to be a factor.</p>
 <pre class="r"><code>tbl_categories &lt;- mutate(
   tbl_categories, 
-  cross_coder_aggregation = vapply(
+  fxDesc_cross_coder_aggregation = vapply(
     `Cross-coder aggregation`, 
     FUN = function(x) {
       if(is.null(x)) return(&quot;&quot;)
@@ -622,7 +630,7 @@ head(tbl_categories$`Cross-coder aggregation`[cross_not_null], 5)</code></pre>
   ) %&gt;% str_trim %&gt;% factor
 ) %&gt;% select(-`Cross-coder aggregation`)</code></pre>
 <p>There are some typos:</p>
-<pre class="r"><code>levels(tbl_categories$cross_coder_aggregation)</code></pre>
+<pre class="r"><code>levels(tbl_categories$fxDesc_cross_coder_aggregation)</code></pre>
 <pre><code>##  [1] &quot;&quot;                                                                                                                                                      
 ##  [2] &quot;Bayesian item response theory measurement model (see V-Dem Method ology).&quot;                                                                             
 ##  [3] &quot;Bayesian item response theory measurement model (see V-Dem Methodology&quot;                                                                                
@@ -635,9 +643,9 @@ head(tbl_categories$`Cross-coder aggregation`[cross_not_null], 5)</code></pre>
 ## [10] &quot;Mode from country experts’ coding, cross-checked by research assistants in cases where a single mode was not generated because of expert disagreement.&quot;</code></pre>
 <pre class="r"><code>tbl_categories &lt;- mutate(
   tbl_categories, 
-  cross_coder_aggregation =
+  fxDesc_cross_coder_aggregation =
     fct_recode(
-      cross_coder_aggregation, 
+      fxDesc_cross_coder_aggregation, 
       `Bayesian Item Response Theory Measurement Model` = 
         &quot;Bayesian item response theory measurement model (see V-Dem Method ology).&quot;, 
       `Bayesian Item Response Theory Measurement Model` = 
@@ -676,7 +684,7 @@ head(tbl_categories$`Data release`[rel_not_null], 5)</code></pre>
 <p>Seems to be a description (although factor might be applicable with some cleaning.)</p>
 <pre class="r"><code>tbl_categories &lt;- mutate(
   tbl_categories, 
-  data_release = vapply(
+  fxDesc_data_release = vapply(
     `Data release`, 
     FUN = function(x) {
       if(is.null(x)) return(&quot;&quot;)
@@ -763,11 +771,11 @@ head(tbl_categories$`Historical Clarification`[hist_not_null], 5)</code></pre>
 ##  [9] &quot;      preeminent authority of the state over its claimed territory and population.&quot;                                                                                                         
 ## [10] &quot;      A second attribute of states is the state administration: the set of institutions that administer&quot;                                                                                    
 ## [11] &quot;      and implement governmental decisions. Here we are mainly interested in the professionalization, or lack thereof, of the state administrative staff – in this context termed the state&quot;
-## [12] &quot;      administrators.\&quot;&quot;</code></pre>
+## [12] &quot;      administrators.&quot;</code></pre>
 <p>Some additional description.</p>
 <pre class="r"><code>tbl_categories &lt;- mutate(
   tbl_categories, 
-  historical_clarification = vapply(
+  fxDesc_historical_clarification = vapply(
     `Historical Clarification`, 
     FUN = function(x) {
       if(is.null(x)) return(&quot;&quot;)
@@ -799,7 +807,7 @@ head(tbl_categories$Notes[notes_not_null], 5)</code></pre>
 <p>Some more description.</p>
 <pre class="r"><code>tbl_categories &lt;- mutate(
   tbl_categories, 
-  notes = vapply(
+  fxDesc_notes = vapply(
     Notes, 
     FUN = function(x) {
       if(is.null(x)) return(&quot;&quot;)
@@ -830,7 +838,7 @@ head(tbl_categories$Ordering[ordering_not_null], 5)</code></pre>
 <p>More description.</p>
 <pre class="r"><code>tbl_categories &lt;- mutate(
   tbl_categories, 
-  ordering = vapply(
+  fxDesc_ordering = vapply(
     Ordering, 
     FUN = function(x) {
       if(is.null(x)) return(&quot;&quot;)
@@ -861,7 +869,7 @@ head(tbl_categories$`Project Manager(s)`[manager_not_null], 5)</code></pre>
 <p>This is a variable where it seems sensible to do some more cleaning. Every observation will consist of a factor vector consisting of the different Project Managers. First of all, we convert them to a single character vector:</p>
 <pre class="r"><code>tbl_categories &lt;- mutate(
   tbl_categories, 
-  project_manager = vapply(
+  fxDesc_project_manager = vapply(
     `Project Manager(s)`, 
     FUN = function(x) {
       if(is.null(x)) return(&quot;&quot;)
@@ -873,18 +881,18 @@ head(tbl_categories$`Project Manager(s)`[manager_not_null], 5)</code></pre>
 <p>We can see that the different names are split by “,” or &quot; and “. As there is one instance of”, and “, we use that as well.</p>
 <pre class="r"><code>tbl_categories &lt;- mutate(
   tbl_categories, 
-  project_manager = str_split(project_manager, &quot;, and |, | and &quot;) %&gt;% 
+  fxDesc_project_manager = str_split(fxDesc_project_manager, &quot;, and |, | and &quot;) %&gt;% 
     lapply(function(x) {
       if(length(x) == 1 &amp;&amp; x == &quot;&quot;) return(character(0))
       x
     })
 )</code></pre>
 <p>We then define a factor with all possible project managers as levels:</p>
-<pre class="r"><code>project_manager_levels &lt;- unlist(tbl_categories$project_manager) %&gt;% unique
+<pre class="r"><code>project_manager_levels &lt;- unlist(tbl_categories$fxDesc_project_manager) %&gt;% unique
 tbl_categories &lt;- mutate(
   tbl_categories, 
-  project_manager = lapply(
-    project_manager, 
+  fxDesc_project_manager = lapply(
+    fxDesc_project_manager, 
     function(x) factor(x, levels = project_manager_levels)
   )
 )</code></pre>
@@ -910,7 +918,7 @@ head(tbl_categories$Question[question_not_null], 5)</code></pre>
 <p>Description.</p>
 <pre class="r"><code>tbl_categories &lt;- mutate(
   tbl_categories, 
-  question = vapply(
+  fxDesc_question = vapply(
     Question, 
     FUN = function(x) {
       if(is.null(x)) return(&quot;&quot;)
@@ -966,7 +974,17 @@ head(tbl_categories$Responses[resp_not_null], 5)</code></pre>
 ## [11] &quot;      4: Yes. The EMB is autonomous and impartially applies elections laws and administrative&quot;    
 ## [12] &quot;      rules.&quot;</code></pre>
 <p>This is a bit harder to clean and will take several iterations. For now, I will simply rename it.</p>
-<pre class="r"><code>tbl_categories &lt;- rename(tbl_categories, responses = Responses)</code></pre>
+<pre class="r"><code>tbl_categories &lt;- mutate(tbl_categories, 
+  fxDesc_responses = Responses %&gt;% 
+  map(function(str) {
+    concatenated &lt;- str_trim(str) %&gt;% str_c(collapse = &quot; &quot;) %&gt;% str_trim()
+    split &lt;- str_split(concatenated, &quot;\\s*(?=\\d:\\s)&quot;) %&gt;% unlist
+    split_no_s &lt;- split[split != &quot;&quot;]
+    if(length(split_no_s) == 1) return(split_no_s)
+    named &lt;- str_split_fixed(split_no_s, &quot;(?&lt;=\\d{1,3}):\\s&quot;, n = 2)
+    ret &lt;- tibble(key = named[, 1], value = named[, 2])
+  })
+) %&gt;% select(-Responses)</code></pre>
 </div>
 <div id="scale" class="section level2">
 <h2>Scale</h2>
@@ -1048,38 +1066,44 @@ head(tbl_categories$Scale[scale_not_null], 5)</code></pre>
 ## [1] &quot;Nominal&quot;
 ## 
 ## [[20]]
-## [1] &quot;Interval&quot; &quot;&quot;        
-## 
-## [[21]]
 ## [1] &quot;nominal&quot;
 ## 
-## [[22]]
+## [[21]]
 ## [1] &quot;Nominal, but categories 2—6 constitute ordinal.&quot;
-## [2] &quot;&quot;                                               
+## 
+## [[22]]
+## [1] &quot;Interval, from low to high.&quot;
 ## 
 ## [[23]]
-## [1] &quot;Ordinal, converted to interval by the measurement model, from from low to high 0-1.&quot;
+## [1] &quot;Interval, from low to high (0-1).&quot; &quot;&quot;                                 
 ## 
 ## [[24]]
-## [1] &quot;Ordinal.&quot; &quot;&quot;        
+## [1] &quot;Ordinal, converted to interval by the measurement model, from from low to high 0-1.&quot;
 ## 
 ## [[25]]
-## [1] &quot;Categorical.&quot;
+## [1] &quot;Ordinal, converted to interval by the measurement model, from from low to high 0-1.&quot;
+## [2] &quot;&quot;                                                                                   
 ## 
 ## [[26]]
-## [1] &quot;Dichotomous.&quot; &quot;&quot;            
+## [1] &quot;Ordinal.&quot; &quot;&quot;        
 ## 
 ## [[27]]
-## [1] &quot;Dichotomous (assuming that missing observations can be interpreted as \&quot;No\&quot;).&quot;
+## [1] &quot;Categorical.&quot;
 ## 
 ## [[28]]
+## [1] &quot;Dichotomous.&quot; &quot;&quot;            
+## 
+## [[29]]
+## [1] &quot;Dichotomous (assuming that missing observations can be interpreted as \&quot;No\&quot;).&quot;
+## 
+## [[30]]
 ## [1] &quot;The index scores are derived from a simple spatial model and theoretically ranges from 0&quot;               
 ## [2] &quot;      to 1, with higher scores indicating more political constraint and thus less feasibility of policy&quot;
 ## [3] &quot;      change.&quot;</code></pre>
 <p>There will be even fewer once the variable has been cleaned.</p>
 <pre class="r"><code>tbl_categories &lt;- mutate(
   tbl_categories, 
-  scale = vapply(
+  fxDesc_scale = vapply(
     Scale, 
     FUN = function(x) {
       if(is.null(x)) return(&quot;&quot;)
@@ -1089,7 +1113,7 @@ head(tbl_categories$Scale[scale_not_null], 5)</code></pre>
   ) %&gt;% str_trim %&gt;% str_replace(&quot;.$&quot;, &quot;&quot;)
 ) %&gt;% select(-Scale)</code></pre>
 <p>There are considerable overlaps due to typos:</p>
-<pre class="r"><code>unique(tbl_categories$scale)</code></pre>
+<pre class="r"><code>unique(tbl_categories$fxDesc_scale)</code></pre>
 <pre><code>##  [1] &quot;Interval, from low to high (0-1)&quot;                                                                                                                                                                 
 ##  [2] &quot;&quot;                                                                                                                                                                                                 
 ##  [3] &quot;Ordinal, converted to interval by the measurement model&quot;                                                                                                                                          
@@ -1108,10 +1132,11 @@ head(tbl_categories$Scale[scale_not_null], 5)</code></pre>
 ## [16] &quot;Nomina&quot;                                                                                                                                                                                           
 ## [17] &quot;nomina&quot;                                                                                                                                                                                           
 ## [18] &quot;Nominal, but categories 2—6 constitute ordinal&quot;                                                                                                                                                   
-## [19] &quot;Ordinal, converted to interval by the measurement model, from from low to high 0-1&quot;                                                                                                               
-## [20] &quot;Categorical&quot;                                                                                                                                                                                      
-## [21] &quot;Dichotomous (assuming that missing observations can be interpreted as \&quot;No\&quot;)&quot;                                                                                                                    
-## [22] &quot;The index scores are derived from a simple spatial model and theoretically ranges from 0 to 1, with higher scores indicating more political constraint and thus less feasibility of policy change&quot;</code></pre>
+## [19] &quot;Interval, from low to high&quot;                                                                                                                                                                       
+## [20] &quot;Ordinal, converted to interval by the measurement model, from from low to high 0-1&quot;                                                                                                               
+## [21] &quot;Categorical&quot;                                                                                                                                                                                      
+## [22] &quot;Dichotomous (assuming that missing observations can be interpreted as \&quot;No\&quot;)&quot;                                                                                                                    
+## [23] &quot;The index scores are derived from a simple spatial model and theoretically ranges from 0 to 1, with higher scores indicating more political constraint and thus less feasibility of policy change&quot;</code></pre>
 </div>
 <div id="sources" class="section level2">
 <h2>Sources</h2>
@@ -1131,21 +1156,47 @@ head(tbl_categories$`Source(s)`[src_not_null], 5)</code></pre>
 ## 
 ## [[5]]
 ## [1] &quot;v2x_egal v2x_polyarchy&quot;</code></pre>
-<p>Sources for the type A variables. We thus split it to character vectors of <code>inner_ind_name</code>s. (Rem.: There is a sources column for type “E” variables, as well! I will need to modify this.)</p>
+<p>Sources for the type A variables. We simply join them.</p>
 <pre class="r"><code>tbl_categories &lt;- mutate(
   tbl_categories, 
-  sources = vapply(
+  fxDesc_sources = vapply(
     `Source(s)`, 
     FUN = function(x) {
       if(is.null(x)) return(&quot;&quot;)
-      paste(str_trim(x), collapse = &quot; &quot;)
+      paste(str_trim(x), collapse = &quot; &quot;) %&gt;% 
+        str_trim()
     }, 
     FUN.VALUE = character(1)
-  ) %&gt;% str_trim %&gt;% str_split(&quot;\\s+&quot;)
+  )
 ) %&gt;% select(-`Source(s)`)
-use_data(tbl_categories)</code></pre>
-<pre><code>## Saving tbl_categories as tbl_categories.rda to C:/Users/samue/Documents/Studium/Statistik/vdem.tectr/data</code></pre>
+# use_data(tbl_categories)</code></pre>
 </div>
+</div>
+<div id="miscellaneous-changes" class="section level1">
+<h1>Miscellaneous Changes</h1>
+<p>There is a typo in the name “e_ Fiscal_Reliance”.</p>
+<pre class="r"><code>tbl_categories &lt;- mutate(tbl_categories, 
+                         ind_name = if_else(ind_name == &quot;e_ Fiscal_Reliance&quot;, 
+                                            &quot;e_Fiscal_Reliance&quot;, ind_name))</code></pre>
+</div>
+<div id="metaframe" class="section level1">
+<h1>Metaframe</h1>
+<p>Finally, we create the metaframe file structure:</p>
+<pre class="r"><code>metaframe &lt;- 
+  rename(tbl_categories, name = ind_name, fxDesc_label = ind_name_external) %&gt;%
+  inner_join(select(tbl_parts, part_num, part_title), by = &quot;part_num&quot;) %&gt;% 
+  inner_join(select(tbl_chapters, chapter_num, chapter_title, part_num), 
+             by = c(&quot;part_num&quot;, &quot;chapter_num&quot;)) %&gt;% 
+  group_by(part_num, chapter_num, fxDesc_label)
+path &lt;- paste0(system.file(&quot;inst&quot;, &quot;extdata&quot;, 
+                                                   package = &quot;vdem.tectr&quot;), 
+                                       &quot;/metaframe&quot;)
+mf_revisable &lt;- fx_write_json(metaframe, 
+                              path = path, 
+                              main = str_subset(names(metaframe), &quot;^fxDesc_&quot;))
+use_data(mf_revisable, overwrite = TRUE)</code></pre>
+<pre><code>## &lt;U+2714&gt; Setting active project to 'C:/Users/samue/Documents/Studium/Statistik/vdem.tectr'
+## &lt;U+2714&gt; Saving 'mf_revisable' to 'data/mf_revisable.rda'</code></pre>
 </div>
 
 

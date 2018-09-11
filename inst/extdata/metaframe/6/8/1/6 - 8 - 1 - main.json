@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Civil war",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Haber and Menaldo (2011).",
+    "fxInfo_clarification": "Civil war — at least one intra-state war with at least 1,000 battle deaths for each country-year.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "Was there a civil war?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No"
+      },
+      {
+        "key": "1",
+        "value": "Yes"
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Haber and Menaldo (2011).",
+    "name": "e_Civil_War"
+  }
+]

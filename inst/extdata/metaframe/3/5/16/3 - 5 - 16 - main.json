@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Introduction lower chamber",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "",
+    "fxInfo_clarification": "The following questions pertain to the lower or unicameral chamber of the legislature. The lower chamber in a bicameral legislature, sometimes also called the \"second chamber,\" is typically the more numerous chamber and also more directly representative of the general population. If there is no legislature in the country you are coding for some period of years, do not code any questions for those years. If you are considering a semi-sovereign territory, such as a colony, please answer these questions with respect to the lower (or unicameral) chamber of the legislature that is seated within the territory in question (such as the lower chamber of a local legislative assembly in a British colony, not the House of Commons in London). Country experts will find the name (proper noun) of the lower chamber of the legislature in the first question (following this page). To see the name, click on any year in the grid. All subsequent questions in this section pertain to that body.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Steven Fish", "Matthew Kroenig"],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "",
+    "name": "v2lgintro2"
+  }
+]

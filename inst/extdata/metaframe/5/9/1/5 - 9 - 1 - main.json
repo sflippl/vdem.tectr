@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Minimally competitive elections",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Skaaning et al. (2015).",
+    "fxInfo_clarification": "The chief executive offices and the seats in the effective legislative body are filled by elections characterized by uncertainty, meaning that the elections are, in principle, sufficiently free to enable the opposition to gain power.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "Are the elections competitive?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No"
+      },
+      {
+        "key": "1",
+        "value": "Yes"
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Skaaning et al. (2015).",
+    "name": "e_competition"
+  }
+]

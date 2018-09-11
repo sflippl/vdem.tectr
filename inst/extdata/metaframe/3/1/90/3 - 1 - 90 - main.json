@@ -1,0 +1,74 @@
+[
+  {
+    "fxInfo_label": "Lower chamber electoral system — 13 categories",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Mixed majoritarian systems were coded as a two-round system. Regarding multimember districts we coded list PR with large multi-member districts when the mean district size = 7. Constituent Assembly elections are excluded from the coding, since they often use specifically designed electoral systems. Further information on the following electoral system types can be found in Reynolds/Reilly, The New International IDEA Handbook(2005), chapter two and Annex B (Glossary of Terms) — downloadable, free of charge, at www.idea.int/publications/esd/.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "7-8",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Staffan I. Lindberg", "Carl Henrik Knutsen", "Jan Teorell"],
+    "fxInfo_question": "What was the electoral system used in this election for the lower or unicameral chamber of the legislature?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "First-past-the-post (FPP, aka plurality) in single-member constituencies. The candidate with the most votes wins the seat."
+      },
+      {
+        "key": "1",
+        "value": "Two-round system in single-member constituencies. Like FPP except that a threshold — usually 50% + 1 — is required to avoid a runoff between the two top vote-getters."
+      },
+      {
+        "key": "2",
+        "value": "Alternative vote in single-member districts. Voters rank-order their preferences for the candidates who compete for a single seat. If any candidate receives an absolute majority of first preferences, s/he is elected. If not, then the least successful candidates (based on firstpreferences) are eliminated and their votes reallocated to the second-preferences. This process is repeated until a candidate reaches 50% +1 of the votes."
+      },
+      {
+        "key": "3",
+        "value": "Block vote in multi-member districts. Electors have as many votes as there are seats within that district and can rank-order them (within or across parties) as they please."
+      },
+      {
+        "key": "4",
+        "value": "Party block vote in multi-member districts. Voters cast a vote for a single party (but not for individual candidates within the party’s list). The party with the most votes (i.e., a plurality) wins all the seats in that district."
+      },
+      {
+        "key": "5",
+        "value": "Parallel (SMD/PR). Some seats are in single-member districts (allocated by FPP or tworound electoral rules) and other seats are in multimember districts (allocated by some form of PR). These districts are overlapping, meaning that each elector votes twice: once in the singlemember district race and once in the multi-member district race. Results are independent."
+      },
+      {
+        "key": "6",
+        "value": "Mixed-member proportional (SMD with PR compensatory seats). Some seats are in singlemember districts (allocated by FPP or two-round electoral rules) and other seats are in multimember districts (allocated by some form of PR). These districts are overlapping, meaning that each elector votes twice: once in the single-member district race and once in the multi-member district race. Results are not independent. Specifically, the multimember seats are used to rectify disproportionalities achieved in the single-member district election — by adding seats, as necessary. This means that the representation of parties in the legislature is determined entirely by the PR ballot. It also means that the result of an MMP election is similar to the result of a PR election: parties achieve representation according to their nationwide vote share(on the PR ballot)."
+      },
+      {
+        "key": "7",
+        "value": "List PR with small multi-member districts (mean district size < 7). Each party presents a list of candidates for election within a district. Electors vote for a party, and parties receive seats in (rough) proportion to their overall share of the vote. Mean district size is less than seven."
+      },
+      {
+        "key": "8",
+        "value": "List PR with large multi-member districts (mean district size > 7). Each party presents a list of candidates for election within a district. Electors vote for a party, and parties receive seats in (rough) proportion to their overall share of the vote. Mean district size is greater than seven."
+      },
+      {
+        "key": "9",
+        "value": "Single-transferable vote (STV) in multi-member districts. Electors rank-order candidates nominated for a district. Candidates that surpass a specified quota of first-preference votes are elected. The remaining seats are chosen by reallocating the votes of the least successful candidates to elector’s second- (or third-) preferences until the specified quota is reached. This process is repeated until all seats for that district are filled."
+      },
+      {
+        "key": "10",
+        "value": "Single non-transferable vote (SNTV) in multi-member districts. Each elector chooses a single candidate. The candidates with the most votes (a plurality) win. (The number of winners is of course determined by the size of the district.)"
+      },
+      {
+        "key": "11",
+        "value": "Limited vote in multi-member districts. Electors have more than one vote but fewer votes  than the number of seats in the district. The candidates with the most votes (a plurality) win.(The number of winners is of course determined by the size of the district.)"
+      },
+      {
+        "key": "12",
+        "value": "Borda Count in single- or multi-member districts. Electors use numbers to mark preferences among candidates and each preference is assigned a value. For example, in a ten-candidate field a first preference is worth one, a second preference is worth .9, and so forth. These are summed and the candidate(s) with the highest total(s) is/are elected."
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Chronicle of Parliamentary Elections (IPU); IDEA; Nohlen et al. (1999, 2002, 2005, 2010); Colomer (2016).",
+    "name": "v2elloelsy"
+  }
+]

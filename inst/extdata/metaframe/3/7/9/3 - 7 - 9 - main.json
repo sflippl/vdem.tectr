@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "High court size (by law)",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Please consider the same high court that you assessed in High court name. The legally required size of the high court may be established by the constitution, statute, or convention. According to the prevailing authority in this calendar year, how many judges were supposed to serve on the high court? This number includes unfilled vacancies. For example, if the constitution mandates that 9 judges serve on the high court, but there was 1 vacancy on the high court in this year, please report 9 for this question. If the number of judges mandated by law to sit on the high court changed in this calendar year due to constitutional or statutory revisions, please report the size of the high court for the majority of the calendar year. For example, if a new constitution was written in December of the calendar year and changed the number of judges required to serve on the high court, please report for this question the number of judges required by the previous constitution, as that was in effect for the majority of the calendar year.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "7-8. Only in disaggregated dataset.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jeffrey Staton"],
+    "fxInfo_question": "By law, what was the size of the high court in this calendar year?",
+    "fxInfo_responses": ["Number."],
+    "fxInfo_scale": "Numeric",
+    "fxInfo_sources": "",
+    "name": "v2juhcsizl"
+  }
+]

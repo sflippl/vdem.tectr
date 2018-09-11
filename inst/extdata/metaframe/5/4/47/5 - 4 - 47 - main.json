@@ -1,0 +1,70 @@
+[
+  {
+    "fxInfo_label": "Specialized courts",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Selection",
+    "fxInfo_citation": "CCP (Elkins et al. 2014).",
+    "fxInfo_clarification": "This variable is dichotomized in a similar fashion as the V-Dem Multiple Selection questions with each binary answer category suffixed with \"_<Response number>\". If religious courts, labor courts, tax courts, military courts, courts charged with hearing cases against public officials, or courts of amparo are mentioned, please list any special provisions for these courts in the comments section. Choose all that apply.",
+    "fxInfo_cpp_tag": "JUDCRTS",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "1-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "For which of the following specialized courts does the constitution contain provisions?",
+    "fxInfo_responses": [
+      {
+        "key": "1",
+        "value": "Administrative courts"
+      },
+      {
+        "key": "2",
+        "value": "Constitutional court"
+      },
+      {
+        "key": "3",
+        "value": "Courts of amparo"
+      },
+      {
+        "key": "4",
+        "value": "Military courts"
+      },
+      {
+        "key": "5",
+        "value": "Courts charged with hearing cases against holders of public offices"
+      },
+      {
+        "key": "6",
+        "value": "Tax courts"
+      },
+      {
+        "key": "7",
+        "value": "Labor courts"
+      },
+      {
+        "key": "8",
+        "value": "Religious courts"
+      },
+      {
+        "key": "9",
+        "value": "Special court"
+      },
+      {
+        "key": "96",
+        "value": "Other, please specify in the comments section"
+      },
+      {
+        "key": "97",
+        "value": "Unable to Determine"
+      },
+      {
+        "key": "98",
+        "value": "Not Specified"
+      }
+    ],
+    "fxInfo_scale": "Series of dichotomous scales",
+    "fxInfo_sources": "CCP (Elkins et al. 2014).",
+    "name": "e_ccp_judcrts"
+  }
+]

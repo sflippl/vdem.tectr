@@ -1,0 +1,46 @@
+[
+  {
+    "fxInfo_label": "Party ban target",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Selection",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Choose all that apply.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "Mean",
+    "fxInfo_data_release": "3-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "The answer categories for contemporary and historical differ in the inclusion of the word\"extremist\". In contemporary it is included while excluded in the historical answer categories.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Allen Hicken"],
+    "fxInfo_question": "If any parties are banned, what label best describes these parties?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "Ethnic party."
+      },
+      {
+        "key": "1",
+        "value": "Religious party."
+      },
+      {
+        "key": "2",
+        "value": "Regional/local party."
+      },
+      {
+        "key": "3",
+        "value": "Leftist extremist party."
+      },
+      {
+        "key": "4",
+        "value": "Rightist extremist party."
+      },
+      {
+        "key": "5",
+        "value": "Other."
+      }
+    ],
+    "fxInfo_scale": "Series of dichotomous scales",
+    "fxInfo_sources": "",
+    "name": "v2psbantar"
+  }
+]

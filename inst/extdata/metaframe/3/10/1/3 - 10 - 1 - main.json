@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "CSOs introduction",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "",
+    "fxInfo_clarification": "The following set of questions focus on civil society organizations (CSOs). These include interest groups, labor unions, religiously inspired organizations (if they are engaged in civic or political activities), social movements, professional associations, and classic nongovernmental organizations (NGOs), but not businesses, political parties, government agencies, or religious organizations that are primarily focused on spiritual practices. A CSO must also be at least nominally independent of government and economic institutions.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "",
+    "fxInfo_historical_clarification": "The following set of questions focus on civil society organizations (CSOs). These include interest groups, labor unions, religiously inspired organizations (if they are engaged in civic or political activities), social movements, professional associations, and classic non-governmental organizations (NGOs), but not businesses, political parties, government agencies, or religious organizations that are primarily focused on spiritual practices. A CSO must also be at least nominally independent of government and economic institutions. If no CSOs exist at all for a particular time period, code the following relevant questions as giving the \"lowest score\" (indicating, for instance, strong repression or no consultation, a 0).",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Michael Bernhard"],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "",
+    "name": "v2csintro"
+  }
+]

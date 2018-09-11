@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Parties introduction",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "",
+    "fxInfo_clarification": "A \"political party\" refers to an organization that nominates candidates for public offic e. A party may refer to a longstanding coalition such as the CDU/CSU in Germany if that coalition functions in most respects like a single party. Sometimes, the identity of a party is obscured by name changes. However, if the party/coalition changes names but retains key personnel and is still run by and for the same constituency then it should be considered the same organization. Unless stated otherwise the following questions pertain to parties that compete for seats in the national legislature or for the presidency. Most of the questions in the following section ask you to generalize across parties in a particular country (and at a particular point in time). We realize that practices vary from party to party; these are, after all, highly diverse organizations. However, for our purposes it is important to consider what the most common practices are. In answering these questions it is sometimes important to distinguish between formal rules (as stipulated by statute, legislative rules, the constitution, or common law precedent) and actual practice (what happens on the ground). In order to clarify the de jure/de facto distinction, we employ the terms \"by law. . . \" and \"in practice... \" Please pay close attention to these cues wherever you see them. And if there is no clarification of the issue, assume that the question is referring to practices rather than formal rules.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "",
+    "fxInfo_historical_clarification": "A \"political party\" refers to an organization that nominates candidates for public office . A party may refer to a longstanding coalition such as the CDU/CSU in Germany if that coalition functions in most respects like a single party. Sometimes, the identity of a party is obscured by name changes. However, if the party/coalition changes names but retains key personnel and is still run by and for the same constituency then it should be considered the same organization. Our notion of a party includes loose factional groupings such as the Tories and Whigs in the 19th-century Britain or the Caps and Hats in 18th-century Sweden. Unless stated otherwise the following questions pertain to parties that compete for seats in the national legislature or for the presidency. Most of the questions in the following section ask you to generalize across parties in a particular country (and at a particular point in time). We realize that practices vary from party to party; these are, after all, highly diverse organizations. However, for our purposes it is important to consider what the most common practices are. In answering these questions it is sometimes important to distinguish between formal rules (as stipulated by statute, legislative rules, the constitution, or common law precedent) and actual practice (what happens on the ground). In order to clarify the de jure/de facto distinction, we employ the terms \"by law...\" and \"in practice...\" Please pay close attention to these cues wherever you see them. And if there is no clarification of the issue, assume that the question is referring to practices rather than formal rules.",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Allen Hicken"],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "",
+    "name": "v2psintro"
+  }
+]

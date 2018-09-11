@@ -1,0 +1,70 @@
+[
+  {
+    "fxInfo_label": "HOG removal body by law",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "CCP (Elkins et al. 2014).",
+    "fxInfo_clarification": "This variable is dichotomized in a similar fashion as the V-Dem Multiple Selection questions with each binary answer category suffixed with \"_<Response number>\".If both chambers must act, then please select ”Both Chambers of the Legislature are required.” If either chamber can act, then please select both the ”First Chamber of the Legislature” and the ”Second Chamber of the Legislature.”",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "1-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "Asked only if HOGDISS is answered 1.",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "Who can approve a dismissal of the Head of Government?",
+    "fxInfo_responses": [
+      {
+        "key": "1",
+        "value": "Head of State. (0=No, 1=Yes) [e_HOGADISS_1]"
+      },
+      {
+        "key": "2",
+        "value": "First (or only) chamber of the Legislature. (0=No, 1=Yes) [e_HOGADISS_2]"
+      },
+      {
+        "key": "3",
+        "value": "Second Chamber of the Legislature. (0=No, 1=Yes) [e_HOGADISS_3]"
+      },
+      {
+        "key": "4",
+        "value": "Both Chambers of the Legislature are required. (0=No, 1=Yes) [e_HOGADISS_4]"
+      },
+      {
+        "key": "5",
+        "value": "Public (e.g., recall). (0=No, 1=Yes) [e_HOGADISS_5]"
+      },
+      {
+        "key": "6",
+        "value": "Public Prosecutor. (0=No, 1=Yes) [e_HOGADISS_6]"
+      },
+      {
+        "key": "7",
+        "value": "Court. (0=No, 1=Yes) [e_HOGADISS_7]"
+      },
+      {
+        "key": "8",
+        "value": "Constitutional Council or Constitutional Court. (0=No, 1=Yes) [e_HOGADISS_8]"
+      },
+      {
+        "key": "90",
+        "value": "Left explicitly to non-constitutional law. (0=No, 1=Yes) [e_HOGADISS_90]"
+      },
+      {
+        "key": "96",
+        "value": "Other, please specify in the comments section. (0=No, 1=Yes) [e_HOGADISS_96]"
+      },
+      {
+        "key": "97",
+        "value": "Unable to Determine. (0=No, 1=Yes) [e_HOGADISS_97]"
+      },
+      {
+        "key": "98",
+        "value": "Not Specified. (0=No, 1=Yes) [e_HOGADISS_98]"
+      }
+    ],
+    "fxInfo_scale": "Series of dichotomous scales",
+    "fxInfo_sources": "CCP (Elkins et al. 2014), v133.",
+    "name": "e_ccp_hogadiss"
+  }
+]

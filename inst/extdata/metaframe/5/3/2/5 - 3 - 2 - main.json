@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Elected institutions",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Bilinski (2015).",
+    "fxInfo_clarification": "Elected institutions means the presence of legislature of executive, or both. If blank, it means that a country lacked an effective central government.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "Did the country have any elected institutions?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No"
+      },
+      {
+        "key": "1",
+        "value": "Yes"
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Bilinski (2015).",
+    "name": "e_electinst"
+  }
+]

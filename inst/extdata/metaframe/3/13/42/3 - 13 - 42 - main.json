@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Citizenship laws",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["John Gerring"],
+    "fxInfo_question": "Are there laws specifying who is a citizen and who is not and establishing procedures for naturalization?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "Dichotomou",
+    "fxInfo_sources": "CCP (v543); http://eudo-citizenship.eu/country-profiles/; various country-specific sources.",
+    "name": "v3stcitlaw"
+  }
+]

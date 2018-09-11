@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Urban population %",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Vanhanen (2003).",
+    "fxInfo_clarification": "Ratio of Urban Population to Population.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "What is the urbanization rate?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Vanhanen (2003).",
+    "name": "e_Vanhanen_urban_ipo"
+  }
+]

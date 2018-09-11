@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Oil reserves",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Haber and Menaldo (2011).",
+    "fxInfo_clarification": "Oil reserves in billions of barrels. We construct estimates of oil reserves in billions of barrels for 168 countries from 1943 to 2006.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "How much oil does a country have in reserves?",
+    "fxInfo_responses": ["Numeric."],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Haber and Menaldo (2011).",
+    "name": "e_reserves_billions"
+  }
+]

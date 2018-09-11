@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Finite term in office",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Cruz et al. (2018).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "Is there a constitutional limit on the number of years the executive can serve before new elections must be called? Deviating from the convention, a 0 is recorded if a limit is not explicitly stated. This gets a 0 in the cases where the constitution with year limits is suspended or unenforced.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "Is there a finite term in office?",
+    "fxInfo_responses": [
+      {
+        "key": "1",
+        "value": "Yes."
+      },
+      {
+        "key": "0",
+        "value": "No."
+      }
+    ],
+    "fxInfo_scale": "Dichotomous",
+    "fxInfo_sources": "Cruz et al. (2018).",
+    "name": "e_dpi_finter"
+  }
+]

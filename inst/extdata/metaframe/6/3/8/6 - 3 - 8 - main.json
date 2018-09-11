@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "GDP growth (rescaled)",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "An S transformation of GDP growth that expands values close to zero and compresses extreme highs and lows. For positive growth, the transformation is ln(growth + 1). For negative growth, the transformation is -ln(abs(growth -1)). For display purposes only; do not use for analysis.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "2-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "What is the GDP growth rate (rescaled)?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "e_migdpgro",
+    "name": "e_migdpgrolns"
+  }
+]

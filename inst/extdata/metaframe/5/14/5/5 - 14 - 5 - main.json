@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Polity combined score",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Polity IV (Marshall and Jaggers 2016).",
+    "fxInfo_clarification": "The Polity score is computed by subtracting the autocracy score from the democracy score. The resulting unified POLITY scale ranges from +10 (strongly democratic) to -10(strongly autocratic).",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "What is the Polity score?",
+    "fxInfo_responses": ["Numeric."],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Polity IV (Marshall and Jaggers 2016).",
+    "name": "e_p_polity"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "fxInfo_label": "Rulers’ involvement in the state administration",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Pemstein et al. (2018, V-Dem Working Paper Series 2018:21); V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "By political elites we mean members of the executive, members of the legislature and political elites at local and regional levels. Note that the focus on the day-to-day decisions of the state administration implies interference in specific operational decisions in a meticulous manner. Decisions taken by rulers about the general direction of the state administration should not be considered. Note that the question refers to the de facto situation.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "Bayesian Item Response Theory Measurement Model",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Agnes Cornell"],
+    "fxInfo_question": "To what extent are day-to-day decisions made by state administrators subject to intervention from political elites?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "Constantly. Day-to-day decisions taken by state administrators are constantly subject to intervention."
+      },
+      {
+        "key": "1",
+        "value": "Often. Day-to-day decisions in the state administration are often subject to intervention."
+      },
+      {
+        "key": "2",
+        "value": "About half. Approximately half of the day-to-day decisions in the state administration are subject to intervention."
+      },
+      {
+        "key": "3",
+        "value": "Occasionally. Day-to-day decisions in the state administration are occasionally subject to intervention."
+      },
+      {
+        "key": "4",
+        "value": "Never, or hardly ever. Day-to-day decisions in the state administration are never or hardly ever subject to intervention."
+      }
+    ],
+    "fxInfo_scale": "Ordinal",
+    "fxInfo_sources": "",
+    "name": "v3struinvadm"
+  }
+]

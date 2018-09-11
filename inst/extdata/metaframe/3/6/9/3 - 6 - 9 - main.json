@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Comments deliberation",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Add here any comments you have about any of the previous questions on deliberation.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Michael Coppedge", "John Gerring", "Staffan Lindberg"],
+    "fxInfo_question": "",
+    "fxInfo_responses": ["Text."],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "",
+    "name": "v2dlcommnt"
+  }
+]

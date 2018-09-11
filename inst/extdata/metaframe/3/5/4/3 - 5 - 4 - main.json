@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Upper chamber name",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Please provide an as accurate as possible literal translation of the name of the upper chamber of the legislature in English, with the name in the native language, or a transcription thereof, within parentheses. The legislature names have been pre-coded for as many years as possible. This means that the text and specific date have already been entered, so we are asking you only to add your confidence in the pre-coded rating.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "3-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "In cases when a parliament consists of three or more chambers, one of the chamber names is coded in the variable ”Lower chamber legislature name” (v2lgnamelo), while the others are enlisted in the variable \"Upper chamber name\" (v2lgnameup). Example: South Africa had a three-chamber parliament during the period of 1984-1994. Subsequently, variable v2lgbicam is coded 2, v2lgnamelo is coded ”House of Assembly”, and v2lgnameup enlists ”House of Representatives, House of Delegates”.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Steven Fish", "Matthew Kroenig"],
+    "fxInfo_question": "What is the name of the upper chamber of the legislature?",
+    "fxInfo_responses": ["Text."],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "",
+    "name": "v2lgnameup"
+  }
+]

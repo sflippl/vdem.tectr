@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Competition",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Vanhanen (2016).",
+    "fxInfo_clarification": "The competition variable portrays the electoral success of smaller parties, that is, the percentage of votes gained by the smaller parties in parliamentary and/or presidential elections. The variable is calculated by subtracting from 100 the percentage of votes won by the largest party (the party which wins most votes) in parliamentary elections or by the party of the successful candidate in presidential elections. Depending on their importance, either parliamentary or presidential elections are used in the calculation of the variable, or both elections are used, with weights. If information on the distribution of votes is not available, or if the distribution does not portray the reality accurately, the distribution of parliamentary seats is used instead. If parliament members are elected but political parties are not allowed to take part in elections, it is assumed that one party has taken all votes or seats. In countries where parties are not banned but yet only independent candidates participate in elections, it is assumed that the share of the largest party is not over 30 percent.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Vanhanen (2016).",
+    "name": "e_van_comp"
+  }
+]

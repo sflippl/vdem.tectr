@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Team translated",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "This variable indicates whether someone on our coding team read the constitutional event in a non-English language and translated information in order to collect the necessary information.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jeffrey Staton"],
+    "fxInfo_question": "For constitutions not available in English, did our coders translate the relevant sections of a non-English event?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "no"
+      },
+      {
+        "key": "1",
+        "value": "Yes, this event was translated by our team"
+      }
+    ],
+    "fxInfo_scale": "Dichotomou",
+    "fxInfo_sources": "V-Dem coding of constitutional texts in CCP (Elkins et al. 2012).",
+    "name": "v2juteamtr"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "fxInfo_label": "Media freedom",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Whitten-Woodring and Van Belle (2015).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "For reasons of consistency with the V-Dem data, the responses to this question from the original source were reversed so that the least democratic response is ”0” and the most democratic is ”2”. Also, original categories \"0\" (No effective media) and \"8\" (Missing data or social/political disruption makes it impossible to code) were set to missing.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "Is media free?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "It is not possible to safely criticize government or government officials."
+      },
+      {
+        "key": "1",
+        "value": "Social, legal, or economic costs related to the criticism of the government officials limits public criticism and major policy failings can and do occur."
+      },
+      {
+        "key": "2",
+        "value": "Criticism of governments and government officials is a common part of the political dialogue in the mediated public sphere."
+      }
+    ],
+    "fxInfo_scale": "Ordinal",
+    "fxInfo_sources": "Whitten-Woodring and Van Belle (2015).",
+    "name": "e_mefree"
+  }
+]

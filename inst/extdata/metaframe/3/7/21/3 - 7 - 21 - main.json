@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Language",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "If the Comparative Constitutions Project had the same constitutional event in both an English and a non-English language, we used the English version.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jeffrey Staton"],
+    "fxInfo_question": "In which language is the constitutional event written?",
+    "fxInfo_responses": ["1. English 2. French 3. German 4. Spanish 27. Arabic 43. Azerbaijani 82. Czech  229. Korean 245. Latvian 249. Lithuanian 282. Maltese 306. Nepali 312. Norwegian Nynorsk; Nynorsk, Norwegian 343. Polish 345. Portuguese 357. Romanian; Moldavian; Moldovan 382. Slovak 409. Swahili 410. Swedish 441. Turkish 485. Greek 113. German 121. Dutch; Flemish 130. Estonian 136. Persian 151. Georgian 170. Hebrew 180. Hungarian 185. Icelandic"],
+    "fxInfo_scale": "Ordina",
+    "fxInfo_sources": "V-Dem coding of constitutional texts in CCP (Elkins et al. 2012).",
+    "name": "v2julanguage"
+  }
+]

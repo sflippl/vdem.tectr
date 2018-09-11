@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Index of power resources",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Vanhanen (2003).",
+    "fxInfo_clarification": "Index of Power Resources is calculated by multiplying the values of Index of Occupational Diversification, Index of Knowledge Distribution and Index of the Distribution of Economic Power Resources and then dividing the product by 10,000.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "What is the index of power resources?",
+    "fxInfo_responses": ["Numeric."],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Vanhanen (2003).",
+    "name": "e_Vanhanen_power_ipo"
+  }
+]

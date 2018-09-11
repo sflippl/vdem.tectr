@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "HOS age",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "7",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jan Teorell"],
+    "fxInfo_question": "In what year was the head of state born?",
+    "fxInfo_responses": [
+      {
+        "key": "[date-year only]",
+        "value": ""
+      },
+      {
+        "key": "99",
+        "value": "Not applicable, e.g. the HOS is a collective body."
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "worldstatesman.org.",
+    "name": "v2exagehos"
+  }
+]

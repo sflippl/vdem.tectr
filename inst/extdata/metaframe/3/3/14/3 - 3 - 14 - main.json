@@ -1,0 +1,34 @@
+[
+  {
+    "fxInfo_label": "Initiatives permitted",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "These are measures placed on the ballot through a citizen petition process, not by the legislature or the executive. They may concern either a new law or a constitutional amendment.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "1-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "Converted from (B) to (A) coding by David Altman.",
+    "fxInfo_ordering": "If no legal provision exists (option 0), skip to question \"Referendums permitted\" [v2ddlexrf].",
+    "fxInfo_project_manager": ["David Altman"],
+    "fxInfo_question": "Is there legal provision for initiatives?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "Not allowed."
+      },
+      {
+        "key": "1",
+        "value": "Allowed but non-binding (or with an intervening institutional veto)."
+      },
+      {
+        "key": "2",
+        "value": "Allowed and binding."
+      }
+    ],
+    "fxInfo_scale": "Ordinal",
+    "fxInfo_sources": "",
+    "name": "v2ddlexci"
+  }
+]

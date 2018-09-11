@@ -1,0 +1,50 @@
+[
+  {
+    "fxInfo_label": "Executive constraints",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Polity IV (Marshall and Jaggers 2016).",
+    "fxInfo_clarification": "This variable refers to the extent of institutionalized constraints on the decisionmaking powers of chief executives. Such limitations may be imposed by any \"accountability groups\" (i.e. legislatures, ruling party, councils of nobles, the military, judiciary).",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "Is there institutional restraint on the executive?",
+    "fxInfo_responses": [
+      {
+        "key": "1",
+        "value": "Unlimited Authority: There are no regular limitations on the executive’s actions (as distinct from irregular limitations such as the threat or actuality of coups and assassinations)."
+      },
+      {
+        "key": "2",
+        "value": "Intermediate Category"
+      },
+      {
+        "key": "3",
+        "value": "Slight to Moderate Limitation on Executive Authority: There are some real but limited restraints on the executive."
+      },
+      {
+        "key": "4",
+        "value": "Intermediate Category"
+      },
+      {
+        "key": "5",
+        "value": "Substantial Limitations on Executive Authority: The executive has more effective authority than any accountability group but is subject to substantial constraints by them."
+      },
+      {
+        "key": "6",
+        "value": "Intermediate Category"
+      },
+      {
+        "key": "7",
+        "value": "Executive Parity or Subordination: Accountability groups have effective authority equal to or greater than the executive in most areas of activity."
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Polity IV (Marshall and Jaggers 2016).",
+    "name": "e_exconst"
+  }
+]

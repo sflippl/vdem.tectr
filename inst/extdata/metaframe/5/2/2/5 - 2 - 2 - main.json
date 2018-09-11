@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Autonomous regions",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Cruz et al. (2018).",
+    "fxInfo_clarification": "Autonomous regions are not the same as states, provinces, etc. An autonomous region is recorded if a source explicitly mentions a region, area, or district that is autonomous or self-governing. Furthermore, they must be constitutionally designated as \"autonomous\" or\"independent\" or \"special\". Federal Districts or Capital Districts do not count as autonomous regions. Disputed autonomy is not recorded. Indian reservations are not counted as autonomous.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "This variable is deviating from convention, no information recorded as 0.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "Are there autonomous regions?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Cruz et al. (2018).",
+    "name": "e_dpi_auton"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "fxInfo_label": "Region (politico-geographic)",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Teorell et al. (2018).",
+    "fxInfo_clarification": "Regions are described as politico-geographic in the sense that they are based on geographical proximity as well as characteristics that contribute to regional understanding as identified by scholars in studies of democratization (e.g. post-Communist). Coverage extended back to 1900 from original source.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "In which politico-geographic region is this country located?",
+    "fxInfo_responses": [
+      {
+        "key": "1",
+        "value": "Eastern Europe and Central Asia (post-Communist; including Mongolia)"
+      },
+      {
+        "key": "2",
+        "value": "Latin America (including Cuba and the Dominican Republic)"
+      },
+      {
+        "key": "3",
+        "value": "The Middle East and North Africa/MENA (including Israel and Turkey)"
+      },
+      {
+        "key": "4",
+        "value": "Sub-Saharan Africa"
+      },
+      {
+        "key": "5",
+        "value": "Western Europe and North America (including Cyprus, Australia and New Zealand)"
+      },
+      {
+        "key": "6",
+        "value": "East Asia"
+      },
+      {
+        "key": "7",
+        "value": "South-East Asia"
+      },
+      {
+        "key": "8",
+        "value": "South Asia"
+      },
+      {
+        "key": "9",
+        "value": "The Pacific (excluding Australia and New Zealand; see 5)"
+      },
+      {
+        "key": "10",
+        "value": "The Caribbean (including Belize, Haiti, Guyana and Suriname)"
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Quality of Government Standard Dataset (2018).",
+    "name": "e_regionpol"
+  }
+]

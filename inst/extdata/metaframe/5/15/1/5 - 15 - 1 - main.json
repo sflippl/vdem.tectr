@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Democratic breakdown",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Bernhard et al. (2001).",
+    "fxInfo_clarification": "Countries that meet the minimum conditions for democracy (see below) enter the dataset and are coded \"0.\" When countries cease to meet those minimum criteria they are coded \"1\" and exit from the dataset.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "If, after a democratic breakdown, a country again meets our minimum criteria it re-enters the data as a new democratic episode. The time frame onset in 1913 is a function of when the first country (Norway) meets the minimum conditions. All series terminate in either in a breakdown in various years or right censorship in 2005. The minimal conditions are based on Dahl’s notion of polyarchy (competitiveness, inclusiveness) combined with Linz and Stepan’s stateness criteria. Competitiveness: Like Przeworski et al. we include countries that hold elections for both the executive and legislature, and in which more than one party contests the elections. However, we exclude cases in which we detected outcome changing vote fraud, in which there was either extensive or extreme violence that inhibited voters’ preference expression, or in which political parties representing a substantial portion of the population were  banned. Inclusiveness: We only include competitive polities in which at least fifty percent of all adult citizens are enfranchised to vote in our set of democracies. Stateness: We also considered questions of sovereignty, not including colonial states, where founding elections were held prior to the granting of independence, and countries experiencing internal wars in which twenty percent or greater of the population or territory was out of control of the state.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "Dichotomous",
+    "fxInfo_sources": "Bernhard et al. (2001).",
+    "name": "e_bnr_dem"
+  }
+]

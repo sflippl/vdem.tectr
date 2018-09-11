@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Egalitarian democracy index ordinal",
+    "fxInfo_aggregation": "Same transformation rule as for \"v2x_libdem_3C/_4C/_5C\".",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Lindberg (2016).",
+    "fxInfo_clarification": "These are ordinalized versions of the V-Dem egalitarian democracy index. The original index ranges from 0 to 1. These transformations offer three different ordinal versions with three (_3C), four (_4C), and five (_5C) levels respectively. For the _3C-version, one can interpret 0.0 as \"Autocratic\", 0.5 as \"Electoral Authoritarian\", and 1.0 as \"Minimally Democratic\". For the _4C-version, one can interpret 0.0 as Autocratic\", 0.33 as \"Electoral Authoritarian\", 0.67 as \"Minimally Democratic\" and 1.0 as \"Democratic\". For the _5C-version, one can interpret 0.0 as \"Closed Autocratic\", 0.25 as \"Autocratic\", 0.5 as\"Ambivalent\", 0.75 as \"Minimally Democratic\", and 1.0 as \"Democratic\".",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "To what extent is the ideal of egalitarian democracy achieved?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "Ordinal",
+    "fxInfo_sources": "v2x_egal v2x_polyarchy",
+    "name": "e_v2x_egaldem_3C /_4C /_5C"
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Direct popular vote index",
+    "fxInfo_aggregation": "This index results from the addition of the weighted scores of each type of popular votes studied (popular initiatives ×1.5, referendums ×1.5, plebiscites, and obligatory referendums). Each type of popular vote receives a maximum score of two resulting from the addition of two terms (easiness of initiation and easiness of approval), where each term obtains a maximum value of one. As we are studying four types of popular votes, the minimum value is 0, and the maximum is 8. In the v2xdd_dd all scores are normalized to range between 0 and 1. For an elaboration of the weighting factor of each component, see: Altman, David. 2016. The index is aggregated using this formula: v2xdd_dd = (v2xdd_i_pi) × 1.5 + (v2xdd_i_rf) × 1.5 + (v2xdd_i_pl) + (v2xdd_i_or) Regarding each type of citizen initiated popular vote (i.e., popular initiative), the ease of initiation is measured by (a) the existence of a direct democracy process (v2ddlexci), (b) the number of signatures needed (v2ddsigpci), (c) time-limits to circulate the signatures (v2ddsigdci), and (d) the level of government (national and/or subnational). Easiness of approval is measured by the surface of the polygon determined by (a) participation quorum (v2ddsigdci), (b) approval quorum (v2ddpartci), and (c) supermajority (v2ddspmci). The resulting score is then multiplied with (d) district majority(v2ddadmci). Consequences are measured by (a) the legal status of the decision made by citizens(binding or merely consultative) (v2ddlexci), and (b) the frequency and degree of success with which direct popular votes have been held in the past (v2ddthreci). The index is aggregated using this formula: v2xdd_dd = [(IF v2ddlexci > 0, 1, 0) × (1 − (v2ddsigpci)) × (IF v2ddsigdci = 0, 1, .5 + (2 × v2ddsigdci/365)) × (IF v2ddlevci = 2, 1, IF v2ddlevci = 0, 0.75, IF v2ddlevci = 1, 0.5)+(v2ddsigdci) ∩ (v2ddpartci) ∩ (v2ddspmci)] × (0.5 + ((100 − v2ddadmci)/100))/2] × (IF v2ddlexci = 2, 1, IF v2ddlexci = 1, 0.75, v2ddlexci = 0, 0) × (IF years since last successful event < 6, v2ddthreci = 1, afterwards decreases by 0.06 units per year until 0.1; if the event was not successful during the first years v2ddapprci = 0.9, afterwards decreases by 0.1 units per year until 0.1) In case the vote originates from above (i.e., authorities), there is no need to account for v2ddsigpci and v2ddsigdci. For an elaboration of the interaction among quorums, (v2ddsigdci) ∩ (v2ddpartci) ∩(v2ddspmci), see Altman, David. 2016.",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Direct popular voting refers here to an institutionalized process by which citizens of a region or country register their choice or opinion on specific issues through a ballot. It is intended to embrace initiatives, referendums, and plebiscites, as those terms are usually understood. It captures some aspects of the more general concept of direct democracy. The term does not encompass recall elections, deliberative assemblies, or settings in which the vote is not secret or the purview is restricted. Likewise, it does not apply to elections for representatives.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "1-6, 7 new aggregation formula, 8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["David Altman"],
+    "fxInfo_question": "To what extent is the direct popular vote utilized?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "Interval, from low to high (0-1)",
+    "fxInfo_sources": "v2ddlexci v2ddsigpci v2ddsiglci v2ddsigdci v2ddlevci v2ddpartci v2ddapprci v2ddspmci v2ddadmci v2ddyrci v2ddlexrf v2ddsigprf v2ddsigdrf v2ddpartrf v2ddapprrf v2ddspmrf v2ddadmrf  v2ddyrrf v2ddpartpl v2ddapprpl v2ddspmpl v2ddadmpl v2ddlexpl v2ddyrpl v2ddlexor v2ddpartor v2ddappor v2ddspmor v2ddadmor v2ddyror v2ddthreor v2ddthrerf v2ddthrepl",
+    "name": "v2xdd_dd"
+  }
+]

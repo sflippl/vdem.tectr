@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Statistical agency",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Brambor et al. (2016); V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "A statistical agency is an official government organization exclusively devoted to gathering numerical information in a variety of subjects about the country. This may be a completely independent agency or a distinguishable office or department within another governmental agency.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jan Teorell", "Thomas Brambor", "Agustín Goenaga", "Johannes Lindvall"],
+    "fxInfo_question": "Is there a national statistical agency?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No."
+      },
+      {
+        "key": "1",
+        "value": "Yes."
+      }
+    ],
+    "fxInfo_scale": "Dichotomou",
+    "fxInfo_sources": "Various country-specific sources",
+    "name": "v3ststatag"
+  }
+]

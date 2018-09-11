@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Election international monitors denied",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "1-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Staffan I. Lindberg"],
+    "fxInfo_question": "In this national election, were some international election monitors denied opportunity to be present by the government holding the election?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No/Unclear"
+      },
+      {
+        "key": "1",
+        "value": "Yes"
+      }
+    ],
+    "fxInfo_scale": "Dichotomous",
+    "fxInfo_sources": "NELDA 48 (Hyde and Marinov 2012); IDEA; websites by international election monitors.",
+    "name": "v2elmonden"
+  }
+]

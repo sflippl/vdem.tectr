@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Participation",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Vanhanen (2016).",
+    "fxInfo_clarification": "The political participation variable portrays the voting turnout in each election, and is calculated as the percentage of the total population who actually voted in the election. In the case of indirect elections, only votes cast in the final election are taken into account. If electors have not been elected by citizens, only the number of actual electors is taken into account, which means that the degree of participation drops to the value 0. If an election to choose electors has been held, the participation variable is calculated from the number and distribution of votes in that election. National referendums raise the variable value by five percent and state(regional) referendums by one percent for the year they are held. Referendums can add the degree of participation at maximum by 30 percent a year. The value of the combined degree of participation cannot be higher than 70 percent, even in cases where the sum of participation and referendums would be higher than 70.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Vanhanen (2016).",
+    "name": "e_van_part"
+  }
+]

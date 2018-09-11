@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Uncertainty 2",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Bilinski (2015).",
+    "fxInfo_clarification": "Relevant if uncertanity1 = 0. If uncertainty2 = 1, it indicates uncertain estimate of the scope of suffrage resulting from objective real-world factors (i.e. unrelated to the presence of sources). In other words, the existing accessible sources on the scope of suffrage are sufficient, but they do not provide for precise suffrage estimate, and the latter likely does not exist (for example, the number of eligible or registered votes during a particular period is unknown or uncertain).",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "How certain are the previous answers?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "Not certain, because lacking sources"
+      },
+      {
+        "key": "1",
+        "value": "Uncertain because of real world factors"
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Bilinski (2015).",
+    "name": "e_uncertainty2"
+  }
+]

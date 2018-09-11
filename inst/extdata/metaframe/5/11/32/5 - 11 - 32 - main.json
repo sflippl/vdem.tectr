@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Prior elections suspended (NELDA)",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "NELDA (Hyde and Marinov 2012).",
+    "fxInfo_clarification": "This question is specifically asking if regular elections were suspended preceding the election at hand, not if elections have ever been suspended. Therefore, if the previous round of elections had been suspended, or sometime after the last round an announcement was made that elections would not be held pending further notice, the answer would be yes. Even if a regime disbands the elected legislature and says it is paving the way for fresh elections, the answer would be yes unless they follow through on the promise in a relatively short period of time(typically less than a year). It does not matter whether elections are held somewhat earlier or later than usual for this question, nor whether there was a regime change that affected the timing of the elections. Nor does it matter whether the freedom of elections changed. Suspending elections often means that the legislative body is also disbanded, and that the regime rules by decree. If a regime had never had elections, the answer is yes.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "Were regular elections suspended before this election?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No"
+      },
+      {
+        "key": "1",
+        "value": "Yes"
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "NELDA (Hyde and Marinov 2012).",
+    "name": "e_nelda1"
+  }
+]

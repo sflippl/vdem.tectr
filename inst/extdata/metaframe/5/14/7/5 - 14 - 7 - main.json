@@ -1,0 +1,42 @@
+[
+  {
+    "fxInfo_label": "Regulation of participation",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Polity IV (Marshall and Jaggers 2016).",
+    "fxInfo_clarification": "Participation is regulated to the extent that there are binding rules on when, whether, and how political preferences are expressed.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "Is political participation regulated?",
+    "fxInfo_responses": [
+      {
+        "key": "1",
+        "value": "Unregulated: Political participation is fluid; there are no enduring national political organizations and no systematic regime controls on political activity."
+      },
+      {
+        "key": "2",
+        "value": "Multiple Identity: There are relatively stable and enduring political groups which compete for political influence at the national level (parties, regional groups, or ethnic groups, not necessarily elected), but there are few, recognized overlapping (common) interests."
+      },
+      {
+        "key": "3",
+        "value": "Sectarian: Political demands are characterized by incompatible interests and intransigent posturing among multiple social groups and oscillate more or less regularly between intense factionalism and government favoritism."
+      },
+      {
+        "key": "4",
+        "value": "Restricted: Some organized political participation is permitted without intense factionalism but significant groups, issues, and/or types of conventional participation are regularly excluded from the political process."
+      },
+      {
+        "key": "5",
+        "value": "Regulated: Relatively stable and enduring political groups regularly compete for political influence and positions with little use of coercion. No significant groups, issues, or types of conventional political action are regularly excluded from the political process."
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Polity IV (Marshall and Jaggers 2016).",
+    "name": "e_parreg"
+  }
+]

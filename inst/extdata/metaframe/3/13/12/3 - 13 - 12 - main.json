@@ -1,0 +1,42 @@
+[
+  {
+    "fxInfo_label": "Minority or majority government",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Carl Henrik Knutsen"],
+    "fxInfo_question": "In the first cabinet after this national election, did the political parties that were represented in the cabinet hold a majority of the seats in the (lower chamber of) the legislature?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "Parties are not allowed."
+      },
+      {
+        "key": "1",
+        "value": "No, the parties represented in cabinet held less than half of the (lower chamber) legislative seats."
+      },
+      {
+        "key": "2",
+        "value": "Yes, the parties represented in cabinet held half, or more than half, of the (lower chamber) legislative seats."
+      },
+      {
+        "key": "3",
+        "value": "Parties are allowed but nonexistent or so diffuse as to be more like factions, and the factions represented in government hold less than half of the (lower chamber) legislative seats."
+      },
+      {
+        "key": "4",
+        "value": "Parties are allowed but nonexistent or so diffuse as to be more like factions, but the factions represented in government hold half, or more than half, of the (lower chamber) legislative seats."
+      }
+    ],
+    "fxInfo_scale": "Nomina",
+    "fxInfo_sources": "http://countrystudies.us, various country specific sources.",
+    "name": "v3elncbmaj"
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Deliberation introduction",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "",
+    "fxInfo_clarification": "The following questions address the deliberative or non-deliberative nature of a country’s politics, with particular focus on elite levels. Some of these questions focus on the quality of discourse and others focus on public policies.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Michael Coppedge", "John Gerring", "Staffan Lindberg"],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "",
+    "name": "v2dlintro"
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Codeable",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "This variable indicates the reasons we could or could not create a visual flowchart representing the selection procedure.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jeffrey Staton"],
+    "fxInfo_question": "Can we generate a flowchart describing the appointment process from this constitutional event?",
+    "fxInfo_responses": ["1. Yes 2. No, the event is in a language the coder can not read 3. No, there is no appointment or removal information 4. No, the process is explicitly left to be developed via a statute 5. Yes, but much of the process is left to law"],
+    "fxInfo_scale": "Ordina",
+    "fxInfo_sources": "V-Dem coding of constitutional texts in CCP (Elkins et al. 2012).",
+    "name": "v2jucodable"
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Chief executive elected",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Przeworski et al. (2013).",
+    "fxInfo_clarification": "Dummy for the chief executive having been elected (whether directly or indirectly; indirectly means elected by people who have been elected; if indirectly elected, election by a partly elected body counts as being elected).",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "In cases of death, constitutional successors of elected chief executives are coded as elected. Coded is each year of the current chief executive. Prime ministers are always coded as elected as long as the legislature is open (OPENL=1). If there is a president and a prime minister, EXSELEC=1 only if both have been elected. If a chief executive is elected, overthrown by force, and then reinstated, coded as of the year of reinstatemen.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Przeworski et al. (2013).",
+    "name": "e_exselec_pipe"
+  }
+]

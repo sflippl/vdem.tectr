@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Family farms",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document) and Vanhanen(2003).",
+    "fxInfo_clarification": "Missing data within a time-series is interpolated using a linear model, increasing the number of observations from 930 to 7774.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "What percentage of (cultivated) land area is comprised of family farms?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Vanhanen (2003).",
+    "name": "e_Vanhanen_familyfarm_ipo"
+  }
+]

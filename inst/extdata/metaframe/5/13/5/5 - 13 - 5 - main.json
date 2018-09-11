@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Lower house dissolution",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Przeworski et al. (2013).",
+    "fxInfo_clarification": "Counts the number of times the lower house of the legislature was dissolved in a particular year.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "Included as dissolutions are (1) unconstitutional closures of the legislature and (2) early constitutional closures. Dissolutions that occur as a formality at the end of the term of legislature are not coded but early dissolutions are. Coded -1 if there was no legislature to dissolve. Dissolutions are early if they occur at least one full year before the next regularly scheduled election. If an election occurred in year t and the legislative term is k years, then a dissolution is counted if it occurred in t ≤ year ≤ t + k − 2: For the 22 OECD countries during the post-1945 period, dissolutions are coded as early if they occurred more than 12 months before the end of the legislative term (based on Maravall 2007). Note that this variable can assume a value of 1 even if DISSOLUTION_POWER=0, because dissolutions occur when they are not unilateral and sometimes simply illegal.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Przeworski et al. (2013).",
+    "name": "e_dissolution"
+  }
+]

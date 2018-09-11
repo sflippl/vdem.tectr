@@ -1,0 +1,54 @@
+[
+  {
+    "fxInfo_label": "Executive recruitment",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Polity IV (Marshall and Jaggers 2016).",
+    "fxInfo_clarification": "This variable combines information presented in three component variables: regulation of chief executive recruitment (e_xrreg), competitiveness of executive recruitment (e_xrcomp), and openness of executive recruitment (e_xropen). It measure how institutionalized, competitive and open are the mechanisms for recruiting the executive. Not surprisingly, these three variables are highly interdependent and have tended to organize themselves into eight general patterns of executive recruitment.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "How institutionalized, competitive, and open is the recruitment of executive?",
+    "fxInfo_responses": [
+      {
+        "key": "1",
+        "value": "Executive selection through ascription — Recruitment of the chief executive (de facto head of government) is determined by hereditary succession."
+      },
+      {
+        "key": "2",
+        "value": "Dual Executive: ascription and designation — The position of chief executive (de facto head of government) is shared. Executive recruitment is determined both by hereditary succession and designation."
+      },
+      {
+        "key": "3",
+        "value": "Executive recruitment through designation — Chief executives are chosen by designation by the ruling political elite, without formal competition by parties or individuals representing alternative political viewpoints or platforms."
+      },
+      {
+        "key": "4",
+        "value": "Executive recruitment through self-selection — \"Unregulated\" changes in executive power through forceful seizures of power by rival political elites. In addition to the use, or threat of use, of force, there are no formal mechanisms by which the transfer of executive power is regulated — such as hereditary selection, party designation or elections."
+      },
+      {
+        "key": "5",
+        "value": "Executive-guided transition — A transitional period during which the structures and/or forms of governing authority are redesigned and altered systematically under the specific direction of a ruling executive who gained and/or retained office through ”autocratic” means: ascription, designation, or self-selection, with the stated intent of reforming the executive recruitment process and/or increasing the relative influence of the legislative/judicial branches of governance. Executive-guided transitions are dominated by the ruling executive and supporting institutions; involvement by non-executive institutions (e.g., autonomous legislative and judicial institutions or opposition groups/parties) is formally limited, restricted, or prohibited."
+      },
+      {
+        "key": "6",
+        "value": "Dual Executive: Ascription and Election — The position of chief executive (de facto head of government) is shared. Executive recruitment is determined both by hereditary succession and election."
+      },
+      {
+        "key": "7",
+        "value": "Transitional or restricted elections — The chief executive is chosen through elections matching candidates from at least two independent parties. These elections are \"free\" but not necessarily \"fair\" in both design and practice. This category is typically used to document \"liberalizing elections\" held by authoritarian rulers who actively seek to bias the electoral process in their favor. This code may also reflect attempts by elected incumbents to unduly influence the outcome of future elections either to win reelection or in an effort to establish a hegemonic party system or the establishment of quasi-democratic power-sharing arrangements. Finally, it is also used to indicate political systems in which non-elected officials have \"reserved domains\" of executive power."
+      },
+      {
+        "key": "8",
+        "value": "Competitive elections — Chief executive (de facto head of government) is chosen through competitive elections matching two or more candidates from at least two major parties. Elections may be popular or by an elected assembly. The electoral process is transparent and its outcomes are institutionally uncertain."
+      }
+    ],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Polity IV (Marshall and Jaggers 2016).",
+    "name": "e_exrec"
+  }
+]

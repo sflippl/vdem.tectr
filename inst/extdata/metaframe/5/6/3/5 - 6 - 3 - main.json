@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Personal autonomy and individual rights",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Freedom House (2018).",
+    "fxInfo_clarification": "The variable evaluates the extent of state control over travel, choice of residence, employment or institution of higher education; the right of citizens to own property and establish private businesses; the private business’ freedom from unduly influence by government offcials, security forces, political parties or organized crime; gender equality, freedom of choice of marriage partners and size of family; equality of opportunity and absence of economic exploitation.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": ["Countries are graded between 0 (worst) and 16 (best)."],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Freedom House (2018). Taken from Teorell et al (2018).",
+    "name": "e_fh_pair"
+  }
+]

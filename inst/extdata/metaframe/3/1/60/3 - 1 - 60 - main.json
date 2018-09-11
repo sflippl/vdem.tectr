@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Local government exists",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Local government refers to the level of government below the regional government. There are many names for units at this level; some common ones are counties, communes, cities, municipalities, towns, rural municipalities, and villages.  Countries with more than two subnational levels may have multiple levels that fit the definition of local government. If this is the case, please code the local level that, in practice, has the most responsibilities (e.g. making laws, providing primary, education, maintaining roads, policing, etc.) and resources to carry out those responsibilities.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "Mode from country experts’ coding, cross-checked by research assistants in cases where a single mode was not generated because of expert disagreement.",
+    "fxInfo_data_release": "3-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "Converted from (C) to (A (C)) coding as of December 2014.",
+    "fxInfo_ordering": "If coded \"0\" for entire period, skip the following questions focused on local government.",
+    "fxInfo_project_manager": ["Kelly McMann"],
+    "fxInfo_question": "Is there a local government?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No."
+      },
+      {
+        "key": "1",
+        "value": "Yes."
+      }
+    ],
+    "fxInfo_scale": "Dichotomous, converted to interval by the measurement model",
+    "fxInfo_sources": "Country expert coding (C data).",
+    "name": "v2ellocgov"
+  }
+]

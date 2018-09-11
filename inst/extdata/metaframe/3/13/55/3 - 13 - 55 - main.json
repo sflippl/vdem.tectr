@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Regime information",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Text",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "The information on this question has been pre-coded for as many years as possible. Any pre-coded years contain an orange triangle. This means that the identity of the regime, which is given a suggestive name, and its start and end dates have already been entered. We are asking you only to add your confidence in the pre-coded information This means that the text and/or specific date have already been entered, so we are asking you only to add your confidence in the pre-coded rating; we do not want you to change the rating, as we need all the Country Experts to answer the subsequent questions for the same regime.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Carl Henrik Knutsen"],
+    "fxInfo_question": "What is the regime name as well as start and end dates of this regime?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "nomina",
+    "fxInfo_sources": "Encyclopedia Britannica; Wikipedia; various country-specific sources.",
+    "name": "v3reginfo"
+  }
+]

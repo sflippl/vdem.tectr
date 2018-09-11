@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "HOG year of death",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jan Teorell"],
+    "fxInfo_question": "In what year did the head of government die?",
+    "fxInfo_responses": ["Date — year only"],
+    "fxInfo_scale": "Interva",
+    "fxInfo_sources": "worldstatesman.org.",
+    "name": "v3exdeathog"
+  }
+]

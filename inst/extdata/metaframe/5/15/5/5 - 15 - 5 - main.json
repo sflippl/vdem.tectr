@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Political constraints index III",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Henisz (2002).",
+    "fxInfo_clarification": "This index measures the feasibility of policy change, i.e. the extent to which a change in the preferences of any one political actor may lead to a change in government policy. The  index is composed from the following information: the number of independent branches of government with veto power over policy change, counting the executive and the presence of an effective lower and upper house in the legislature (more branches leading to more constraint); the extent of party alignment across branches of government, measured as the extent to which the same party or coalition of parties control each branch (decreasing the level of constraint); and the extent of preference heterogeneity within each legislative branch, measured as legislative fractionalization in the relevant house (increasing constraint for aligned executives, decreasing it for opposed executives).",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "The coding reflects information as of January 1 in any given year. Henisz (2002) uses this index to demonstrate that political environments that limit the feasibility of policy change are an important determinant of investment in infrastructure.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "The index scores are derived from a simple spatial model and theoretically ranges from 0 to 1, with higher scores indicating more political constraint and thus less feasibility of policy change",
+    "fxInfo_sources": "The Political Constraint Index POLCON Dataset (2017).",
+    "name": "e_h_polcon3"
+  }
+]

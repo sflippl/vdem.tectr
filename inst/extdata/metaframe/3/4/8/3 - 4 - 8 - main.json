@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "HOS other body controls",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "3-8. Only in disaggregated dataset.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "The question text is different for the historical coding: \"From which kind of body or bodies does the head of state need approval prior to making important decisions on domestic policy?\"",
+    "fxInfo_ordering": "Answer this question only for those years you answered \"other\" (7) to the previous question [v2exctlhs].",
+    "fxInfo_project_manager": ["Jan Teorell"],
+    "fxInfo_question": "From which kind of body or bodies does the head of state need approval for its actions?",
+    "fxInfo_responses": ["Text."],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "",
+    "name": "v2exctlhos"
+  }
+]

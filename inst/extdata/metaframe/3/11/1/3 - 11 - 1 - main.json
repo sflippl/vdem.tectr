@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Media introduction",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "",
+    "fxInfo_clarification": "Two types of media are distinguished in this section: (1) print (newspapers and magazines) and broadcast (radio and television), and (2) online media. We ask that you evaluate these categories as a whole. Thus, \"the print and broadcast media\" can provide a wide range of perspectives in a country even when individual publications or programs take a consistently narrow perspective.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "",
+    "fxInfo_historical_clarification": "Two types of media are distinguished in this section: (1) print (newspapers and magazines) and (2) broadcast (radio) media. The latter is, however, only for reference to the contemporary era, and should of course be ignored before it appeared. But when applicable, we ask that you evaluate these categories as a whole. If there is no print or broadcast media at all in a given time period, leave the following questions blank (missing) for this time period. Please also explicitly note in the comments section at the end for which years there was no print or broadcast media at all.",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Michael Coppedge"],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "",
+    "name": "v2meintro"
+  }
+]

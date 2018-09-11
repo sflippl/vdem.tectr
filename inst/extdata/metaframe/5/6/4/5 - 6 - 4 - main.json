@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Freedom House/Polity",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Freedom House (2018).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "Average of Freedom House (fh_pr and fh_cl) is transformed to a scale 0-10 and Polity(p_polity2) is transformed to a scale 0-10. These variables are averaged into fh_polity2.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": ["Scale ranges from 0-10 where 0 is least democratic and 10 most democratic."],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Freedom House (2018). Taken from Teorell et al (2018).",
+    "name": "e_fh_polity2"
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Lower chamber gender quota threshold",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Hughes, Paxton, Clayton, and Zetterberg (2018); V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "A quota is the minimum threshold, understood as a percentage (%) of the total seats in the legislature. Coded only for years where a gender quota was present.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Pamela Paxton"],
+    "fxInfo_question": "What is the threshold of the quota for the lower (or unicameral) chamber of the legislature?",
+    "fxInfo_responses": ["Percent."],
+    "fxInfo_scale": "Interval",
+    "fxInfo_sources": "QAROT dataset (Hughes, Paxton, Clayton, and Zetterberg 2017), Quota project (2017); Coding by project manager.",
+    "name": "v2lgqugent"
+  }
+]

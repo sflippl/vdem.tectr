@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Lower chamber election seats won by third largest party",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Numeric",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Does not include appointed (nonelected) seats. Leave this question blank if election was nonpartisan, i.e., no parties (not even pro-government parties) were allowed.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Carl Henrik Knutsen"],
+    "fxInfo_question": "In this election, how many seats in the lower (or unicameral) chamber of the legislature were obtained by the next-largest party?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "Interva",
+    "fxInfo_sources": "Nohlen and colleagues (1999, 2002, 2005, 2010). Caramani (2000). Wikipedia. Websites of National Parliaments. Websites of National Bureau of Statistics. Various country-specific sources.",
+    "name": "v3ellosttm"
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Regime type",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Geddes et al. (2014).",
+    "fxInfo_clarification": "Variable on regime type. Classes are: (1) Indirect military; (2) Military; (3) MilitaryPersonal; (4) Monarchy; (5) Oligarchy; (6) Party; (7) Party-Military; (8) Party-MilitaryPersonal; (9) Party-Personal; (10) Personal.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Geddes et al. (2014).",
+    "name": "e_wr_regtype"
+  }
+]

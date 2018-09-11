@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Upper chamber budget",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Pemstein et al. (2018, V-Dem Working Paper Series 2018:21); V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "The budget refers to major revenue (appropriations) and expenditure (spending) bills. Typically, these are passed annually or bi-annually. Approval is understood to mean a formal vote on the floor of the chamber in which at least 50% of those voting approve the measure.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "Bayesian Item Response Theory Measurement Model",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["John Gerring"],
+    "fxInfo_question": "Is the upper chamber of the legislature required to approve the budget?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No. Includes situations in which (a) there are no formal budget bills, or (b) the executive entirely by-passes the upper house or ignores its actions."
+      },
+      {
+        "key": "1",
+        "value": "Yes. Includes situations in which (a) the executive exercises selective (\"line-item\") vetoes, and (b) there is a prolonged period in which no budget is passed and the executive is unable to raise and spend money, or must operate under the terms of the previous budget."
+      }
+    ],
+    "fxInfo_scale": "Dichotomou",
+    "fxInfo_sources": "",
+    "name": "v3lgbudgup"
+  }
+]

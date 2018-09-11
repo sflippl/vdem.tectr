@@ -1,0 +1,34 @@
+[
+  {
+    "fxInfo_label": "Legislature bicameral",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "The number of chambers have been pre-coded for as many years as possible. This means that the score has already been entered, so we are asking you only to add your confidence in the pre-coded rating. If there is a change in the number of chambers, this is coded on the exact date of when the change occurred, for example the exact date of when a legislature was dissolved, or when the lower and/or upper chamber was established (usually coded on the date when the new legislature first meets; otherwise on the date of the legislative election where the composition of the new legislature was decided).",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "1-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "For the country-year aggregation of the dataset, we have taken the minimum value of v2lgbicam. Constituent assemblies that perform other functions except for drafting and adopting a new constitution (e.g. legislating, electing president, adopting budget, etc) are coded as 1 (1 chamber). In cases when a parliament consists of three or more chambers, one of the chamber names is coded in the variable ”Lower chamber legislature name” (v2lgnamelo), while the others are listed in the variable \"Upper chamber name\" (v2lgnameup). South Africa had a three-chamber parliament during the period of 1984-1994. Subsequently, variable v2lgbicam is coded 2, v2lgnamelo is coded ”House of Assembly”, and v2lgnameup enlists ”House of Representatives, House of Delegates”.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Steven Fish", "Matthew Kroenig"],
+    "fxInfo_question": "How many chambers does the legislature contain?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "0 chambers."
+      },
+      {
+        "key": "1",
+        "value": "1 chamber."
+      },
+      {
+        "key": "2",
+        "value": "2 or more chambers."
+      }
+    ],
+    "fxInfo_scale": "Ordina",
+    "fxInfo_sources": "Nohlen et al. (1999, 2002, 2005, 2010); Chronicle of Parliamentary Elections (IPU); IFES; Websites of national parliaments; National constitutions; Reif (2011, 2012); CCP (Elkins et al. 2012), v191.",
+    "name": "v2lgbicam"
+  }
+]

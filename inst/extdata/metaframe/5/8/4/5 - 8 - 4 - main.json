@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Intercoder",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Kelley and Kolev (2010).",
+    "fxInfo_clarification": "",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "How many variables (0-7) between SR0STR and SR23VIOL had to be reconciled between the datasets?",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "Kelley and Kolev (2010).",
+    "name": "e_INTERCODER"
+  }
+]

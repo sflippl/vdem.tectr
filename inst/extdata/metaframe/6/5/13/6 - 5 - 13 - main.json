@@ -1,0 +1,21 @@
+[
+  {
+    "fxInfo_label": "Protected areas: Percentage of total land area",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "IUCN (2017).",
+    "fxInfo_clarification": "Protected areas: IUCN Categories I-IV and other, percentage of total land area. The proportion of a country or region’s total land area that is assigned terrestrial protected area status by the World Conservation Union (IUCN). Both IUCN categories I-VI and terrestrial protected areas that are not assigned to a category by IUCN are included here. A protected area is defined by IUCN as \"an area of land and/or sea especially dedicated to the protection and maintenance of biological diversity, and of natural and associated cultural resources, and managed through legal or other effective means.\"",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [],
+    "fxInfo_scale": "",
+    "fxInfo_sources": "IUCN Protected Areas Categories System (2017).",
+    "name": "e_wri_pa"
+  }
+]

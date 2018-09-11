@@ -1,0 +1,62 @@
+[
+  {
+    "fxInfo_label": "Election type",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Selection",
+    "fxInfo_citation": "V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "Choose all that apply. Whenever possible, specify the exact date of each election. If the election unfolds across more than one day, enter the date for the first day. If the precise date is unavailable, enter the first of the month; if the month is unknown, enter January 1. Multiple-round elections (e.g., two-round elections) are counted separately. (More than one election in a single year can be accommodated.)",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "1-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "All direct elections and elections by an electoral college that is elected by the people and has the sole purpose of electing an executive or members of parliament are coded. Note that single-party elections, elections held under limited suffrage and for only parts of a parliament, as well as elections of which the results are subsequently cancelled are included. Elections for constituent assemblies that come to perform functions beyond drafting and adopting a new constitution (e.g. legislating, electing president, adopting budget, etc) are also included and coded under category 0 and 1 (Legislative; lower, sole, or both chambers; first or second round). Excluded are elections that are not decisive, i. e. when the HOS alone is selecting the candidate(s). The variable includes elections where results were declared invalid after the fact, e.g. by a constitutional court, since they also provide information on the quality of democracy.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Staffan I. Lindberg"],
+    "fxInfo_question": "What type of election was held on this date?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "Legislative; lower, sole, or both chambers, first or only round. (0=No, 1=Yes) [v2eltype_0]"
+      },
+      {
+        "key": "1",
+        "value": "Legislative, lower, sole, or both chambers, second round. (0=No, 1=Yes) [v2eltype_1]"
+      },
+      {
+        "key": "2",
+        "value": "Legislative, upper chamber only, first or only round. (0=No, 1=Yes) [v2eltype_2] (Not yet coded)"
+      },
+      {
+        "key": "3",
+        "value": "Legislative, upper chamber only, second round. (0=No, 1=Yes) [v2eltype_3] (Not yet coded)"
+      },
+      {
+        "key": "4",
+        "value": "Constituent Assembly, first or only round. (0=No, 1=Yes) [v2eltype_4]"
+      },
+      {
+        "key": "5",
+        "value": "Constituent Assembly, second round. (0=No, 1=Yes) [v2eltype_5]"
+      },
+      {
+        "key": "6",
+        "value": "Presidential, first or only round. (0=No, 1=Yes) [v2eltype_6]"
+      },
+      {
+        "key": "7",
+        "value": "Presidential, second round. (0=No, 1=Yes) [v2eltype_7]"
+      },
+      {
+        "key": "8",
+        "value": "Metropolitan or supranational legislative, first or only round. (0=No, 1=Yes) [v2eltype_8](Not yet coded)"
+      },
+      {
+        "key": "9",
+        "value": "Metropolitan or supranational legislative, second round. (0=No, 1=Yes) [v2eltype_9] (Not yet coded)"
+      }
+    ],
+    "fxInfo_scale": "Series of dichotomous scales",
+    "fxInfo_sources": "NELDA (Hyde and Marinov 2012); Chronicle of Parliamentary Elections (IPU); IFES; IDEA; Reif (2011, 2012); Polity IV (Marshall, Jaggers 2007); Keesings Records; CIA Factbook; Wikipedia.",
+    "name": "v2eltype"
+  }
+]

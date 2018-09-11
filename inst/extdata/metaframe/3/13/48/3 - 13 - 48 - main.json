@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Statistical yearbook published",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Brambor et al. (2016); V-Dem Codebook (see suggested citation at the top of this document).",
+    "fxInfo_clarification": "A statistical yearbook is a recurrent publication of a government agency published annually or less frequently which contain statistical tables in more than one of the following categories: 1. Physical environment; 2. Demography; 3. Economic Affairs; 4. Political Affairs; and 5. Cultural Affairs.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": ["Jan Teorell", "Thomas Brambor", "Agustín Goenaga", "Johannes Lindvall"],
+    "fxInfo_question": "Was there a statistical yearbook issued this year?",
+    "fxInfo_responses": [
+      {
+        "key": "0",
+        "value": "No."
+      },
+      {
+        "key": "1",
+        "value": "Yes."
+      }
+    ],
+    "fxInfo_scale": "Dichotomou",
+    "fxInfo_sources": "Various country-specific sources",
+    "name": "v3ststybpub"
+  }
+]

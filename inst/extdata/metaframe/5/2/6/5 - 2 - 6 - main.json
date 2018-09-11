@@ -1,0 +1,30 @@
+[
+  {
+    "fxInfo_label": "Executive electoral competitiveness",
+    "fxInfo_aggregation": "",
+    "fxInfo_answer_type": "Multiple Choice",
+    "fxInfo_citation": "Cruz et al. (2018).",
+    "fxInfo_clarification": "Uses same scale as Legislative IEC.",
+    "fxInfo_cpp_tag": "",
+    "fxInfo_cross_coder_aggregation": "",
+    "fxInfo_data_release": "5-8.",
+    "fxInfo_historical_clarification": "",
+    "fxInfo_notes": "Executives elected by bodies other than these are given the same score that the electing body would get. Even if the electing body is not the actual \"legislature\" that is tracked in the LIEC (such as an appointed electoral college), the competitiveness of that body is used to score the executive. This means that competitively elected prime ministers get 6 or 7. The chief executives of Communist nations (the chairman of the Communist Party) is given a 3, because they are elected by the Party Congress, electing bodies which they do not appoint. Executives elected by small, appointed juntas or by appointed electoral colleges get 2. Rival chief executives in one country, particularly in the setting of armed conflicts, are counted as No executives, and thus score a 1. Referenda and votes by \"popular acclamation\" on unelected executives are scored as 3. If executives unilaterally extend their terms of office, they get a 2 starting in the year they should have held elections. Any executive elected for life, even by the people or an elected assembly, gets a 2. This elected-for-life rule is slightly different from that followed for legislatures that unilaterally extend their rule. If chief executive takes office through a coup and remains office without an election, EIEC is 2 because the executive is unelected. If an elected president is impeached and the vice-president succeeds the presidency in a legal and proper way, EIEC remains as was. If EIEC was 7 under the old president, it remains 7 under the new president. For \"Electoral Rules\" variables: all get an NA if the LIEC is 1. If LIEC is 2, then legislature is unelected and we infer that district magnitude is NA. If LIEC is less than or equal to 4, then PR is also NA irrespective of district magnitude. If LIEC is less than or equal to 3.5, then both PR and Plurality are NA. In order to assess electoral rules we use the IPU website as well as the Europa Yearbook (and to a lesser extent Banks). IPU has the most recent information whereas Europa has information up to 1984, and from 1990 to 1994. If there are discrepancies between Europa (to 1984) and IPU (1998), we assume that changes have occurred, and only input the IPU information for 1995, leaving blanks from 1985 to 1994. If the IPU matched the Europa exactly, we assumed no changes took place, and filled in the intervening years. In the event that a system changed and then switched back, this introduces errors. Since this assumption was made only when institutions from 1984 matched those in 1998, these cases are limited to very stable democracies.",
+    "fxInfo_ordering": "",
+    "fxInfo_project_manager": [],
+    "fxInfo_question": "",
+    "fxInfo_responses": [
+      {
+        "key": "1",
+        "value": "Elected directly by population."
+      },
+      {
+        "key": "2",
+        "value": "Elected by an electoral college that is elected by the people and has the sole purpose of electing the executive, are scored on the above scale."
+      }
+    ],
+    "fxInfo_scale": "Categorical",
+    "fxInfo_sources": "Cruz et al. (2018).",
+    "name": "e_dpi_eipc"
+  }
+]
