@@ -133,7 +133,7 @@ $(document).ready(function () {
 <h1>Preparations</h1>
 <pre class="r"><code>load_all()</code></pre>
 <pre><code>## Loading vdem.tectr</code></pre>
-<pre class="r"><code>pdffile &lt;- system.file(&quot;extdata&quot;, &quot;Country_Year_V-Dem_Extended_STATA_v8&quot;,
+<pre class="r"><code>pdffile &lt;- system.file(&quot;extdata&quot;, &quot;Country_Year_V-Dem_STATA_v8&quot;,
                        &quot;V-DEM Codebook V8.pdf&quot;, 
                        package = &quot;vdem.tectr&quot;)
 codebook &lt;- pdf_text(pdffile)</code></pre>
@@ -331,7 +331,7 @@ tbl_chapters2</code></pre>
 <pre class="r"><code>codebook2[7]</code></pre>
 <pre><code>## [1] &quot;  Question: To what extent is the ideal of electoral democracy in its fullest sense achieved?&quot;</code></pre>
 <p>we extract all these lines and make a manual exception:</p>
-<pre class="r"><code>categories &lt;- str_detect(codebook2, &quot;^  \\S[^:]+:&quot;) &amp; 
+<pre class="r"><code>categories &lt;- str_detect(codebook2, &quot;^\\s{2,3}\\S[^:]+:&quot;) &amp; 
   !str_detect(codebook2, &quot;^  The index is aggregated using this formula:&quot;)</code></pre>
 <p>We may now modify <code>tbl_sort</code>:</p>
 <pre class="r"><code>tbl_sort2 &lt;- tibble(
@@ -349,7 +349,7 @@ tbl_chapters2</code></pre>
   )</code></pre>
 <p>Finally, we can split every description into a category and a list column of character vectors (for now - later this will be merged appropriately).</p>
 <pre class="r"><code>category_descriptions &lt;- str_match(codebook2[categories], 
-                                   pattern = &quot;^  (\\S[^:]+):\\s*(.*)$&quot;)
+                                   pattern = &quot;^\\s{2,3}(\\S[^:]+):\\s*(.*)$&quot;)
 tbl_categories &lt;- tibble(
   category = category_descriptions[, 2], 
   description = category_descriptions[, 3], 
@@ -962,7 +962,9 @@ head(tbl_categories$Responses[resp_not_null], 5)</code></pre>
 ## [10] &quot;      of elections.&quot;                                                                              
 ## [11] &quot;      4: Yes. The EMB is autonomous and impartially applies elections laws and administrative&quot;    
 ## [12] &quot;      rules.&quot;</code></pre>
-<p>This is a bit harder to clean and will take several iterations. For now, I will simply rename it.</p>
+<p>The pattern is typically “<number>: <response>”. However, there is a typo in “v3regendtypems” which we will correct beforehand.</p>
+<pre class="r"><code>tbl_categories[tbl_categories$ind_name == &quot;v3regendtypems&quot;, &quot;Responses&quot;][[1]][[1]] %&lt;&gt;%
+  str_replace(&quot;11.&quot;, &quot;11:&quot;)</code></pre>
 <pre class="r"><code>tbl_categories &lt;- mutate(tbl_categories, 
   fxInfo_responses = Responses %&gt;% 
   map(function(str) {
@@ -999,17 +1001,17 @@ head(tbl_categories$Scale[scale_not_null], 5)</code></pre>
 ## [1] &quot;Interval, from low to high (0-1).&quot;
 ## 
 ## [[2]]
-## NULL
+## [1] &quot;Interval.&quot;
 ## 
 ## [[3]]
-## [1] &quot;Ordinal, converted to interval by the measurement model.&quot;
+## NULL
 ## 
 ## [[4]]
 ## [1] &quot;Ordinal, converted to interval by the measurement model.&quot;
-## [2] &quot;&quot;                                                        
 ## 
 ## [[5]]
-## [1] &quot;Interval.&quot;
+## [1] &quot;Ordinal, converted to interval by the measurement model.&quot;
+## [2] &quot;&quot;                                                        
 ## 
 ## [[6]]
 ## [1] &quot;Dichotomous.&quot;
@@ -1104,9 +1106,9 @@ head(tbl_categories$Scale[scale_not_null], 5)</code></pre>
 <p>There are considerable overlaps due to typos:</p>
 <pre class="r"><code>unique(tbl_categories$fxInfo_scale)</code></pre>
 <pre><code>##  [1] &quot;Interval, from low to high (0-1)&quot;                                                                                                                                                                 
-##  [2] &quot;&quot;                                                                                                                                                                                                 
-##  [3] &quot;Ordinal, converted to interval by the measurement model&quot;                                                                                                                                          
-##  [4] &quot;Interval&quot;                                                                                                                                                                                         
+##  [2] &quot;Interval&quot;                                                                                                                                                                                         
+##  [3] &quot;&quot;                                                                                                                                                                                                 
+##  [4] &quot;Ordinal, converted to interval by the measurement model&quot;                                                                                                                                          
 ##  [5] &quot;Dichotomous&quot;                                                                                                                                                                                      
 ##  [6] &quot;Nominal&quot;                                                                                                                                                                                          
 ##  [7] &quot;Dichotomous, converted to interval by the measurement model&quot;                                                                                                                                      
@@ -1172,14 +1174,13 @@ head(tbl_categories$`Source(s)`[src_not_null], 5)</code></pre>
 <h1>Metaframe</h1>
 <p>Finally, we create the metaframe file structure:</p>
 <pre class="r"><code>metaframe &lt;- 
-  rename(tbl_categories, name = ind_name, fxInfo_label = ind_name_external) %&gt;%
+  rename(tbl_categories, name = ind_name, fxInfo_name = ind_name_external) %&gt;%
   inner_join(select(tbl_parts, part_num, part_title), by = &quot;part_num&quot;) %&gt;% 
-  inner_join(select(tbl_chapters, chapter_num, chapter_title, part_num), 
+  left_join(select(tbl_chapters, chapter_num, chapter_title, part_num), 
              by = c(&quot;part_num&quot;, &quot;chapter_num&quot;)) %&gt;% 
   group_by(part_num, chapter_num, ind_num)
-path &lt;- paste0(system.file(&quot;inst&quot;, &quot;extdata&quot;, 
-                                                   package = &quot;vdem.tectr&quot;), 
-                                       &quot;/metaframe&quot;)
+path &lt;- paste0(system.file(&quot;inst&quot;, &quot;extdata&quot;, package = &quot;vdem.tectr&quot;), 
+               &quot;/metaframe&quot;)
 mf_revisable &lt;- fx_write_json(metaframe, 
                               path = path, 
                               main = str_subset(names(metaframe), &quot;^fxInfo_&quot;))

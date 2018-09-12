@@ -13,6 +13,7 @@ library(pdftools)
 library(glue)
 library(purrr)
 library(tectr)
+library(magrittr)
 ```
 
 This document reads in the codebook and determines the indicator info.
@@ -21,7 +22,7 @@ This document reads in the codebook and determines the indicator info.
 
 ```{r}
 load_all()
-pdffile <- system.file("extdata", "Country_Year_V-Dem_Extended_STATA_v8",
+pdffile <- system.file("extdata", "Country_Year_V-Dem_STATA_v8",
                        "V-DEM Codebook V8.pdf", 
                        package = "vdem.tectr")
 codebook <- pdf_text(pdffile)
@@ -245,7 +246,7 @@ codebook2[7]
 we extract all these lines and make a manual exception:
 
 ```{r}
-categories <- str_detect(codebook2, "^  \\S[^:]+:") & 
+categories <- str_detect(codebook2, "^\\s{2,3}\\S[^:]+:") & 
   !str_detect(codebook2, "^  The index is aggregated using this formula:")
 ```
 
@@ -271,7 +272,7 @@ Finally, we can split every description into a category and a list column of cha
 
 ```{r}
 category_descriptions <- str_match(codebook2[categories], 
-                                   pattern = "^  (\\S[^:]+):\\s*(.*)$")
+                                   pattern = "^\\s{2,3}(\\S[^:]+):\\s*(.*)$")
 tbl_categories <- tibble(
   category = category_descriptions[, 2], 
   description = category_descriptions[, 3], 
@@ -666,7 +667,13 @@ resp_not_null <- !sapply(tbl_categories$Responses, is.null)
 head(tbl_categories$Responses[resp_not_null], 5)
 ```
 
-This is a bit harder to clean and will take several iterations. For now, I will simply rename it.
+The pattern is typically "<number>: <response>". However, there is a typo in "v3regendtypems" which we will correct beforehand.
+
+```{r}
+tbl_categories[tbl_categories$ind_name == "v3regendtypems", "Responses"][[1]][[1]] %<>%
+  str_replace("11.", "11:")
+```
+
 
 ```{r}
 tbl_categories <- mutate(tbl_categories, 
@@ -760,14 +767,13 @@ Finally, we create the metaframe file structure:
 
 ```{r}
 metaframe <- 
-  rename(tbl_categories, name = ind_name, fxInfo_label = ind_name_external) %>%
+  rename(tbl_categories, name = ind_name, fxInfo_name = ind_name_external) %>%
   inner_join(select(tbl_parts, part_num, part_title), by = "part_num") %>% 
-  inner_join(select(tbl_chapters, chapter_num, chapter_title, part_num), 
+  left_join(select(tbl_chapters, chapter_num, chapter_title, part_num), 
              by = c("part_num", "chapter_num")) %>% 
   group_by(part_num, chapter_num, ind_num)
-path <- paste0(system.file("inst", "extdata", 
-                                                   package = "vdem.tectr"), 
-                                       "/metaframe")
+path <- paste0(system.file("inst", "extdata", package = "vdem.tectr"), 
+               "/metaframe")
 mf_revisable <- fx_write_json(metaframe, 
                               path = path, 
                               main = str_subset(names(metaframe), "^fxInfo_"))

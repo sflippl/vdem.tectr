@@ -1,0 +1,599 @@
+---
+title: "Codebook after Writing"
+output: html_document
+---
+
+```{r}
+library(tectr)
+library(tidyverse)
+library(haven)
+library(magrittr)
+library(glue)
+devtools::load_all()
+```
+
+# Overview
+
+Between the end of "Codebook_metaframe" and here, the metaframe may be changed 
+by following the path to the specific json file. Now, the metaframe and the data
+will be created. We will begin with the basics of the metaframe, followed by the
+data. The third codebook contains the geocoding and further tweaking of the metaframe.
+
+# Metaframe
+
+## Import
+
+I will now read `mf_revisable` to get the data from the json files:
+
+```{r}
+tmp_mf_vdem <- fx_read(mf_revisable)
+tmp_mf_vdem
+```
+
+I read in the data, as well:
+
+```{r}
+path <- system.file("inst", "extdata", "Country_Year_V-Dem_STATA_v8", "V-Dem-CY-v8.dta",package = "vdem.tectr")
+tmp_vdem <- read_dta(path)
+tmp_vdem
+rm(path)
+```
+
+## Identifiers
+
+`haven::as_factor` allows us to transform the appropriate columns into factors by applying the function to `tmp_vdem`. However, this method cannot distinguish between nominal and ordinal variables and we will therefore have to wait with this. First, I will add the identifier variables to the metaframe. I did not add them to the metaframe beforehand because their format is different and the information contained in the codebook mostly refers to other documents. It may sensible to add the information in a future version. The ones that I will explicitly add for now, are "country_name" and "year".
+
+```{r}
+tmp_mf_vdem <- bind_rows(tibble(name = c("country_name", "year"), 
+                                fxInfo_name = c("Country Name", "Year")), 
+                         tmp_mf_vdem)
+```
+
+Many of the columns of `tmp_mf_vdem` are not important for the task of formatting the data. The goal is, at first, to have a metaframe which contains all columns of the corresponding dataset (possibly more) and a dataframe where the values are correctly coded. We thus first look at the class of the columns of `tmp_vdem`:
+
+```{r}
+tmp_vdem %>% 
+  map_chr(class) %>% 
+  table
+```
+
+The only task is to differentiate between ordinal and nominal variables and make sure that all variables but the identifiers are described in the mf_vdem data. The identifiers are: 
+
+```{r}
+names(tmp_vdem)[1:21]
+```
+
+Only "country_name" and "year" are contained in the metaframe.
+
+```{r}
+idents <- names(tmp_vdem)[c(2, 3, 5:21)]
+```
+
+If we remove these variables, we get:
+
+```{r}
+tmp_vdem %>% 
+  select(-!!idents) %>% 
+  map_chr(class) %>% 
+  table
+```
+
+## Preliminaries
+
+Let's take a peek at the column names that are not yet contained:
+
+```{r}
+names(tmp_vdem %>% select(-!!idents)) %>% 
+  extract(!(. %in% tmp_mf_vdem$name)) %>% 
+  length
+```
+
+There are three main reasons why so many variables are not contained in the metaframe:
+
+* there are series of dichotomous variables that are encoded by "<name>_<level>" for each level, e. g., v2csanmvch:
+
+```{r}
+names(tmp_vdem) %>% str_subset(coll("v2csanmvch"))
+```
+
+* many names are saved in the form "<name>, \*_osp, \*_ord"
+* there is additional information on many variables in the form of confidence intervals ("_codehigh"/"_codelow"), standard deviations ("_sd") and the number of experts who coded them
+
+As this is partly stacked in the direction in which I have listed it, we will decode it in this direction. However, there are two previous tasks to fulfill:
+
+### Column name corrections
+
+There are a few variables that are inconsistently named.
+
+```{r}
+names(tmp_vdem) %>% str_subset("osp_ex")
+```
+
+The variable name here is "<name>_ex" and a more consistent name would therefore be "<name>_ex_osp". Let us look at the different forms in which these inconsistent variables come:
+
+```{r}
+names(tmp_vdem) %>% str_subset("v2elmulpar_\\S*_(?:ex|leg)")
+```
+
+We therefore define a function which corrects these names by switching the pattern with the suffix:
+
+```{r}
+correct_names <- function(names) {
+  # One of the following mixtures has to exist that is not empty:
+  grid <- expand.grid(
+    c("_osp", "_ord", ""),
+    c("_codehigh", "_codelow", "_sd", "")
+  )
+  proper_end <- paste0(grid[[1]], grid[[2]]) %>%
+    magrittr::extract(. != "") %>%
+    paste(collapse = "|")
+  unproblematic_pattern <- glue::glue("(?:{proper_end})$")
+  long_grid <- expand.grid(
+    c("_osp", "_ord"),
+    c("_codehigh", "_codelow", "_sd")
+  )
+  long_proper_end <- paste0(long_grid[[1]], long_grid[[2]], collapse = "|")
+  short_proper_end <- paste0(c("_osp", "_ord", "_codehigh", "_codelow", "_sd"), 
+                             collapse = "|")
+  names <- names %>% {
+    if_else(
+      str_detect(., unproblematic_pattern), ., 
+      str_replace(., glue(
+        "(<long_proper_end>)(_[:alpha:]{1,50})$", .open = "<", .close = ">"
+        ), "\\2\\1")
+    )
+  } %>% {
+    if_else(
+      str_detect(., unproblematic_pattern), ., 
+      str_replace(., glue(
+        "(<short_proper_end>)(_[:alpha:]{1,50})$", .open = "<", .close = ">"
+        ), "\\2\\1")
+    )
+  }
+  names
+}
+```
+
+I have included a short example with different flavors of correct and incorrect names:
+
+```{r}
+ex <- c(
+    "v2psprbrch_ord_codehigh",
+    "v2elasmoff_codelow_ex",
+    "v2elasmoff",
+    "v2elasmoff_ord_codelow_ex",
+    "v2elasmoff_ex", 
+    "v2elpeace_rec_codelow_ex"
+  )
+correct_names(ex)
+```
+
+We now change `tmp_vdem`:
+
+```{r}
+names(tmp_vdem) <- correct_names(names(tmp_vdem))
+```
+
+```{r}
+names(tmp_vdem) %>% str_subset("osp_ex")
+```
+
+
+### Metaframe name corrections
+
+There are two reasons why names are incorrect in the metaframe: there is the pattern "<name>, *_osp ..." and "<name>_3C/_4C ..." 
+
+Whereas we only delete ", *_osp ...", the second pattern actually implies several variables and we therefore have to conduct an inner join (together with some more flexible regular expressions because of typos):
+
+```{r}
+key <- dplyr::tibble(
+    before = tmp_mf_vdem$name,
+    name = tmp_mf_vdem$name %>%
+      purrr::map(
+      function(name) {
+        if(stringr::str_detect(name, "\\*_osp,")) {
+          stringr::str_extract(name, "^[^\\s*]*(?=,)") %>%
+            return()
+        }
+        else if(stringr::str_detect(name, "_3C\\s\\/")) {
+          stringr::str_extract(name, "^\\S*(?=_3C)") %>%
+            paste0(c("_3C", "_4C", "_5C")) %>%
+            return()
+        }
+        else return(name)
+      }
+    )
+  ) %>% tidyr::unnest()
+tmp_mf_vdem <- 
+  dplyr::inner_join(key, tmp_mf_vdem, by = c(before = "name")) %>%
+  dplyr::select(-before)
+```
+
+## Split the series of dichotomous variables
+
+Besides extending the names, the following code edits the question and answer of the new dichotomous variable so that they are more appropriate.  Because of some inconsistencies in the codebook, I had to try out some different criteria for dichotomous variables. The following ones turned out to be appropriate:
+
+```{r}
+is_ds <- tmp_mf_vdem %$%
+  {((stringr::str_detect(fxInfo_answer_type, "(?:S|s)election") &
+    !stringr::str_detect(fxInfo_scale, "Ordinal")) |
+    stringr::str_detect(fxInfo_scale, "(?:S|s)eries") |
+      name %in% c("v3equavouc",  "v3equavolc")) & 
+    !(name %in% c("country_name", "year", "v2expathhg"))}
+mf_rem <- tmp_mf_vdem[!is_ds, ]
+mf_dich <- tmp_mf_vdem[is_ds, ]
+mf_dich_new <- seq_len(nrow(mf_dich)) %>%
+  purrr::map_dfr(
+    function(i_row) {
+      tmp_old <- mf_dich[i_row, ]
+      resps <- tmp_old$fxInfo_responses[[1]] %>%
+        dplyr::as_tibble() %>%
+        dplyr::mutate(
+          value = stringr::str_split_fixed(value,
+              pattern = stringr::coll("(0=No, 1=Yes)"),
+              n = 2)[, 1] %>% stringr::str_trim()
+        )
+      question <- tmp_old$fxInfo_question
+      question_new <- glue::glue(
+        question, " Is the answer \"{resps$value}\"?"
+      ) %>% as.character()
+      response_new <- "Yes or No"
+      name_new <- paste0(tmp_old$name, "_", resps$key)
+      tmp_old <- tmp_old[rep(1, nrow(resps)), ]
+      tmp_old %>%
+        dplyr::mutate(
+          name = name_new,
+          fxInfo_question = question_new,
+          fxInfo_responses = list(response_new)
+        )
+    }
+  )
+tmp_mf_vdem <- dplyr::bind_rows(mf_rem, mf_dich_new)
+```
+
+## Only keep variables that can be found in `tmp_vdem`
+
+While the metaframe might be extended in future versions, for now, it seems sensible to retain only the columns that can be found in `tmp_vdem`. To make sure that we did not overlook anything, we will do this gradually.
+
+First of all, those variables of that are found in the fifth and sixth part are only present in the extended dataset:
+
+```{r}
+tmp_mf_vdem %>%
+  filter(part_num >= 5) %$% 
+  name %in% names(tmp_vdem) %>% 
+  any
+```
+
+We therefore remove them:
+
+```{r}
+tmp_mf_vdem <- tmp_mf_vdem %>% 
+  filter(part_num < 5 | name %in% c("country_name", "year"))
+```
+
+Furthermore, many sections contain introductions or comments which, again, might be interesting in the future but which we will remove for now:
+
+```{r}
+tmp_mf_vdem %>%
+  filter(str_detect(name, "intro") | str_detect(fxInfo_name, "comment")) %$% 
+  name %in% names(tmp_vdem) %>% 
+  any
+```
+
+```{r}
+tmp_mf_vdem <- tmp_mf_vdem %>% 
+  filter(!str_detect(name, "intro") & !str_detect(fxInfo_name, "comment"))
+```
+
+Some variables can only be found in the disaggregated dataset:
+
+```{r}
+tmp_mf_vdem %>%
+  filter(str_detect(fxInfo_data_release, "disaggregated dataset")) %$% 
+  name %in% names(tmp_vdem) %>% 
+  any
+```
+
+```{r}
+tmp_mf_vdem <- tmp_mf_vdem %>%
+  filter(!str_detect(fxInfo_data_release, "disaggregated dataset") | 
+           name %in% c("country_name", "year"))
+```
+
+Furthermore, the cautionary notes report some variables that have been excluded:
+
+```{r}
+tmp_mf_vdem <- tmp_mf_vdem %>% 
+  filter(!(name %in% c(
+    "v2elnoncit", "v2elmalsuf", "v2elfemsuf", "v2elmalsuf_ex", "v2elfemsuf_ex",
+    "v2elmalsuf_leg", "v2elfemsuf_leg", "v2elsnlpop", "v2elsnmpop", 
+    "v2psswitch", "v2clsnmpct", "v2svstterr", "v2svstpop", "v2meaccess", 
+    "v2lgqumin"
+  )))
+```
+
+We will inspect the remaining variables that do not exist, manually:
+
+```{r}
+print(filter(tmp_mf_vdem, !(name %in% names(tmp_vdem))), n = 51)
+```
+
+* The variables from the contemporary V-DEM (beginning with v2) are either comments or have previous data releases associated with them. While this does not always imply that the variable does not exist in the dataset, it is a reasonable explanation. 
+* The fact that the accountability indices and a few other indices from part 4 are missing ("v2x_accountability" and below) is odd. 
+* As historical V-DEM is a separate project, there are certain inconsistencies that have been mentioned. This could be the reason why not all of these variables have been included so far.
+* Furthermore, there are series of dichotomous variables where only certain levels are missing. In the case of v2eltype, there is explicit information in the responses (see the Codebook as these have been replaced) that these levels have not been coded yet.
+
+While these considerations certainly do not answer all the questions, I hope that the table will at least demonstrate that no simple coding errors have been made and that the variables are indeed not present in the dataset.
+
+I will therefore now remove these variables.
+
+```{r}
+tmp_mf_vdem <- filter(tmp_mf_vdem, name %in% names(tmp_vdem))
+```
+
+## Add the cautionary notes
+
+There are a few cautionary notes which I will include here.
+
+```{r}
+tmp_mf_vdem <- 
+  tmp_mf_vdem %>% 
+  dplyr::mutate(
+      fxInfo_cautionary = dplyr::case_when(
+        name %in% c(
+          "v2eldonate", "v2elpeace", "v2psprbrch"
+        ) ~ glue::glue(
+          "While the country-date estimates reached a stationary distribution",
+          " according to our standard diagnostic procedures, population-level",
+          " thresholds (gamma_mu) did not."
+        ),
+        name %in% c(
+          "v2x_frassoc_thick", "v2x_clpol", "v2xcs_ccsi"
+        ) ~ glue::glue(
+          "While the country-date estimates converged in the factor models",
+          " some of the parameters, although near convergence, did not",
+          " converge according to the standard V-Dem criteria."
+        ),
+        name == "v2x_veracc" ~
+          glue::glue(
+            "While estimates converged according to standard V-Dem criteria,",
+            " some parameters involved in the estimation process for this",
+            " variable did not. "
+          ),
+        name %in% c("v2mefemjrn", "v2clsnlpct") ~
+          glue::glue(
+            "These variables should be used with caution."
+          ),
+        TRUE ~ ""
+      )
+    )
+```
+
+
+## Add osp and ord
+
+We now add the suffix "_osp" or "_ord" depending on whether the corresponding variable exists as a column in `tmp_vdem`. This operation implies changes in the number of rows. Furthermore we need to adapt the `fxInfo_name` column with an appropriate suffix:
+
+```{r}
+name_suffix <- c(" (Relative)", osp = " (Original)", ord = " (Ordinal)")
+```
+
+```{r warning=FALSE}
+tmp_mf_vdem <- 
+  seq_len(nrow(tmp_mf_vdem)) %>% 
+  map_dfr(
+    function(i_row) {
+      tmp_old <- tmp_mf_vdem[i_row, ]
+      names <- paste0(tmp_old$name, c("", "_osp", "_ord"))
+      if(names[2] %in% names(tmp_vdem)) {
+        stopifnot(names[3] %in% names(tmp_vdem))
+        ret <- tmp_old[rep(1, 3), ]
+        ret <- ret %>% 
+          mutate(
+            name = names, 
+            fxInfo_name = paste0(fxInfo_name, name_suffix)
+          )
+      }
+      else ret <- tmp_old
+      ret
+    }
+  )
+```
+
+## Add `codehigh`, `codelow`, `sd` and `nr`
+
+We now add the suffix "_codehigh", "_codelow", "_sd" and "_nr" depending on whether the corresponding variable exists. codehigh and codelow should exist together but sd and nr may be independent.
+
+```{r}
+tmp_mf_vdem <-
+  seq_len(nrow(tmp_mf_vdem)) %>% 
+  map_dfr(
+    function(i_row) {
+      tmp_old <- tmp_mf_vdem[i_row, ]
+      names <- paste0(tmp_old$name, c("", "_codehigh", "_codelow", "_sd", "_nr"))
+      if(!any(names[2:5] %in% names(tmp_vdem))) return(tmp_old)
+      ret <- tmp_old
+      if(names[2] %in% names(tmp_vdem)) {
+        stopifnot(names[3] %in% names(tmp_vdem))
+        ret <- tmp_old[rep(1, 3), ]
+        ret <- ret %>% 
+          mutate(
+            name = names[1:3],
+            fxInfo_name = paste0(
+              fxInfo_name,
+              c("", " (Upper CI)", " (Lower CI)")
+            )
+          )
+      }
+      if(names[4] %in% names(tmp_vdem)) {
+        ret <- bind_rows(
+          ret, 
+          tmp_old %>% 
+            mutate(
+              name = names[4], 
+              fxInfo_name = paste0(fxInfo_name, " (Std. Dev.)")
+            )
+        )
+      }
+      if(names[5] %in% names(tmp_vdem)) {
+        ret <- bind_rows(
+          ret, 
+          tmp_old %>% 
+            mutate(
+              name = names[5], 
+              fxInfo_name = paste0(fxInfo_name, " (Nr of experts)")
+            )
+        )
+      }
+      ret
+    }
+  )
+```
+
+What variables are still missing? 
+
+```{r}
+names(tmp_vdem) %>% extract(!(. %in% tmp_mf_vdem$name))
+```
+
+The first variables consist of the identifiers we will not include for now. As "v2svstterr" has explicitly been excluded, we will not include this variable:
+
+```{r}
+tmp_vdem <- select(tmp_vdem, -contains("v2svstterr"))
+```
+
+The remaining variables correspond to existing variables, only with the suffix "rec", "ex" or "leg" (and possibly the already known suffixes behind that). They cannot be found in the codebook. Nevertheless, I will include them. I will use the name that is given by their label:
+
+```{r}
+manual_mf <- tibble(
+  name = c("v2eldonate_rec", "v2elpeace_rec", "v2elpeace_rec_leg", 
+           "v2elpeace_rec_ex", "v2psprbrch_rec", "v3elbalpap_leg", 
+           "v3elbalpap_ex", "v3elbalstat_leg", "v3elbalstat_ex"),
+  fxInfo_cautionary = "These variables have not been mentioned in the codebook."
+) %>% 
+  mutate(
+    fxInfo_name = purrr::map_chr(name, ~ attr(tmp_vdem[[.]], "label"))
+  )
+```
+
+We repeat the procedure regarding osp etc. from above:
+
+```{r warning=FALSE}
+manual_mf <- 
+  seq_len(nrow(manual_mf)) %>% 
+  map_dfr(
+    function(i_row) {
+      tmp_old <- manual_mf[i_row, ]
+      names <- paste0(tmp_old$name, c("", "_osp", "_ord"))
+      if(names[2] %in% names(tmp_vdem)) {
+        stopifnot(names[3] %in% names(tmp_vdem))
+        ret <- tmp_old[rep(1, 3), ]
+        ret <- ret %>% 
+          mutate(
+            name = names, 
+            fxInfo_name = paste0(fxInfo_name, name_suffix)
+          )
+      }
+      else ret <- tmp_old
+      ret
+    }
+  )
+```
+
+```{r}
+manual_mf <-
+  seq_len(nrow(manual_mf)) %>% 
+  map_dfr(
+    function(i_row) {
+      tmp_old <- manual_mf[i_row, ]
+      names <- paste0(tmp_old$name, c("", "_codehigh", "_codelow", "_sd", "_nr"))
+      if(!any(names[2:5] %in% names(tmp_vdem))) return(tmp_old)
+      ret <- tmp_old
+      if(names[2] %in% names(tmp_vdem)) {
+        stopifnot(names[3] %in% names(tmp_vdem))
+        ret <- tmp_old[rep(1, 3), ]
+        ret <- ret %>% 
+          mutate(
+            name = names[1:3],
+            fxInfo_name = paste0(
+              fxInfo_name,
+              c("", " (Upper CI)", " (Lower CI)")
+            )
+          )
+      }
+      if(names[4] %in% names(tmp_vdem)) {
+        ret <- bind_rows(
+          ret, 
+          tmp_old %>% 
+            mutate(
+              name = names[4], 
+              fxInfo_name = paste0(fxInfo_name, " (Std. Dev.)")
+            )
+        )
+      }
+      if(names[5] %in% names(tmp_vdem)) {
+        ret <- bind_rows(
+          ret, 
+          tmp_old %>% 
+            mutate(
+              name = names[5], 
+              fxInfo_name = paste0(fxInfo_name, " (Nr of experts)")
+            )
+        )
+      }
+      ret
+    }
+  )
+```
+
+```{r}
+manual_mf
+```
+
+Finally, we bind the two metaframes together to receive the final metaframe:
+
+```{r}
+mf_vdem <- bind_rows(tmp_mf_vdem, manual_mf)
+mf_vdem
+```
+
+```{r}
+names(tmp_vdem) %>% extract(!(. %in% mf_vdem$name))
+```
+
+As we can see, the only variables that are not present are identifiers.
+
+# Data frame
+
+We will now modify `tmp_vdem` by calling `as_factor`.
+
+We will assume that those variables are ordered where the scale information contains the word "Ordinal":
+
+```{r}
+ordered <- 
+  tmp_mf_vdem %>% 
+  filter(str_detect(fxInfo_scale, "(?:O|o)rdinal")) %>% 
+  extract2("name")
+head(ordered)
+```
+
+(Remark: As `as_factor` does not affect numeric variables when called upon a data frame it is not a problem that this selection also contains numeric variables.)
+
+```{r}
+ordered_vdem <- tmp_vdem %>% 
+  select(country_name, year, !!ordered) %>% 
+  haven::as_factor(ordered = TRUE)
+rem_vdem <- tmp_vdem %>% 
+  select(-!!ordered) %>%
+  haven::as_factor(ordered = FALSE)
+vdem <- inner_join(rem_vdem, ordered_vdem, by = c("country_name", "year"))
+vdem
+```
+
+We save this data frame (without any metaframe) as `df_vdem`:
+
+```{r}
+df_vdem <- vdem
+devtools::use_data(df_vdem, overwrite = TRUE)
+```
+

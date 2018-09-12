@@ -2,4 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
-inst/extdata/Country_Year_V-Dem_Extended_STATA_v8
+inst/extdata/Country_Year_V-Dem_STATA_v8
+inst/extdata/metaframe
