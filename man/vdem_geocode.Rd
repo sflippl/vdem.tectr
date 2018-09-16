@@ -11,6 +11,6 @@ vdem_geocode(data)
 }
 \description{
 This functions transforms the vdem dataframe or a part of it into a
-\code{\link[sf:st_sf]{sf::st_sf()}}(simple feature). It needs the columns "country_name" and
+\code{\link[sf:st_sf]{sf::st_sf()}}-simple feature. It needs the columns "country_name" and
 "year".
 }

@@ -597,3 +597,323 @@ df_vdem <- vdem
 devtools::use_data(df_vdem, overwrite = TRUE)
 ```
 
+## Coding the metaframe
+
+### fxGeom_class
+
+Here, we determine the `fxGeom_class`. We have defined a new class OspCI, as osp variables deserve a second axis with the original ordinal variable's responses. It inherits from Continuous CI and as this class simply does not do anything if upper and lower are undefined, we need not define several classes. Besides that, the existence of variables with the suffix _codehigh and _codelow indicates a CI. The remaining extrapolations are clear.
+
+```{r}
+fxGeom_class_fun <- function(fxGeom_class, name) {
+  if(name == "year") return("Time")
+  if(str_detect(name, coll("_osp"))) return("OspCI")
+  codehigh <- paste0(name, "_codehigh")
+  codelow <- paste0(name, "_codelow")
+  bool_ci <- 
+    codehigh %in% names(vdem) & 
+    codelow %in% names(vdem)
+  if(bool_ci & fxGeom_class == "Continuous") return("ContinuousCI")
+  if(bool_ci & fxGeom_class %in% c("Ordinal", "Discrete")) return("OrdinalCI")
+  if(is.ordered(vdem[[name]])) return("Ordinal")
+  fxGeom_class
+}
+mf_vdem <-
+  mf_vdem %>% 
+  mutate(
+    fxGeom_class = 
+      fx_default_fxGeom_class(
+      vdem, 
+      mf = mf_vdem, 
+      custom_fun = fxGeom_class_fun
+    )
+  )
+```
+
+### fxGeom_assoc_vars
+
+The associated variables are closely related to the class and we therefore define them next. Confidence Interval have an upper and lower aesthetic while time variables (i. e. the year) have a group aesthetic which is country_name.
+
+```{r}
+mf_vdem <-
+  mf_vdem %>% 
+  mutate(
+    fxGeom_assoc_vars = 
+      purrr::map(
+        mf_vdem$name,  
+        function(nam) {
+          if(nam == "year") return(aes(group = country_name))
+          codehigh <- paste0(nam, "_codehigh")
+          codelow <- paste0(nam, "_codelow")
+          bool_ci <- 
+            codehigh %in% names(vdem) & 
+            codelow %in% names(vdem)
+          new_mapping <- aes()
+          if(bool_ci) new_mapping[c("lower", "upper")] <- aes(lower = !!codelow, upper = !!codehigh)
+          if(str_detect(nam, "_osp")) {
+            ord_name <- str_replace(nam, "_osp", "_ord")
+            new_mapping["ord"] <- aes(ord = !!ord_name)
+          }
+          NULL
+        }
+      )
+  )
+```
+
+### fxInfo_scale
+
+As the series of dichotomous scales have been transformed to dichotomous scales, we will capture that in the metaframe. Furthermore we will standardize the remaining options which can be seen here:
+
+```{r}
+mf_vdem$fxInfo_scale %>% unique()
+```
+
+
+```{r}
+mf_vdem <-
+  mf_vdem %>% 
+  mutate(
+    fxInfo_scale = 
+      case_when(
+        str_to_lower(fxInfo_scale) == "nomina" ~ "Nominal", 
+        name == "v2expathhg" ~ "Nominal", 
+        fxInfo_scale == "Dichotomou" ~ "Dichotomous", 
+        str_detect(fxInfo_scale, "eries of dichotomous scales") ~ 
+          "Dichotomous",
+        fxInfo_scale == "Ordina" ~ "Ordinal", 
+        fxInfo_scale == "Interva" ~ "Interval", 
+        TRUE ~ fxInfo_scale
+      )
+  )
+```
+
+### fxGeom_limits
+
+Limits are dependent on scale, responses and whether the variable contains an osp, as in that case, we know that it has the range $[0,4]$.
+
+```{r}
+mf_vdem$fxInfo_responses %>% 
+  extract(map_lgl(., ~ length(.) == 1)) %>% 
+  unique()
+```
+
+
+```{r}
+mf_vdem <- 
+  mf_vdem %>% 
+  mutate(
+    fxGeom_limits = fx_default_fxGeom_limits(vdem, mf_vdem), 
+    fxGeom_limits = 
+      purrr::map(
+        seq_len(nrow(mf_vdem)), 
+        function(i) {
+          if(str_detect(fxInfo_scale[[i]], coll("0-1")) & 
+             !is.na(fxInfo_scale[[i]])) return(c(0, 1))
+          if(str_detect(name[[i]], "_osp")) return(c(0, 4))
+          if(isTRUE(all.equal(fxInfo_responses[[i]], "Percent."))) return(c(0, 100))
+          if(isTRUE(all.equal(fxInfo_responses[[i]], "Proportion."))) return(c(0, 1))
+          fxGeom_limits[[i]]
+        }
+      )
+  )
+```
+
+### fxGeom_breaks
+
+In the case of an osp variable, due to the second axis, the breaks should be 0-4 resp. 0-1 in the case of a dichotomous variable:
+
+```{r}
+mf_vdem <-
+  mf_vdem %>% 
+  mutate(
+    fxGeom_breaks = 
+      purrr::map2(
+        fxGeom_class, fxInfo_scale, 
+        function(x, y) {
+          if(x == "OspCI" & !is.na(x)) {
+            if(
+              y ==  
+               "Dichotomous, converted to interval by the measurement model" & 
+              !is.na(y)
+              ) return(0:1)
+            else return(0:4)
+          }
+          NULL
+        }
+      )
+  )
+```
+
+### fxGeom_trans
+
+```{r}
+mf_vdem <- 
+  mf_vdem %>% 
+  mutate(
+    fxGeom_trans = fx_default_fxGeom_trans(vdem, mf_vdem), 
+    fxGeom_trans = map2(
+      fxGeom_limits, fxGeom_trans, 
+      if(!is.null(.x)) return("identity") else .y
+    )
+  )
+```
+
+
+### fxGeom modifications
+
+In the election section, there are variables where a line plot over time is not sensible as they do not continuously change but refer to the last election. `geom_step()` is already nominated and these variables must cast two additional votes in their favor. These are indicators 9 to 55 in part 3 chapter 1, indicators 9 to 15 in part 3 chapter 2 and indicators 17 to 22 in part 3 chapter 13. Furthermore, nominally scaled variables should neither have line nor a step plot as the order of categories is arbitrary.
+
+```{r}
+# veto lines vetos path plots if the variable is on the x or y scale.
+veto_lines <- function(nomination, aes_name, ...) {
+  has_lines <- 
+    nomination %>% 
+    nom_layers() %>% 
+    map_lgl( ~ inherits(.$geom, "GeomPath")) %>% 
+    any()
+  if(aes_name %in% c("x", "y")) return(has_lines)
+  FALSE
+}
+
+# vote step gives two votes to step plots if it is the y aesthetic
+vote_step <- function(nomination, aes_name, ...) {
+  if(aes_name != "y") return(0)
+  has_path <-
+    nomination %>% 
+    nom_layers() %>%
+    map_lgl( ~ inherits(.$geom, "GeomStep")) %>% 
+    any()
+  2 * has_path
+}
+
+mf_vdem <- 
+  mf_vdem %>% 
+  mutate(
+    fxGeom_veto = 
+      case_when(
+        fxInfo_scale == "Nominal" ~ 2L, 
+        TRUE ~ 1L
+      ) %>% 
+      as_fx_factor(levels = list(NULL, veto_lines)),
+    fxGeom_vote = 
+      case_when(
+        part_num == 3 & 
+          (
+            (chapter_num == 1 & ind_num >= 9 & ind_num <= 55) | 
+              (chapter_num == 2 & ind_num >= 9 & ind_num <= 15) |
+              (chapter_num == 13 & ind_num >= 17 & ind_num <= 22)
+          ) ~ 2L, 
+        TRUE ~ 1L
+      ) %>% 
+      as_fx_factor(levels = list(NULL, vote_step))
+  )
+```
+
+### Drop empty levels for country names
+
+```{r}
+mf_vdem <-
+  mf_vdem %>% 
+  mutate(fxGeom_drop = (name == "country_name"))
+```
+
+
+### Color palettes
+
+This section is devoted to determining a few different palettes that make the colour coding consistent. I have tried to attribute a gradient from worse to better where possible.
+
+#### "Bad-to-good" palette
+```{r}
+bad_good_disc <- scales::brewer_pal(palette = "RdYlBu", direction = 1)
+bad_good_cont <- scales::gradient_n_pal(bad_good_disc(11))
+good_bad_disc <- scales::brewer_pal(palette = "RdYlBu", direction = -1)
+good_bad_cont <- scales::gradient_n_pal(good_bad_disc(11))
+```
+
+#### Qualitative palette
+
+```{r}
+qualitative <- scales::brewer_pal(palette = "Accent")
+```
+
+#### Sequential palette
+
+```{r}
+sequential_disc <- scales::brewer_pal(palette = "PuBuGn")
+sequential_cont <- scales::gradient_n_pal(sequential_disc(9))
+```
+
+#### pal_v3partyid
+
+```{r}
+# First category is nominal the rest is ordinal
+pal_v3partyid <- function(n) {
+  c(
+    "#ffeda0", 
+    sequential_disc(n - 1)
+  )
+}
+```
+
+
+
+#### Attribution
+
+This is a colour/fill-scale.
+
+```{r}
+mf_vdem <-
+  mf_vdem %>% 
+  mutate(
+    fxGeom_pal.colour_fill = 
+      case_when(
+        # All high and mid-level indices are continuous and higher values 
+        # seem to indicate a more democratic state overall
+        part_num == 2 ~ 2L, 
+        # All osp/ord variables are formulated so that lower values are 
+        # less democratic
+        str_detect(fxInfo_name, "(Original)") | 
+          str_detect(fxInfo_name, "(Relative)") ~ 2L, 
+        str_detect(fxInfo_name, "(Ordinal)") ~ 1L, 
+        name == "v3partyid" ~ 8L,
+        fxInfo_scale == "Nominal" ~ 5L, 
+        map_lgl(fxGeom_class, ~ is(fxGeom(.), "fxGeomContinuous")) ~ 
+          7L,
+        map_lgl(fxGeom_class, ~ is(fxGeom(.), "fxGeomContinuous")) ~ 
+          6L, 
+        TRUE ~ 9L
+      ) %>% 
+    as_fx_factor(
+      levels =
+        list(
+          bad_good_disc,    #1
+          bad_good_cont,    #2
+          good_bad_disc,    #3
+          good_bad_cont,    #4
+          qualitative,      #5
+          sequential_disc,  #6
+          sequential_cont,  #7
+          pal_v3partyid,    #8
+          NULL              #9
+        )
+    )
+  )
+```
+
+# Add everything together
+
+```{r}
+vdem <- 
+  df_vdem %>% 
+  vdem_geocode() %>% 
+  set_metaframe(
+    as_metaframe(mf_vdem) %>% 
+      bind_rows(
+        new_metaframe(
+          name = "geometry", 
+          fxGeom_class = "fxGeomSpatial"
+        )
+      )
+  )
+devtools::use_data(vdem, overwrite = TRUE)
+```
+

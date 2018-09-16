@@ -13,7 +13,8 @@ Imports:
     tectr,
     dplyr,
     magrittr,
-    sf
+    sf,
+    methods
 RoxygenNote: 6.1.0
 Roxygen: list(markdown = TRUE)
 Suggests:
