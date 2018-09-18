@@ -1,20 +1,23 @@
 Package: vdem.tectr
 Type: Package
-Title: What the Package Does (Title Case)
+Title: V-Dem Data
 Version: 0.1.0
 Author: Who wrote it
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
 Imports:
     tectr,
     dplyr,
     magrittr,
-    sf
+    sf,
+    methods,
+    rlang
 RoxygenNote: 6.1.0
 Roxygen: list(markdown = TRUE)
 Suggests:
-    testthat
+    testthat,
+    covr

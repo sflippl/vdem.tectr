@@ -127,12 +127,12 @@ $(document).ready(function () {
 
 <pre class="r"><code>library(tectr)
 library(tidyverse)</code></pre>
-<pre><code>## -- Attaching packages ------------------------------------------------------------------------------------------------------------------- tidyverse 1.2.1 --</code></pre>
+<pre><code>## -- Attaching packages --------------------------------- tidyverse 1.2.1 --</code></pre>
 <pre><code>## v ggplot2 3.0.0     v purrr   0.2.5
 ## v tibble  1.4.2     v dplyr   0.7.6
 ## v tidyr   0.8.1     v stringr 1.3.1
 ## v readr   1.1.1     v forcats 0.3.0</code></pre>
-<pre><code>## -- Conflicts ---------------------------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
+<pre><code>## -- Conflicts ------------------------------------ tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>library(haven)
@@ -914,6 +914,306 @@ vdem</code></pre>
 <pre class="r"><code>df_vdem &lt;- vdem
 devtools::use_data(df_vdem, overwrite = TRUE)</code></pre>
 <pre><code>## Saving df_vdem as df_vdem.rda to C:/Users/samue/Documents/Studium/Statistik/vdem.tectr/data</code></pre>
+<div id="coding-the-metaframe" class="section level2">
+<h2>Coding the metaframe</h2>
+<pre class="r"><code>vdem &lt;-
+  df_vdem %&gt;% 
+  set_metaframe(
+    as_metaframe(mf_vdem)
+  )</code></pre>
+<div id="fxgeom_class" class="section level3">
+<h3>fxGeom_class</h3>
+<p>Here, we determine the <code>fxGeom_class</code>. The existence of variables with the suffix _codehigh and _codelow indicates a CI; the remaining extrapolations are clear.</p>
+<pre class="r"><code>fxGeom_class_fun &lt;- function(fxGeom_class, name) {
+  if(name == &quot;year&quot;) return(&quot;Time&quot;)
+  codehigh &lt;- paste0(name, &quot;_codehigh&quot;)
+  codelow &lt;- paste0(name, &quot;_codelow&quot;)
+  bool_ci &lt;- 
+    codehigh %in% names(vdem) &amp; 
+    codelow %in% names(vdem)
+  if(bool_ci &amp; fxGeom_class == &quot;Continuous&quot;) return(&quot;ContinuousCI&quot;)
+  if(bool_ci &amp; fxGeom_class %in% c(&quot;Ordinal&quot;, &quot;Discrete&quot;)) return(&quot;OrdinalCI&quot;)
+  if(is.ordered(vdem[[name]])) return(&quot;Ordinal&quot;)
+  fxGeom_class
+}
+vdem &lt;-
+  vdem %&gt;% 
+  mutate_mf(
+    fxGeom_class = 
+      fx_default_fxGeom_class(
+      vdem, 
+      mf = mf_vdem, 
+      custom_fun = fxGeom_class_fun
+    )
+  )</code></pre>
+</div>
+<div id="fxgeom_assoc_variables" class="section level3">
+<h3>fxGeom_assoc_variables</h3>
+<p>The associated variables are closely related to the class and we therefore define them next. Confidence Interval have an upper and lower aesthetic while time variables (i. e. the year) have a group aesthetic which is country_name.</p>
+<pre class="r"><code>create_assoc_vars &lt;- function(nam) {
+  codehigh &lt;- paste0(nam, &quot;_codehigh&quot;)
+  codelow &lt;- paste0(nam, &quot;_codelow&quot;)
+  bool_ci &lt;- 
+    codehigh %in% names(vdem) &amp; 
+    codelow %in% names(vdem)
+  if(nam == &quot;year&quot;) aes(group = country_name)
+  else if(bool_ci) aes_string(lower = codelow, upper = codehigh, 
+                              group = &quot;country_name&quot;)
+  else NULL
+}
+vdem &lt;-
+  vdem %&gt;% 
+  mutate_mf(
+    fxGeom_assoc_vars = 
+      purrr::map(
+        name, create_assoc_vars
+      )
+  )</code></pre>
+</div>
+<div id="fxinfo_scale" class="section level3">
+<h3>fxInfo_scale</h3>
+<p>As the series of dichotomous scales have been transformed to dichotomous scales, we will capture that in the metaframe. Furthermore we will standardize the remaining options which can be seen here:</p>
+<pre class="r"><code>metaframe(vdem)$fxInfo_scale %&gt;% unique()</code></pre>
+<pre><code>##  [1] NA                                                                                  
+##  [2] &quot;Interval, from low to high (0-1)&quot;                                                  
+##  [3] &quot;Interval&quot;                                                                          
+##  [4] &quot;Ordinal, converted to interval by the measurement model&quot;                           
+##  [5] &quot;&quot;                                                                                  
+##  [6] &quot;Dichotomous&quot;                                                                       
+##  [7] &quot;Nominal&quot;                                                                           
+##  [8] &quot;Dichotomous, converted to interval by the measurement model&quot;                       
+##  [9] &quot;Ordinal&quot;                                                                           
+## [10] &quot;Nominal (v2expathhg), or a series of dichotomous scales&quot;                           
+## [11] &quot;Ordina&quot;                                                                            
+## [12] &quot;Dichotomou&quot;                                                                        
+## [13] &quot;Interva&quot;                                                                           
+## [14] &quot;Nomina&quot;                                                                            
+## [15] &quot;nomina&quot;                                                                            
+## [16] &quot;Nominal, but categories 2—6 constitute ordinal&quot;                                    
+## [17] &quot;Interval, from low to high&quot;                                                        
+## [18] &quot;Ordinal, converted to interval by the measurement model, from from low to high 0-1&quot;
+## [19] &quot;Series of dichotomous scales&quot;                                                      
+## [20] &quot;A series of dichotomous scales&quot;</code></pre>
+<pre class="r"><code>vdem &lt;-
+  vdem %&gt;% 
+  mutate_mf(
+    fxInfo_scale = 
+      case_when(
+        str_to_lower(fxInfo_scale) == &quot;nomina&quot; ~ &quot;Nominal&quot;, 
+        name == &quot;v2expathhg&quot; ~ &quot;Nominal&quot;, 
+        fxInfo_scale == &quot;Dichotomou&quot; ~ &quot;Dichotomous&quot;, 
+        str_detect(fxInfo_scale, &quot;eries of dichotomous scales&quot;) ~ 
+          &quot;Dichotomous&quot;,
+        fxInfo_scale == &quot;Ordina&quot; ~ &quot;Ordinal&quot;, 
+        fxInfo_scale == &quot;Interva&quot; ~ &quot;Interval&quot;, 
+        TRUE ~ fxInfo_scale
+      )
+  )</code></pre>
+</div>
+<div id="fxgeom_limits" class="section level3">
+<h3>fxGeom_limits</h3>
+<p>Limits are dependent on scale, responses and whether the variable contains an osp, as in that case, we know that it has the range <span class="math inline">\([0,4]\)</span>.</p>
+<pre class="r"><code>metaframe(vdem)$fxInfo_responses %&gt;% 
+  extract(map_lgl(., ~ length(.) == 1)) %&gt;% 
+  unique()</code></pre>
+<pre><code>## [[1]]
+## [1] &quot;Percent.&quot;
+## 
+## [[2]]
+## [1] &quot;Text.&quot;
+## 
+## [[3]]
+## [1] &quot;Numeric.&quot;
+## 
+## [[4]]
+## [1] &quot;1. Yes 2. No, the event is in a language the coder can not read 3. No, there is no appointment or removal information 4. No, the process is explicitly left to be developed via a statute 5. Yes, but much of the process is left to law&quot;
+## 
+## [[5]]
+## [1] &quot;0. No 1. Yes&quot;
+## 
+## [[6]]
+## [1] &quot;1. English 2. French 3. German 4. Spanish 27. Arabic 43. Azerbaijani 82. Czech  229. Korean 245. Latvian 249. Lithuanian 282. Maltese 306. Nepali 312. Norwegian Nynorsk; Nynorsk, Norwegian 343. Polish 345. Portuguese 357. Romanian; Moldavian; Moldovan 382. Slovak 409. Swahili 410. Swedish 441. Turkish 485. Greek 113. German 121. Dutch; Flemish 130. Estonian 136. Persian 151. Georgian 170. Hebrew 180. Hungarian 185. Icelandic&quot;
+## 
+## [[7]]
+## [1] &quot;0: Extreme. Because of poor-quality healthcare, at least 75 percent (1: Unequal. Because of poor-quality healthcare, at least 25 percent (2: Somewhat equal. Because of poor-quality healthcare, ten to 25 percent (3: Relatively equal. Basic health care is overall equal in quality but because of poor-quality healthcare, five to ten percent (4: Equal. Basic health care is equal in quality and less than five percent (&quot;
+## 
+## [[8]]
+## [1] &quot;Date — year only&quot;
+## 
+## [[9]]
+## [1] &quot;Proportion.&quot;
+## 
+## [[10]]
+## [1] &quot;Yes or No&quot;</code></pre>
+<pre class="r"><code>vdem &lt;- 
+  vdem %&gt;% 
+  mutate_mf(
+    fxGeom_limits = fx_default_fxGeom_limits(vdem), 
+    fxGeom_limits = 
+      purrr::map(
+        seq_len(nrow(metaframe(vdem))), 
+        function(i) {
+          if(name[i] == &quot;country_name&quot;) return(NULL)
+          if(str_detect(fxInfo_scale[[i]], coll(&quot;0-1&quot;)) &amp; 
+             !is.na(fxInfo_scale[[i]])) return(c(0, 1))
+          if(str_detect(name[[i]], &quot;_osp&quot;)) return(c(0, 4))
+          if(isTRUE(all.equal(fxInfo_responses[[i]], &quot;Percent.&quot;))) return(c(0, 100))
+          if(isTRUE(all.equal(fxInfo_responses[[i]], &quot;Proportion.&quot;))) return(c(0, 1))
+          fxGeom_limits[[i]]
+        }
+      )
+  )</code></pre>
+</div>
+<div id="fxgeom_trans" class="section level3">
+<h3>fxGeom_trans</h3>
+<pre class="r"><code>vdem &lt;- 
+  vdem %&gt;% 
+  mutate_mf(
+    fxGeom_trans = map2(
+      fxGeom_limits, fx_default_fxGeom_trans(vdem), 
+      ~ if(!is.null(.x)) return(scales::identity_trans()) else .y
+    )
+  )</code></pre>
+</div>
+<div id="fxgeom-modifications" class="section level3">
+<h3>fxGeom modifications</h3>
+<p>In the election section, there are variables where a line plot over time is not sensible as they do not continuously change but refer to the last election. <code>geom_step()</code> is already nominated and these variables must cast two additional votes in their favor. These are indicators 9 to 55 in part 3 chapter 1, indicators 9 to 15 in part 3 chapter 2 and indicators 17 to 22 in part 3 chapter 13. Furthermore, nominally scaled variables should neither have line nor a step plot as the order of categories is arbitrary.</p>
+<pre class="r"><code># veto lines vetos path plots if the variable is on the x or y scale.
+veto_lines &lt;- function(nomination, aes_name, ...) {
+  has_lines &lt;- 
+    nomination %&gt;% 
+    nom_layers() %&gt;% 
+    purrr::map_lgl( ~ inherits(.$geom, &quot;GeomPath&quot;)) %&gt;% 
+    any()
+  if(aes_name %in% c(&quot;x&quot;, &quot;y&quot;)) return(has_lines)
+  FALSE
+}
+
+# vote step gives two votes to step plots if it is the y aesthetic
+vote_step &lt;- function(nomination, aes_name, ...) {
+  if(aes_name != &quot;y&quot;) return(0)
+  has_path &lt;-
+    nomination %&gt;% 
+    nom_layers() %&gt;%
+    purrr::map_lgl( ~ inherits(.$geom, &quot;GeomStep&quot;)) %&gt;% 
+    any()
+  2 * has_path
+}
+
+vdem &lt;- 
+  vdem %&gt;% 
+  mutate_mf(
+    fxGeom_veto = map(
+      fxInfo_scale, 
+      ~ if(. == &quot;Nominal&quot; &amp; !(is.na(.))) return(veto_lines) else NULL
+    ),
+    fxGeom_vote = 
+      map(
+        seq_len(nrow(metaframe(vdem))), 
+        function(i) {
+          tmp_mf &lt;- metaframe(vdem)[i, ]
+          if(
+            tmp_mf$part_num == 3 &amp; 
+              (
+                (tmp_mf$chapter_num == 1 &amp; tmp_mf$ind_num &gt;= 9 &amp; tmp_mf$ind_num &lt;= 55) | 
+                  (tmp_mf$chapter_num == 2 &amp; tmp_mf$ind_num &gt;= 9 &amp; tmp_mf$ind_num &lt;= 15) |
+                  (tmp_mf$chapter_num == 13 &amp; tmp_mf$ind_num &gt;= 17 &amp; tmp_mf$ind_num &lt;= 22)
+              ) &amp; 
+            !is.na(tmp_mf$part_num) &amp; !is.na(tmp_mf$chapter_num) &amp; !is.na(tmp_mf$ind_num)
+          ) return(vote_step)
+          NULL
+        }
+      )
+  )</code></pre>
+</div>
+<div id="drop-empty-levels-for-country-names" class="section level3">
+<h3>Drop empty levels for country names</h3>
+<pre class="r"><code>vdem &lt;-
+  vdem %&gt;% 
+  mutate_mf(fxGeom_drop = (name == &quot;country_name&quot;))</code></pre>
+</div>
+<div id="color-palettes" class="section level3">
+<h3>Color palettes</h3>
+<p>This section is devoted to determining a few different palettes that make the colour coding consistent. I have tried to attribute a gradient from worse to better where possible.</p>
+<div id="bad-to-good-palette" class="section level4">
+<h4>“Bad-to-good” palette</h4>
+<pre class="r"><code>bad_good_disc &lt;- scales::brewer_pal(palette = &quot;RdYlBu&quot;, direction = 1)
+bad_good_cont &lt;- scales::gradient_n_pal(bad_good_disc(11))
+good_bad_disc &lt;- scales::brewer_pal(palette = &quot;RdYlBu&quot;, direction = -1)
+good_bad_cont &lt;- scales::gradient_n_pal(good_bad_disc(11))</code></pre>
+</div>
+<div id="qualitative-palette" class="section level4">
+<h4>Qualitative palette</h4>
+<pre class="r"><code>qualitative &lt;- scales::brewer_pal(palette = &quot;Accent&quot;)
+qualitative_strong &lt;- scales::brewer_pal(palette = &quot;Set1&quot;)</code></pre>
+</div>
+<div id="sequential-palette" class="section level4">
+<h4>Sequential palette</h4>
+<pre class="r"><code>sequential_disc &lt;- scales::brewer_pal(palette = &quot;PuBuGn&quot;)
+sequential_cont &lt;- scales::gradient_n_pal(sequential_disc(9))</code></pre>
+</div>
+<div id="pal_v3partyid" class="section level4">
+<h4>pal_v3partyid</h4>
+<pre class="r"><code># First category is nominal the rest is ordinal
+pal_v3partyid &lt;- function(n) {
+  c(
+    &quot;#ffeda0&quot;, 
+    sequential_disc(n - 1)
+  )
+}</code></pre>
+</div>
+<div id="attribution" class="section level4">
+<h4>Attribution</h4>
+<p>This is a colour/fill-scale.</p>
+<pre class="r"><code>vdem &lt;-
+  vdem %&gt;% 
+  mutate_mf(
+    fxGeom_pal.colour_fill = 
+      map(
+        seq_len(nrow(metaframe(vdem))), 
+        function(i) {
+          tmp_mf &lt;- metaframe(vdem)[i, ]
+          # All high and mid-level indices are continuous and higher values 
+          # seem to indicate a more democratic state overall
+          if(tmp_mf$part_num == 2 &amp; !is.na(tmp_mf$part_num)) return(bad_good_cont)
+          # All osp/ord variables are formulated so that lower values are 
+          # less democratic
+          if(
+            (
+              str_detect(tmp_mf$fxInfo_name, &quot;(Original)&quot;) | 
+              str_detect(tmp_mf$fxInfo_name, &quot;(Relative)&quot;)
+            ) &amp; !is.na(tmp_mf$fxInfo_name)
+          ) return(bad_good_cont)
+          if(str_detect(tmp_mf$fxInfo_name, &quot;(Ordinal)&quot;) &amp; !is.na(tmp_mf$fxInfo_name)) return(bad_good_disc)
+          if(tmp_mf$name == &quot;v3partyid&quot;) return(pal_v3partyid)
+          if(tmp_mf$fxInfo_scale == &quot;Nominal&quot; &amp; !is.na(tmp_mf$fxInfo_scale)) return(qualitative)
+          if(tmp_mf$name == &quot;country_name&quot;) return(qualitative_strong)
+          if(is(fxGeom(tmp_mf$fxGeom_class[[1]]), &quot;fxGeomContinuous&quot;)) return(sequential_cont)
+          if(is(fxGeom(tmp_mf$fxGeom_class[[1]]), &quot;fxGeomDiscrete&quot;)) return(sequential_disc)
+          NULL
+        }
+      )
+  )</code></pre>
+</div>
+</div>
+</div>
+<div id="add-the-geometry" class="section level2">
+<h2>Add the geometry</h2>
+<p>We will not save the geometry in the same metaframe for reasons of size. However, we do need a metaframe row geometry for when the geometry is added via <code>vdem_geocode()</code>.</p>
+<pre class="r"><code>new_metaframe &lt;-
+  metaframe(vdem) %&gt;% 
+  bind_rows(
+    tibble(name = &quot;geometry&quot;, fxInfo_name = &quot;Country Area&quot;, 
+           fxGeom_class = &quot;Spatial&quot;)
+  ) %&gt;% 
+  as_metaframe()
+metaframe(vdem) &lt;- new_metaframe</code></pre>
+</div>
+</div>
+<div id="save-the-data" class="section level1">
+<h1>Save the data</h1>
+<pre class="r"><code>devtools::use_data(vdem, overwrite = TRUE)</code></pre>
+<pre><code>## Saving vdem as vdem.rda to C:/Users/samue/Documents/Studium/Statistik/vdem.tectr/data</code></pre>
 </div>
 
 
